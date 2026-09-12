@@ -1,0 +1,223 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "reconciliation-report",
+  "description": "Required shape of reconciliation-report.json, the final output of the billing-reconciliation flow. This is the only fixed schema in the exercise. Every invoice line in every invoice file must appear exactly once in `lines`; unmatched lines still appear, with shipment_id null.",
+  "type": "object",
+  "required": [
+    "lines",
+    "invoice_totals",
+    "summary"
+  ],
+  "properties": {
+    "lines": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "invoice",
+          "consignment_ref",
+          "shipment_id",
+          "billed_amount",
+          "expected_amount",
+          "delta",
+          "disposition",
+          "justification"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "invoice": {
+            "type": "string",
+            "description": "Invoice identifier the line appears on"
+          },
+          "consignment_ref": {
+            "type": "string",
+            "description": "Carrier consignment reference as printed on the invoice"
+          },
+          "shipment_id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Matched shipment_id from shipments.json, or null if the line could not be matched"
+          },
+          "billed_amount": {
+            "type": "number",
+            "description": "Line amount as billed by the carrier, INR"
+          },
+          "expected_amount": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Amount payable per the governing contract, INR. Null only when no expected amount can be computed (e.g. unmatched line, or the contract does not determine one)"
+          },
+          "delta": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "billed_amount minus expected_amount; null when expected_amount is null"
+          },
+          "disposition": {
+            "type": "string",
+            "enum": [
+              "accept",
+              "dispute",
+              "escalate"
+            ]
+          },
+          "justification": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Why this disposition. Cite the governing contract clause where one applies."
+          },
+          "contract_clause": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Reference to the contract provision(s) the expected amount is computed from, e.g. 'falcon-freight.md \u00a71, \u00a73'"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "invoice_findings": {
+      "type": "array",
+      "description": "Findings that attach to an invoice as a whole rather than to a single line",
+      "items": {
+        "type": "object",
+        "required": [
+          "invoice",
+          "description",
+          "amount_impact",
+          "disposition",
+          "justification"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "invoice": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "amount_impact": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "INR impact on the invoice total (positive = overbilled), null if not quantifiable"
+          },
+          "disposition": {
+            "type": "string",
+            "enum": [
+              "accept",
+              "dispute",
+              "escalate"
+            ]
+          },
+          "justification": {
+            "type": "string",
+            "minLength": 1
+          },
+          "contract_clause": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "invoice_totals": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "invoice",
+          "billed_total",
+          "expected_total"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "invoice": {
+            "type": "string"
+          },
+          "billed_total": {
+            "type": "number"
+          },
+          "expected_total": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Sum of expected amounts for the invoice after invoice-level findings; null if any component is undeterminable"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "total_billed",
+        "total_expected",
+        "total_in_dispute",
+        "line_count",
+        "counts_by_disposition"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "total_billed": {
+          "type": "number"
+        },
+        "total_expected": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "Null if any invoice's expected_total is null"
+        },
+        "total_in_dispute": {
+          "type": "number",
+          "description": "Sum of absolute deltas across all lines and findings with disposition 'dispute'. An amount already carried by a line must not be re-counted via an invoice-level finding (or vice versa) \u2014 every disputed rupee counts exactly once."
+        },
+        "line_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "counts_by_disposition": {
+          "type": "object",
+          "required": [
+            "accept",
+            "dispute",
+            "escalate"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "accept": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "dispute": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "escalate": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        }
+      }
+    }
+  }
+}

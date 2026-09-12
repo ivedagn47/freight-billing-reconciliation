@@ -1,0 +1,361 @@
+{
+  "carrier": "Alpine Express Logistics",
+  "customer": "BlueFin Commerce",
+  "invoice_no": "ALPINE-0826",
+  "billing_period": "2026-08",
+  "consignment_count": 35,
+  "lines": [
+    {
+      "sl": 1,
+      "consignment_no": "AE-3041",
+      "booking_date": "2026-08-02",
+      "actual_weight_kg": 32,
+      "chargeable_weight_kg": 32,
+      "rate_per_kg": 9.5,
+      "handling_fee": 0,
+      "line_amount": 304.0
+    },
+    {
+      "sl": 2,
+      "consignment_no": "AE-3042",
+      "booking_date": "2026-08-03",
+      "actual_weight_kg": 68,
+      "chargeable_weight_kg": 68,
+      "rate_per_kg": 8.25,
+      "handling_fee": 0,
+      "line_amount": 561.0
+    },
+    {
+      "sl": 3,
+      "consignment_no": "AE-3043",
+      "booking_date": "2026-08-04",
+      "actual_weight_kg": 18,
+      "chargeable_weight_kg": 25.0,
+      "rate_per_kg": 9.5,
+      "handling_fee": 0,
+      "line_amount": 237.5
+    },
+    {
+      "sl": 4,
+      "consignment_no": "AE-3044",
+      "booking_date": "2026-08-05",
+      "actual_weight_kg": 120,
+      "chargeable_weight_kg": 120,
+      "rate_per_kg": 8.25,
+      "handling_fee": 0,
+      "line_amount": 990.0
+    },
+    {
+      "sl": 5,
+      "consignment_no": "AE-3045",
+      "booking_date": "2026-08-06",
+      "actual_weight_kg": 45,
+      "chargeable_weight_kg": 45,
+      "rate_per_kg": 9.5,
+      "handling_fee": 0,
+      "line_amount": 427.5
+    },
+    {
+      "sl": 6,
+      "consignment_no": "AE-3046",
+      "booking_date": "2026-08-07",
+      "actual_weight_kg": 25.5,
+      "chargeable_weight_kg": 25.5,
+      "rate_per_kg": 9.5,
+      "handling_fee": 150,
+      "line_amount": 392.25
+    },
+    {
+      "sl": 7,
+      "consignment_no": "AE-3047",
+      "booking_date": "2026-08-08",
+      "actual_weight_kg": 80,
+      "chargeable_weight_kg": 80,
+      "rate_per_kg": 8.25,
+      "handling_fee": 0,
+      "line_amount": 660.0
+    },
+    {
+      "sl": 8,
+      "consignment_no": "AE-3048",
+      "booking_date": "2026-08-09",
+      "actual_weight_kg": 55,
+      "chargeable_weight_kg": 55,
+      "rate_per_kg": 8.25,
+      "handling_fee": 0,
+      "line_amount": 453.75
+    },
+    {
+      "sl": 9,
+      "consignment_no": "AE-3049",
+      "booking_date": "2026-08-10",
+      "actual_weight_kg": 40,
+      "chargeable_weight_kg": 40,
+      "rate_per_kg": 9.5,
+      "handling_fee": 0,
+      "line_amount": 380.0
+    },
+    {
+      "sl": 10,
+      "consignment_no": "AE-3050",
+      "booking_date": "2026-08-11",
+      "actual_weight_kg": 95,
+      "chargeable_weight_kg": 95,
+      "rate_per_kg": 8.25,
+      "handling_fee": 0,
+      "line_amount": 783.75
+    },
+    {
+      "sl": 11,
+      "consignment_no": "AE-3051",
+      "booking_date": "2026-08-12",
+      "actual_weight_kg": 30,
+      "chargeable_weight_kg": 30,
+      "rate_per_kg": 9.5,
+      "handling_fee": 0,
+      "line_amount": 285.0
+    },
+    {
+      "sl": 12,
+      "consignment_no": "AE-3052",
+      "booking_date": "2026-08-13",
+      "actual_weight_kg": 60,
+      "chargeable_weight_kg": 60,
+      "rate_per_kg": 8.25,
+      "handling_fee": 150,
+      "line_amount": 645.0
+    },
+    {
+      "sl": 13,
+      "consignment_no": "AE-3053",
+      "booking_date": "2026-08-14",
+      "actual_weight_kg": 22,
+      "chargeable_weight_kg": 25.0,
+      "rate_per_kg": 9.5,
+      "handling_fee": 0,
+      "line_amount": 237.5
+    },
+    {
+      "sl": 14,
+      "consignment_no": "AE-3054",
+      "booking_date": "2026-08-15",
+      "actual_weight_kg": 71.5,
+      "chargeable_weight_kg": 71.5,
+      "rate_per_kg": 8.25,
+      "handling_fee": 0,
+      "line_amount": 589.88
+    },
+    {
+      "sl": 15,
+      "consignment_no": "AE-3055",
+      "booking_date": "2026-08-16",
+      "actual_weight_kg": 36,
+      "chargeable_weight_kg": 36,
+      "rate_per_kg": 9.5,
+      "handling_fee": 0,
+      "line_amount": 342.0
+    },
+    {
+      "sl": 16,
+      "consignment_no": "AE-3056",
+      "booking_date": "2026-08-17",
+      "actual_weight_kg": 88,
+      "chargeable_weight_kg": 88,
+      "rate_per_kg": 8.25,
+      "handling_fee": 0,
+      "line_amount": 726.0
+    },
+    {
+      "sl": 17,
+      "consignment_no": "AE-3057",
+      "booking_date": "2026-08-18",
+      "actual_weight_kg": 47,
+      "chargeable_weight_kg": 47,
+      "rate_per_kg": 9.5,
+      "handling_fee": 0,
+      "line_amount": 446.5
+    },
+    {
+      "sl": 18,
+      "consignment_no": "AE-3058",
+      "booking_date": "2026-08-19",
+      "actual_weight_kg": 105,
+      "chargeable_weight_kg": 105,
+      "rate_per_kg": 8.25,
+      "handling_fee": 150,
+      "line_amount": 1016.25
+    },
+    {
+      "sl": 19,
+      "consignment_no": "AE-3059",
+      "booking_date": "2026-08-20",
+      "actual_weight_kg": 28,
+      "chargeable_weight_kg": 28,
+      "rate_per_kg": 9.5,
+      "handling_fee": 0,
+      "line_amount": 266.0
+    },
+    {
+      "sl": 20,
+      "consignment_no": "AE-3060",
+      "booking_date": "2026-08-21",
+      "actual_weight_kg": 66,
+      "chargeable_weight_kg": 66,
+      "rate_per_kg": 8.25,
+      "handling_fee": 0,
+      "line_amount": 544.5
+    },
+    {
+      "sl": 21,
+      "consignment_no": "AE-3061",
+      "booking_date": "2026-08-22",
+      "actual_weight_kg": 32,
+      "chargeable_weight_kg": 32,
+      "rate_per_kg": 9.5,
+      "handling_fee": 0,
+      "line_amount": 304.0
+    },
+    {
+      "sl": 22,
+      "consignment_no": "AE-3062",
+      "booking_date": "2026-08-23",
+      "actual_weight_kg": 68,
+      "chargeable_weight_kg": 68,
+      "rate_per_kg": 8.25,
+      "handling_fee": 0,
+      "line_amount": 561.0
+    },
+    {
+      "sl": 23,
+      "consignment_no": "AE-3063",
+      "booking_date": "2026-08-24",
+      "actual_weight_kg": 18,
+      "chargeable_weight_kg": 25.0,
+      "rate_per_kg": 9.5,
+      "handling_fee": 0,
+      "line_amount": 237.5
+    },
+    {
+      "sl": 24,
+      "consignment_no": "AE-3064",
+      "booking_date": "2026-08-25",
+      "actual_weight_kg": 120,
+      "chargeable_weight_kg": 120,
+      "rate_per_kg": 8.25,
+      "handling_fee": 150,
+      "line_amount": 1140.0
+    },
+    {
+      "sl": 25,
+      "consignment_no": "AE-3065",
+      "booking_date": "2026-08-26",
+      "actual_weight_kg": 45,
+      "chargeable_weight_kg": 45,
+      "rate_per_kg": 9.5,
+      "handling_fee": 0,
+      "line_amount": 427.5
+    },
+    {
+      "sl": 26,
+      "consignment_no": "AE-3066",
+      "booking_date": "2026-08-01",
+      "actual_weight_kg": 25.5,
+      "chargeable_weight_kg": 25.5,
+      "rate_per_kg": 9.5,
+      "handling_fee": 0,
+      "line_amount": 242.25
+    },
+    {
+      "sl": 27,
+      "consignment_no": "AE-3067",
+      "booking_date": "2026-08-02",
+      "actual_weight_kg": 80,
+      "chargeable_weight_kg": 80,
+      "rate_per_kg": 8.25,
+      "handling_fee": 0,
+      "line_amount": 660.0
+    },
+    {
+      "sl": 28,
+      "consignment_no": "AE-3068",
+      "booking_date": "2026-08-03",
+      "actual_weight_kg": 55,
+      "chargeable_weight_kg": 55,
+      "rate_per_kg": 8.25,
+      "handling_fee": 0,
+      "line_amount": 453.75
+    },
+    {
+      "sl": 29,
+      "consignment_no": "AE-3069",
+      "booking_date": "2026-08-04",
+      "actual_weight_kg": 40,
+      "chargeable_weight_kg": 40,
+      "rate_per_kg": 9.5,
+      "handling_fee": 0,
+      "line_amount": 380.0
+    },
+    {
+      "sl": 30,
+      "consignment_no": "AE-3070",
+      "booking_date": "2026-08-05",
+      "actual_weight_kg": 95,
+      "chargeable_weight_kg": 95,
+      "rate_per_kg": 8.25,
+      "handling_fee": 150,
+      "line_amount": 933.75
+    },
+    {
+      "sl": 31,
+      "consignment_no": "AE-3071",
+      "booking_date": "2026-08-06",
+      "actual_weight_kg": 30,
+      "chargeable_weight_kg": 30,
+      "rate_per_kg": 9.5,
+      "handling_fee": 0,
+      "line_amount": 285.0
+    },
+    {
+      "sl": 32,
+      "consignment_no": "AE-3072",
+      "booking_date": "2026-08-07",
+      "actual_weight_kg": 60,
+      "chargeable_weight_kg": 60,
+      "rate_per_kg": 8.25,
+      "handling_fee": 0,
+      "line_amount": 495.0
+    },
+    {
+      "sl": 33,
+      "consignment_no": "AE-3073",
+      "booking_date": "2026-08-08",
+      "actual_weight_kg": 22,
+      "chargeable_weight_kg": 25.0,
+      "rate_per_kg": 9.5,
+      "handling_fee": 0,
+      "line_amount": 237.5
+    },
+    {
+      "sl": 34,
+      "consignment_no": "AE-3074",
+      "booking_date": "2026-08-09",
+      "actual_weight_kg": 71.5,
+      "chargeable_weight_kg": 71.5,
+      "rate_per_kg": 8.25,
+      "handling_fee": 0,
+      "line_amount": 589.88
+    },
+    {
+      "sl": 35,
+      "consignment_no": "AE-3075",
+      "booking_date": "2026-08-10",
+      "actual_weight_kg": 36,
+      "chargeable_weight_kg": 36,
+      "rate_per_kg": 9.5,
+      "handling_fee": 0,
+      "line_amount": 342.0
+    }
+  ],
+  "discount": 878.88,
+  "invoice_total": 16698.63
+}

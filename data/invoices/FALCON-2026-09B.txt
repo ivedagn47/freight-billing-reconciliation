@@ -1,0 +1,100 @@
+FALCON FREIGHT PVT LTD
+Servicing BlueFin Commerce under agreement FF/BFC/2024-11
+TAX INVOICE FALCON-2026-09B    Period: 15-30 2026-09
+================================================================
+
+1. Consignment FF-8089
+   Mumbai to Hyderabad, 650 km, 350 kg, standard
+   Freight incl. fuel surcharge: Rs 13,104.00
+   LINE TOTAL: Rs 13,104.00
+
+2. Consignment FF-8090
+   Mumbai to Hyderabad, 650 km, 120 kg, standard
+   Freight incl. fuel surcharge: Rs 13,104.00
+   LINE TOTAL: Rs 13,104.00
+
+3. Consignment FF-8091
+   Pune to Kolhapur, 275 km, 350 kg, standard
+   Freight incl. fuel surcharge: Rs 5,544.00
+   LINE TOTAL: Rs 5,544.00
+
+4. Consignment FF-8092
+   Mumbai to Hyderabad, 650 km, 900 kg, standard
+   Freight incl. fuel surcharge: Rs 17,472.00
+   LINE TOTAL: Rs 17,472.00
+
+5. Consignment FF-8093
+   Mumbai to Surat, 420 km, 120 kg, express
+   Freight incl. fuel surcharge: Rs 9,737.28
+   LINE TOTAL: Rs 9,737.28
+
+6. Consignment FF-8094
+   Mumbai to Ahmedabad, 530 km, 1800 kg, standard
+   Freight incl. fuel surcharge: Rs 14,246.40
+   LINE TOTAL: Rs 14,246.40
+
+7. Consignment FF-8095
+   Nashik to Pune, 300 km, 1200 kg, standard
+   Residential delivery: Rs 250.00
+   Freight incl. fuel surcharge: Rs 8,064.00
+   LINE TOTAL: Rs 8,314.00
+
+8. Consignment FF-8096
+   Mumbai to Vadodara, 520 km, 120 kg, standard
+   Freight incl. fuel surcharge: Rs 10,483.20
+   LINE TOTAL: Rs 10,483.20
+
+9. Consignment FF-8097
+   Mumbai to Indore, 610 km, 700 kg, standard
+   Freight incl. fuel surcharge: Rs 16,396.80
+   LINE TOTAL: Rs 16,396.80
+
+10. Consignment FF-8098
+   Mumbai to Vadodara, 520 km, 900 kg, express
+   Freight incl. fuel surcharge: Rs 16,074.24
+   LINE TOTAL: Rs 16,074.24
+
+11. Consignment FF-8099
+   Mumbai to Surat, 420 km, 350 kg, standard
+   Freight incl. fuel surcharge: Rs 8,467.20
+   LINE TOTAL: Rs 8,467.20
+
+12. Consignment FF-8100
+   Mumbai to Nagpur, 340 km, 1500 kg, standard
+   Freight incl. fuel surcharge: Rs 9,139.20
+   LINE TOTAL: Rs 9,139.20
+
+13. Consignment FF-8101
+   Mumbai to Hyderabad, 650 km, 1800 kg, standard
+   Freight incl. fuel surcharge: Rs 17,472.00
+   LINE TOTAL: Rs 17,472.00
+
+14. Consignment FF-8102
+   Mumbai to Indore, 610 km, 1800 kg, standard
+   Residential delivery: Rs 250.00
+   Freight incl. fuel surcharge: Rs 16,396.80
+   LINE TOTAL: Rs 16,646.80
+
+15. Consignment FF-8103
+   Mumbai to Hyderabad, 650 km, 1500 kg, express
+   Freight incl. fuel surcharge: Rs 20,092.80
+   LINE TOTAL: Rs 20,092.80
+
+16. Consignment FF-8104
+   Mumbai to Hyderabad, 650 km, 350 kg, standard
+   Freight incl. fuel surcharge: Rs 13,104.00
+   LINE TOTAL: Rs 13,104.00
+
+17. Consignment FF-8105
+   Pune to Kolhapur, 275 km, 1500 kg, standard
+   Freight incl. fuel surcharge: Rs 7,392.00
+   LINE TOTAL: Rs 7,392.00
+
+18. Consignment FF-8106
+   Mumbai to Surat, 420 km, 1800 kg, standard
+   Freight incl. fuel surcharge: Rs 11,289.60
+   LINE TOTAL: Rs 11,289.60
+
+================================================================
+INVOICE TOTAL: Rs 228,079.52
+Payment due 30 days from invoice date. E&OE.

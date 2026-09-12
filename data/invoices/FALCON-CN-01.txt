@@ -1,0 +1,12 @@
+FALCON FREIGHT PVT LTD
+CREDIT NOTE FALCON-CN-01    Date: 2026-08-05
+Against: TAX INVOICE FALCON-2026-07A
+================================================================
+
+1. Consignment FF-8005
+   Correction: fuel surcharge invoiced at 15% in error; contractual
+   rate is 12%. Credit for the difference.
+   LINE TOTAL: Rs -496.80
+
+================================================================
+CREDIT NOTE TOTAL: Rs -496.80

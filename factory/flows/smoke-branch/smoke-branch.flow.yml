@@ -1,0 +1,35 @@
+# Companion schema for smoke-branch.dot.
+output_schemas:
+  worker_a_outputs:
+    files:
+      - name: worker_a_note
+        path: "{_run_artefact_dir}/worker_a_note.json"
+        definition: note
+    sets_variables:
+      note_a: worker_a_note
+
+  worker_b_outputs:
+    files:
+      - name: worker_b_note
+        path: "{_run_artefact_dir}/worker_b_note.json"
+        definition: note
+    sets_variables:
+      note_b: worker_b_note
+
+  merge_outputs:
+    files:
+      - name: merged_note
+        path: "{_run_artefact_dir}/merged_note.json"
+        definition: merged-note
+    sets_variables:
+      merged_note: merged_note
+
+variables:
+  note_a:
+    type: path
+  note_b:
+    type: path
+  merged_note:
+    type: path
+  branch_summary:
+    type: dict

@@ -1,0 +1,25 @@
+# Companion schema for smoke-test.dot.
+output_schemas:
+  research_outputs:
+    files:
+      - name: research-brief
+        path: "{_run_artefact_dir}/research-brief.json"
+        definition: research-brief
+    sets_variables:
+      research_brief: research-brief
+
+  summarise_outputs:
+    files:
+      - name: summary
+        path: "{_run_artefact_dir}/summary.json"
+        definition: summary
+    sets_variables:
+      summary: summary
+
+variables:
+  research_topic:
+    type: string
+  research_brief:
+    type: path
+  summary:
+    type: path

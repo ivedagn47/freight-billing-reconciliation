@@ -1,0 +1,32 @@
+// factory/flows/smoke-test/smoke-test.dot
+// Two-phase smoke test for graph orchestrator: research -> summarise.
+
+digraph smoke_test {
+  graph [label="Smoke Test"]
+
+  start     [shape=Mdiamond]
+
+  research  [shape=box,
+             prompt_template="prompts/research.md",
+             working_dir="{_run_artefact_dir}",
+             output_schema="research_outputs",
+             model="sonnet",
+             permission_mode="auto",
+             pause_at="optional",
+             description="Gather information on the topic and write a research brief as bullets."]
+
+  summarise [shape=box,
+             prompt_template="prompts/summarise.md",
+             working_dir="{_run_artefact_dir}",
+             output_schema="summarise_outputs",
+             model="sonnet",
+             permission_mode="auto",
+             pause_at="optional",
+             description="Read the research brief and write a one-paragraph summary."]
+
+  done      [shape=Msquare]
+
+  start     -> research
+  research  -> summarise [gates="gates/brief-exists.sh"]
+  summarise -> done
+}

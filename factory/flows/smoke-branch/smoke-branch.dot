@@ -1,0 +1,48 @@
+// factory/flows/smoke-branch/smoke-branch.dot
+// Fork/join smoke test: start -> fork -> [worker_a || worker_b] -> join -> merge_notes -> done.
+// Exercises the fork (fan-out) and join (synchronise) control-flow runners.
+
+digraph smoke_branch {
+  graph [label="Smoke Branch (fork/join)"]
+
+  start      [shape=Mdiamond]
+
+  fork       [runner=fork,
+              description="Fan out to worker_a and worker_b in parallel."]
+
+  worker_a   [shape=box,
+              runner=script,
+              script="scripts/worker_a.sh",
+              working_dir="{_run_artefact_dir}",
+              output_schema="worker_a_outputs",
+              description="Deterministic branch A: writes note_a."]
+
+  worker_b   [shape=box,
+              runner=script,
+              script="scripts/worker_b.sh",
+              working_dir="{_run_artefact_dir}",
+              output_schema="worker_b_outputs",
+              description="Deterministic branch B: writes note_b."]
+
+  j          [runner=join,
+              reducer_script="scripts/reduce.sh",
+              summary_var="branch_summary",
+              description="Wait for both worker_a and worker_b to complete; fire the reducer on each arrival to maintain branch_summary."]
+
+  merge_notes [shape=box,
+               runner=script,
+               script="scripts/merge_notes.sh",
+               working_dir="{_run_artefact_dir}",
+               output_schema="merge_outputs",
+               description="Reads merged branch scope and writes a combined note."]
+
+  done       [shape=Msquare]
+
+  start      -> fork
+  fork       -> worker_a
+  fork       -> worker_b
+  worker_a   -> j
+  worker_b   -> j
+  j          -> merge_notes
+  merge_notes -> done
+}

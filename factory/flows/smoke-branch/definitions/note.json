@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["_session_id", "note"],
+  "properties": {
+    "_session_id": {"type": "string"},
+    "note": {"type": "string"}
+  }
+}

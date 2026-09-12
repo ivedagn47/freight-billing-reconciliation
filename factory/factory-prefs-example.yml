@@ -1,0 +1,10 @@
+# factory/factory-prefs-example.yml
+# Defaults for graph runs. Do not edit your runtime preferences here — edit
+# factory/factory-prefs.yml instead (created from this file on first run,
+# gitignored).
+
+supervision: low
+
+# Default graph (DOT file stem) used when no DOT path is passed explicitly.
+# Resolved to factory/flows/<stem>/<stem>.dot.
+default_graph: smoke-test
