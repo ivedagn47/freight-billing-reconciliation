@@ -1,0 +1,18 @@
+# Runtime prefs (copy from factory-prefs-example.yml)
+factory/factory-prefs.yml
+
+# Orchestrator local venv
+orchestrator/.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.Python
+
+# OS / editor
+.DS_Store
+*.swp
+*~
+.idea/
+.vscode/
