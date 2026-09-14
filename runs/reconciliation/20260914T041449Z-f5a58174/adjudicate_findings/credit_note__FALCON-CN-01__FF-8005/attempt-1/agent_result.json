@@ -1,0 +1,125 @@
+{
+  "duration_api_ms": 9685,
+  "stop_reason": "tool_use",
+  "session_id": "b8d74cd5-7671-472f-a316-c65ed8585af5",
+  "total_cost_usd": 0.060726,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 11133,
+    "cache_read_input_tokens": 9435,
+    "output_tokens": 826,
+    "output_tokens_details": {
+      "thinking_tokens": 101
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 11133,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 826,
+        "cache_read_input_tokens": 9435,
+        "cache_creation_input_tokens": 11133,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 11133
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 5963,
+      "outputTokens": 16,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.006043000000000001,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-sonnet-5": {
+      "inputTokens": 2,
+      "outputTokens": 826,
+      "cacheReadInputTokens": 9435,
+      "cacheCreationInputTokens": 11133,
+      "webSearchRequests": 0,
+      "costUSD": 0.054683,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 101,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "extra_usage_disabled",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 2,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"finding_id\":\"credit_note:FALCON-CN-01:FF-8005\",\"disposition\":\"dispute\",\"justification\":\"The contract fixes the fuel surcharge at 12% of the freight charge (base freight plus express premium where applicable) per \u00a73. Falcon's own credit note FALCON-CN-01 admits the FF-8005 line was invoiced with a 15% fuel surcharge \\\"in error\\\" and states the contractual rate is 12%, issuing a credit for the difference. This is exactly the kind of correction \u00a78 contemplates a credit note making, and it corroborates the already-detected line-level pricing delta on FALCON-2026-07A/FF-8005 rather than introducing a new, separate dispute amount. Since the credit note's stated amount matches the independently computed line-level delta one-for-one, there is no additional money to count here \u2014 the underlying billing error is real and should be disputed at the line level, and this finding simply confirms that conclusion using the carrier's own admission.\",\"governing_clauses\":[\"falcon-freight.md \u00a73\",\"falcon-freight.md \u00a78\"],\"memo_narrative\":{\"what_happened\":\"Falcon issued credit note FALCON-CN-01 against invoice FALCON-2026-07A for consignment FF-8005, admitting the fuel surcharge was billed at 15% instead of the contractual 12% and crediting the difference.\",\"why\":\"Per \u00a73 of the Falcon contract, the fuel surcharge is fixed at 12% of the freight charge; Falcon's own credit note confirms the original line was overbilled, corroborating the line-level pricing discrepancy already flagged on this invoice.\",\"recommended_action\":\"Confirm the credit note (already issued by Falcon) is applied against the FF-8005 line and reflected in the next remittance; no separate dispute action is needed since the amount is already accounted for at the line level.\"}}",
+  "structured_output": {
+    "finding_id": "credit_note:FALCON-CN-01:FF-8005",
+    "disposition": "dispute",
+    "justification": "The contract fixes the fuel surcharge at 12% of the freight charge (base freight plus express premium where applicable) per \u00a73. Falcon's own credit note FALCON-CN-01 admits the FF-8005 line was invoiced with a 15% fuel surcharge \"in error\" and states the contractual rate is 12%, issuing a credit for the difference. This is exactly the kind of correction \u00a78 contemplates a credit note making, and it corroborates the already-detected line-level pricing delta on FALCON-2026-07A/FF-8005 rather than introducing a new, separate dispute amount. Since the credit note's stated amount matches the independently computed line-level delta one-for-one, there is no additional money to count here \u2014 the underlying billing error is real and should be disputed at the line level, and this finding simply confirms that conclusion using the carrier's own admission.",
+    "governing_clauses": [
+      "falcon-freight.md \u00a73",
+      "falcon-freight.md \u00a78"
+    ],
+    "memo_narrative": {
+      "what_happened": "Falcon issued credit note FALCON-CN-01 against invoice FALCON-2026-07A for consignment FF-8005, admitting the fuel surcharge was billed at 15% instead of the contractual 12% and crediting the difference.",
+      "why": "Per \u00a73 of the Falcon contract, the fuel surcharge is fixed at 12% of the freight charge; Falcon's own credit note confirms the original line was overbilled, corroborating the line-level pricing discrepancy already flagged on this invoice.",
+      "recommended_action": "Confirm the credit note (already issued by Falcon) is applied against the FF-8005 line and reflected in the next remittance; no separate dispute action is needed since the amount is already accounted for at the line level."
+    }
+  },
+  "ttft_ms": 2479,
+  "type": "result",
+  "duration_ms": 8443,
+  "uuid": "4b57d0d5-99e0-4cbc-bb09-2bb2f01dd5d7",
+  "ttft_stream_ms": 1169,
+  "time_to_request_ms": 31,
+  "first_content_frame_ms": 1628,
+  "queued_turn_count": 0,
+  "result_index": 0
+}

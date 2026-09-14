@@ -1,0 +1,14 @@
+{
+  "finding_id": "duplicate:dup-FF-8003",
+  "disposition": "dispute",
+  "justification": "Consignment FF-8003, matched to a single shipment (SH-4003), appears identically on two separate Falcon invoices (FALCON-2026-07A block 3 and FALCON-2026-07B block 8), each billed at the same amount with pricing independently determined and matching the contract's expected freight for this consignment. The shipment record shows one ship date, one delivery event (delivered 2026-07-06), and no indication of a re-delivery, correction, or split shipment that would justify two separate freight charges under \u00a71 (base freight is charged per kilometre of the booked lane distance for the consignment). Clause 5's whitelist further confirms nothing beyond the scheduled freight/accessorial items in \u00a7\u00a71-4 is payable absent a written rate confirmation, and no such confirmation or explanation for a second charge appears in the evidence. With no shipment or invoice evidence explaining a legitimate basis for billing the same consignment's freight twice, the second occurrence is an unauthorized duplicate charge.",
+  "governing_clauses": [
+    "falcon-freight.md \u00a71",
+    "falcon-freight.md \u00a75"
+  ],
+  "memo_narrative": {
+    "what_happened": "Consignment FF-8003, tied to a single shipment (SH-4003), was billed identically on two separate Falcon invoices (07A and 07B).",
+    "why": "Per \u00a71, base freight is charged for the consignment's booked lane distance, and \u00a75 bars any charge beyond the contracted schedule without a prior written rate confirmation; nothing in the shipment or invoice record shows a re-delivery, correction, or other basis for two separate freight charges on the same consignment.",
+    "recommended_action": "Contact Falcon to confirm this is a duplicate billing and request a credit note under \u00a78 for the second occurrence (invoice FALCON-2026-07B, consignment FF-8003), withholding payment on the duplicate line pending resolution under \u00a77."
+  }
+}

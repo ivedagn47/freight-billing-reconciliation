@@ -1,0 +1,17 @@
+[
+  "claude",
+  "-p",
+  "--output-format",
+  "json",
+  "--model",
+  "sonnet",
+  "--tools",
+  "",
+  "--session-id",
+  "aeae9072-66de-4f4d-98d7-2425c7ee307d",
+  "--no-session-persistence",
+  "--json-schema",
+  "{\"$schema\": \"http://json-schema.org/draft-07/schema#\", \"title\": \"phase0-greeting\", \"description\": \"Output schema for the Phase 0 proof-of-runner agent node.\", \"type\": \"object\", \"required\": [\"node\", \"greeting\", \"topic_echo\"], \"additionalProperties\": false, \"properties\": {\"node\": {\"type\": \"string\", \"enum\": [\"hello_agent\"]}, \"greeting\": {\"type\": \"string\", \"minLength\": 1}, \"topic_echo\": {\"type\": \"string\", \"minLength\": 1, \"description\": \"Must restate the topic it was given, proving the prompt/variable was actually received.\"}}}",
+  "--",
+  "You are a single, isolated worker node in a small pipeline runner. You have no tools and no memory of any other node.\n\nThe topic passed to you by the previous node is: \"the flowstate/agentctl gap in this repository\"\n\nReply with ONLY a raw JSON object (no markdown, no code fences, no commentary) with exactly these fields:\n  \"node\": the literal string \"hello_agent\"\n  \"greeting\": a short one-sentence greeting of your choosing\n  \"topic_echo\": the exact topic string given to you above, verbatim\n"
+]

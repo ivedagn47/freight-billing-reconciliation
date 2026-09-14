@@ -1,0 +1,124 @@
+{
+  "duration_api_ms": 11861,
+  "stop_reason": "tool_use",
+  "session_id": "3805b04c-2beb-4817-8c3a-8326cd8dfaa3",
+  "total_cost_usd": 0.0700404,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 11805,
+    "cache_read_input_tokens": 30172,
+    "output_tokens": 1062,
+    "output_tokens_details": {
+      "thinking_tokens": 283
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 11805,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 715,
+        "cache_read_input_tokens": 20737,
+        "cache_creation_input_tokens": 503,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 503
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 6078,
+      "outputTokens": 16,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.006158,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 1062,
+      "cacheReadInputTokens": 30172,
+      "cacheCreationInputTokens": 11805,
+      "webSearchRequests": 0,
+      "costUSD": 0.06388239999999999,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 283,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "extra_usage_disabled",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 3,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"finding_id\":\"credit_note:FALCON-CN-01:FF-8005\",\"disposition\":\"dispute\",\"justification\":\"Contract \u00a73 fixes the fuel surcharge at 12% of the freight charge (base freight plus express premium where applicable). Falcon's own credit note FALCON-CN-01 states the fuel surcharge was invoiced at 15% in error and that the contractual rate is 12%, and its stated credit amount is the exact inverse of the already-detected line-level pricing delta on consignment FF-8005, which the deterministic pricing engine independently found to be fully determined. This is corroborating evidence, not a new dispute amount \u2014 the underlying overcharge is already captured at the line level (du:line:FALCON-2026-07A:FF-8005). Because the carrier itself admits the 15% rate was applied in error against a 12% contractual rate under \u00a73, the underlying discrepancy is a real, established billing error, so this finding should carry the same disposition as the line-level delta it corroborates: dispute.\",\"governing_clauses\":[\"falcon-freight.md \u00a73\"],\"memo_narrative\":{\"what_happened\":\"Falcon issued its own credit note (FALCON-CN-01) admitting that consignment FF-8005 was invoiced with a fuel surcharge of 15% instead of the contractual 12%, matching the overcharge already flagged at the line level.\",\"why\":\"Contract \u00a73 sets the fuel surcharge at 12% of the freight charge; the carrier's own credit note confirms the 15% billing was in error, corroborating the line-level pricing delta rather than adding a new one.\",\"recommended_action\":\"Confirm the credit note has been applied against invoice FALCON-2026-07A and reconcile it with the already-tracked line-level dispute for FF-8005 so the correction isn't paid or counted twice.\"}}",
+  "structured_output": {
+    "finding_id": "credit_note:FALCON-CN-01:FF-8005",
+    "disposition": "dispute",
+    "justification": "Contract \u00a73 fixes the fuel surcharge at 12% of the freight charge (base freight plus express premium where applicable). Falcon's own credit note FALCON-CN-01 states the fuel surcharge was invoiced at 15% in error and that the contractual rate is 12%, and its stated credit amount is the exact inverse of the already-detected line-level pricing delta on consignment FF-8005, which the deterministic pricing engine independently found to be fully determined. This is corroborating evidence, not a new dispute amount \u2014 the underlying overcharge is already captured at the line level (du:line:FALCON-2026-07A:FF-8005). Because the carrier itself admits the 15% rate was applied in error against a 12% contractual rate under \u00a73, the underlying discrepancy is a real, established billing error, so this finding should carry the same disposition as the line-level delta it corroborates: dispute.",
+    "governing_clauses": [
+      "falcon-freight.md \u00a73"
+    ],
+    "memo_narrative": {
+      "what_happened": "Falcon issued its own credit note (FALCON-CN-01) admitting that consignment FF-8005 was invoiced with a fuel surcharge of 15% instead of the contractual 12%, matching the overcharge already flagged at the line level.",
+      "why": "Contract \u00a73 sets the fuel surcharge at 12% of the freight charge; the carrier's own credit note confirms the 15% billing was in error, corroborating the line-level pricing delta rather than adding a new one.",
+      "recommended_action": "Confirm the credit note has been applied against invoice FALCON-2026-07A and reconcile it with the already-tracked line-level dispute for FF-8005 so the correction isn't paid or counted twice."
+    }
+  },
+  "ttft_ms": 3712,
+  "type": "result",
+  "duration_ms": 10747,
+  "uuid": "3602e4a8-e555-4886-809d-07797d4ccbc6",
+  "ttft_stream_ms": 1347,
+  "time_to_request_ms": 201,
+  "first_content_frame_ms": 1407,
+  "queued_turn_count": 0,
+  "result_index": 0
+}

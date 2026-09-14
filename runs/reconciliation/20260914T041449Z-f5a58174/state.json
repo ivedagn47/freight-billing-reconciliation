@@ -1,0 +1,91 @@
+{
+  "graph": "reconciliation",
+  "started_at": "2026-09-14T04:14:49Z",
+  "nodes": {
+    "discover_invoices": {
+      "status": "done",
+      "started_at": "2026-09-14T04:14:49Z",
+      "finished_at": "2026-09-14T04:14:49Z",
+      "output_path": "/Users/vedangi/Projects/freight-billing-reconciliation/freight-billing-reconciliation/.claude/worktrees/init-claude-md/runs/reconciliation/20260914T041449Z-f5a58174/discover_invoices/output.json",
+      "session_id": null
+    },
+    "parse_invoices": {
+      "status": "done",
+      "started_at": "2026-09-14T04:14:49Z",
+      "finished_at": "2026-09-14T04:14:49Z",
+      "output_path": "/Users/vedangi/Projects/freight-billing-reconciliation/freight-billing-reconciliation/.claude/worktrees/init-claude-md/runs/reconciliation/20260914T041449Z-f5a58174/parse_invoices/output.json",
+      "session_id": null
+    },
+    "load_shipments": {
+      "status": "done",
+      "started_at": "2026-09-14T04:14:49Z",
+      "finished_at": "2026-09-14T04:14:49Z",
+      "output_path": "/Users/vedangi/Projects/freight-billing-reconciliation/freight-billing-reconciliation/.claude/worktrees/init-claude-md/runs/reconciliation/20260914T041449Z-f5a58174/load_shipments/output.json",
+      "session_id": null
+    },
+    "match_and_normalise": {
+      "status": "done",
+      "started_at": "2026-09-14T04:14:49Z",
+      "finished_at": "2026-09-14T04:14:49Z",
+      "output_path": "/Users/vedangi/Projects/freight-billing-reconciliation/freight-billing-reconciliation/.claude/worktrees/init-claude-md/runs/reconciliation/20260914T041449Z-f5a58174/match_and_normalise/output.json",
+      "session_id": null
+    },
+    "extract_ratecard_alpine": {
+      "status": "done",
+      "started_at": "2026-09-14T04:14:49Z",
+      "finished_at": "2026-09-14T04:14:49Z",
+      "output_path": "/Users/vedangi/Projects/freight-billing-reconciliation/freight-billing-reconciliation/.claude/worktrees/init-claude-md/runs/reconciliation/20260914T041449Z-f5a58174/extract_ratecard_alpine/output.json",
+      "session_id": null
+    },
+    "extract_ratecard_falcon": {
+      "status": "done",
+      "started_at": "2026-09-14T04:14:49Z",
+      "finished_at": "2026-09-14T04:14:49Z",
+      "output_path": "/Users/vedangi/Projects/freight-billing-reconciliation/freight-billing-reconciliation/.claude/worktrees/init-claude-md/runs/reconciliation/20260914T041449Z-f5a58174/extract_ratecard_falcon/output.json",
+      "session_id": null
+    },
+    "extract_ratecard_sagar": {
+      "status": "done",
+      "started_at": "2026-09-14T04:14:49Z",
+      "finished_at": "2026-09-14T04:14:49Z",
+      "output_path": "/Users/vedangi/Projects/freight-billing-reconciliation/freight-billing-reconciliation/.claude/worktrees/init-claude-md/runs/reconciliation/20260914T041449Z-f5a58174/extract_ratecard_sagar/output.json",
+      "session_id": null
+    },
+    "price_lines": {
+      "status": "done",
+      "started_at": "2026-09-14T04:14:49Z",
+      "finished_at": "2026-09-14T04:14:49Z",
+      "output_path": "/Users/vedangi/Projects/freight-billing-reconciliation/freight-billing-reconciliation/.claude/worktrees/init-claude-md/runs/reconciliation/20260914T041449Z-f5a58174/price_lines/output.json",
+      "session_id": null
+    },
+    "detect_findings": {
+      "status": "done",
+      "started_at": "2026-09-14T04:14:49Z",
+      "finished_at": "2026-09-14T04:14:49Z",
+      "output_path": "/Users/vedangi/Projects/freight-billing-reconciliation/freight-billing-reconciliation/.claude/worktrees/init-claude-md/runs/reconciliation/20260914T041449Z-f5a58174/detect_findings/output.json",
+      "session_id": null
+    },
+    "adjudicate_findings": {
+      "status": "done",
+      "started_at": "2026-09-14T04:14:49Z",
+      "finished_at": "2026-09-14T04:17:06Z",
+      "output_path": "/Users/vedangi/Projects/freight-billing-reconciliation/freight-billing-reconciliation/.claude/worktrees/init-claude-md/runs/reconciliation/20260914T041449Z-f5a58174/adjudicate_findings/output.json",
+      "session_id": null
+    },
+    "write_memos": {
+      "status": "done",
+      "started_at": "2026-09-14T04:17:06Z",
+      "finished_at": "2026-09-14T04:17:06Z",
+      "output_path": "/Users/vedangi/Projects/freight-billing-reconciliation/freight-billing-reconciliation/.claude/worktrees/init-claude-md/runs/reconciliation/20260914T041449Z-f5a58174/write_memos/output.json",
+      "session_id": null
+    },
+    "assemble_report": {
+      "status": "done",
+      "started_at": "2026-09-14T04:17:06Z",
+      "finished_at": "2026-09-14T04:17:06Z",
+      "output_path": "/Users/vedangi/Projects/freight-billing-reconciliation/freight-billing-reconciliation/.claude/worktrees/init-claude-md/runs/reconciliation/20260914T041449Z-f5a58174/assemble_report/output.json",
+      "session_id": null
+    }
+  },
+  "finished_at": "2026-09-14T04:17:06Z"
+}

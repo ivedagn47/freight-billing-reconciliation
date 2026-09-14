@@ -1,0 +1,102 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "phase1-matched-lines",
+  "description": "Output of match_and_normalise: every canonical line enriched with its shipment match and duplicate flags, plus the cross-invoice duplicate groups and a summary. Enforced (via the line-conservation gate, not this schema alone) to have exactly one entry per parsed line.",
+  "type": "object",
+  "required": ["matched_lines", "duplicate_groups", "summary"],
+  "additionalProperties": false,
+  "properties": {
+    "matched_lines": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "invoice", "carrier", "consignment_ref", "billed_amount", "billed_components",
+          "stated_attributes", "provenance", "raw",
+          "shipment_id", "matched", "shipment_carrier", "is_duplicate", "duplicate_group_id"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "invoice": { "type": "string", "minLength": 1 },
+          "carrier": { "type": "string", "minLength": 1 },
+          "consignment_ref": { "type": "string", "minLength": 1 },
+          "billed_amount": { "type": "number" },
+          "billed_components": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["label", "amount"],
+              "additionalProperties": false,
+              "properties": {
+                "label": { "type": "string", "minLength": 1 },
+                "amount": { "type": "number" }
+              }
+            }
+          },
+          "stated_attributes": { "type": "object" },
+          "provenance": {
+            "type": "object",
+            "required": ["file", "locator"],
+            "additionalProperties": false,
+            "properties": {
+              "file": { "type": "string", "minLength": 1 },
+              "locator": { "type": "string", "minLength": 1 }
+            }
+          },
+          "raw": { "type": "object" },
+          "shipment_id": { "type": ["string", "null"] },
+          "matched": { "type": "boolean" },
+          "shipment_carrier": { "type": ["string", "null"] },
+          "is_duplicate": { "type": "boolean" },
+          "duplicate_group_id": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "duplicate_groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["group_id", "consignment_ref", "occurrences"],
+        "additionalProperties": false,
+        "properties": {
+          "group_id": { "type": "string", "minLength": 1 },
+          "consignment_ref": { "type": "string", "minLength": 1 },
+          "occurrences": {
+            "type": "array",
+            "minItems": 2,
+            "items": {
+              "type": "object",
+              "required": ["invoice", "provenance"],
+              "additionalProperties": false,
+              "properties": {
+                "invoice": { "type": "string", "minLength": 1 },
+                "provenance": {
+                  "type": "object",
+                  "required": ["file", "locator"],
+                  "additionalProperties": false,
+                  "properties": {
+                    "file": { "type": "string", "minLength": 1 },
+                    "locator": { "type": "string", "minLength": 1 }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": ["invoice_count", "line_count", "matched_count", "unmatched_count", "duplicate_group_count"],
+      "additionalProperties": false,
+      "properties": {
+        "invoice_count": { "type": "integer", "minimum": 0 },
+        "line_count": { "type": "integer", "minimum": 0 },
+        "matched_count": { "type": "integer", "minimum": 0 },
+        "unmatched_count": { "type": "integer", "minimum": 0 },
+        "duplicate_group_count": { "type": "integer", "minimum": 0 }
+      }
+    }
+  }
+}

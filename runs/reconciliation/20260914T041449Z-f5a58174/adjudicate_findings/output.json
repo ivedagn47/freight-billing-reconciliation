@@ -1,0 +1,126 @@
+{
+  "adjudications": [
+    {
+      "finding_id": "invoice_discount:ALPINE-0726:Volume incentive discount",
+      "disposition": "escalate",
+      "justification": "\u00a75 of the Alpine contract entitles BlueFin to a 5% volume discount on the invoice total for any calendar month in which more than 12 consignments are tendered. This invoice covers 40 consignments, and that count is 40 under every candidate date basis the pipeline tried (by invoice document, by booking-date calendar month, and by ship-date calendar month) \u2014 all comfortably above the 12-consignment threshold, so the entitlement to the discount is not itself ambiguous despite the contract's silence on which date defines the \"calendar month\" (a gap noted elsewhere in the rate card's ambiguities). The carrier declared a discount of 0.0 on this invoice, which on its face is inconsistent with \u00a75. However, the pipeline's own evidence notes that one line on this invoice is not yet pricing-determined, so the invoice total the 5% would apply to, and therefore the exact discount shortfall, cannot be computed yet. Because the amount is blocked by an unresolved line elsewhere on the invoice, this is not yet something a colleague can act on with a specific figure, so it should go to a human rather than be resolved as a straight dispute at this stage.",
+      "governing_clauses": [
+        "alpine-express.md \u00a75"
+      ],
+      "memo_narrative": {
+        "what_happened": "Alpine's July invoice covers 40 consignments \u2014 well above the 12-consignment monthly threshold under every way of counting the month \u2014 but the carrier applied no volume incentive discount to the invoice total.",
+        "why": "Per \u00a75, tendering more than 12 consignments in a calendar month entitles BlueFin to a 5% discount on that invoice's total, so a 0% discount appears to be a contractual shortfall; however, one line on this invoice is still pricing-undetermined, so the invoice total (and thus the exact discount owed) can't be finalized yet.",
+        "recommended_action": "Hold this discount question pending resolution of the outstanding line on the same invoice, then raise the \u00a75 volume discount shortfall with Alpine's account manager once the invoice total is finalized."
+      }
+    },
+    {
+      "finding_id": "duplicate:dup-FF-8003",
+      "disposition": "dispute",
+      "justification": "Consignment FF-8003, tied to a single shipment (SH-4003), was billed identically on two separate Falcon invoices (2026-07A and 2026-07B), each priced correctly against the contract in isolation but representing the same physical freight movement. The shipment record shows a single ship date, a single delivery event, and no special handling indicating a re-delivery, correction run, or split consignment that would justify a second legitimate charge. Clause 1 establishes base freight as a per-consignment charge for the booked lane distance, implying one payable freight charge per shipment; nothing in the contract or evidence supports two chargeable occurrences of the same consignment. Clause 8 provides the carrier's own mechanism (a credit note referencing the original consignment note) for correcting exactly this kind of duplicate invoicing, and no such credit note is present in the evidence to explain or authorize the second occurrence. Absent any indication of a genuine second freight movement, the second billing is an unauthorized duplicate charge.",
+      "governing_clauses": [
+        "falcon-freight.md \u00a71",
+        "falcon-freight.md \u00a78"
+      ],
+      "memo_narrative": {
+        "what_happened": "Falcon billed consignment FF-8003 (shipment SH-4003) twice, once on invoice FALCON-2026-07A and again on FALCON-2026-07B, for the identical amount both times.",
+        "why": "The shipment record shows a single delivery with no re-delivery or split-shipment indication, and the contract prices freight per consignment (\u00a71); with no credit note on file to explain a legitimate second charge under the carrier's own correction mechanism (\u00a78), the second occurrence is an unsupported duplicate.",
+        "recommended_action": "Request Falcon issue a credit note under \u00a78 against one of the two invoices (recommend crediting FALCON-2026-07B) to remove the duplicate charge for FF-8003, and confirm no other consignments were double-billed across these invoice cycles."
+      }
+    },
+    {
+      "finding_id": "credit_note:FALCON-CN-01:FF-8005",
+      "disposition": "dispute",
+      "justification": "The contract fixes the fuel surcharge at 12% of the freight charge (base freight plus express premium where applicable) per \u00a73. Falcon's own credit note FALCON-CN-01 admits the FF-8005 line was invoiced with a 15% fuel surcharge \"in error\" and states the contractual rate is 12%, issuing a credit for the difference. This is exactly the kind of correction \u00a78 contemplates a credit note making, and it corroborates the already-detected line-level pricing delta on FALCON-2026-07A/FF-8005 rather than introducing a new, separate dispute amount. Since the credit note's stated amount matches the independently computed line-level delta one-for-one, there is no additional money to count here \u2014 the underlying billing error is real and should be disputed at the line level, and this finding simply confirms that conclusion using the carrier's own admission.",
+      "governing_clauses": [
+        "falcon-freight.md \u00a73",
+        "falcon-freight.md \u00a78"
+      ],
+      "memo_narrative": {
+        "what_happened": "Falcon issued credit note FALCON-CN-01 against invoice FALCON-2026-07A for consignment FF-8005, admitting the fuel surcharge was billed at 15% instead of the contractual 12% and crediting the difference.",
+        "why": "Per \u00a73 of the Falcon contract, the fuel surcharge is fixed at 12% of the freight charge; Falcon's own credit note confirms the original line was overbilled, corroborating the line-level pricing discrepancy already flagged on this invoice.",
+        "recommended_action": "Confirm the credit note (already issued by Falcon) is applied against the FF-8005 line and reflected in the next remittance; no separate dispute action is needed since the amount is already accounted for at the line level."
+      }
+    },
+    {
+      "finding_id": "ambiguous_line:ALPINE-0726:AE-3005",
+      "disposition": "escalate",
+      "justification": "The shipment record confirms billed_weight_kg is exactly 50.0, and the chargeable weight floor (\u00a71, 25kg minimum) does not change this since actual weight already exceeds the floor. Under \u00a72, the rate bands are stated as strictly \"under 50 kg\" (\u20b99.50/kg) and \"over 50 kg\" (\u20b98.25/kg), with no rate stated for exactly 50 kg. This is a genuine textual gap between adjacent bands, not a computable pricing scenario: reading \"under 50 kg\" to include 50 kg, or reading \"over 50 kg\" to include 50 kg, are both plausible but contradictory interpretations, and the contract gives no tiebreaker. The rate card's own ambiguities list independently confirms this exact gap at \u00a72. Per policy, a genuine rate-band gap that the deterministic pricing engine could not resolve must default to escalate rather than have either party (or me) pick a band that isn't actually written in the contract.",
+      "governing_clauses": [
+        "alpine-express.md \u00a71",
+        "alpine-express.md \u00a72"
+      ],
+      "memo_narrative": {
+        "what_happened": "This Alpine consignment (AE-3005, shipment SH-4111) has a chargeable weight of exactly 50 kg, which falls between the contract's two per-kg rate bands ('under 50 kg' and 'over 50 kg') and matches neither, so no expected freight amount could be computed.",
+        "why": "Contract \u00a72 defines rates using strict inequalities ('under 50 kg' / 'over 50 kg'), leaving no stated rate at exactly 50 kg -- this is a genuine drafting gap, not a computable pricing question, so it cannot be resolved by picking either band unilaterally.",
+        "recommended_action": "Escalate to Alpine Express's account manager to obtain a written ruling on which rate band applies to consignments at exactly 50 kg, and request the contract be amended (per \u00a77's rate-revision process) to close this gap for future invoices."
+      }
+    },
+    {
+      "finding_id": "line_delta:FALCON-2026-07A:FF-8005",
+      "disposition": "dispute",
+      "justification": "The pricing trace correctly applies the contract: a 260 kg consignment falls squarely within the 'up to and including 500 kg' band (\u00a71) at \u20b918/km over the 800 km lane, express service adds the 15% premium (\u00a72) on base freight, and the 12% fuel surcharge (\u00a73) compounds on base freight plus the express premium, per the contract's own wording. No accessorial (\u00a74) fired since special_handling is empty, and \u00a75 states no other accessorial charges are payable absent a written rate confirmation, none of which is in evidence here. The billed amount exceeds this fully-supported, unambiguous calculation by the delta shown, with nothing in the shipment facts, contract, or evidence explaining the excess. This is a straightforward overcharge, not an ambiguous rate-band or classification question.",
+      "governing_clauses": [
+        "falcon-freight.md \u00a71",
+        "falcon-freight.md \u00a72",
+        "falcon-freight.md \u00a73",
+        "falcon-freight.md \u00a75"
+      ],
+      "memo_narrative": {
+        "what_happened": "Falcon billed consignment FF-8005 (260 kg, Mumbai to Bengaluru, 800 km, express) above the amount the contract's freight, express premium, and fuel surcharge clauses support, with no accessorial charge applicable.",
+        "why": "Reconstructing the charge from \u00a71 (weight-band per-km rate), \u00a72 (15% express premium), and \u00a73 (12% fuel surcharge) using the actual shipment facts yields a lower, fully contract-supported figure, and \u00a75 bars any other charge without a prior written rate confirmation, which is not present here.",
+        "recommended_action": "Raise a billing dispute with Falcon citing \u00a71\u2013\u00a73 and \u00a75, and request a corrected invoice for consignment FF-8005 within the 45-day window under \u00a77."
+      }
+    },
+    {
+      "finding_id": "line_delta:FALCON-2026-07A:FF-8011",
+      "disposition": "dispute",
+      "justification": "The pricing trace correctly applies the contract to this shipment's facts: 700 kg falls unambiguously within the 501-2,000 kg band (\u00a71) at \u20b924/km over the 800 km lane, yielding the base freight; the express premium (\u00a72) does not fire because service_level is \"standard,\" not express; the 12% fuel surcharge (\u00a73) is correctly applied to base freight only; and no residential accessorial (\u00a74) applies since special_handling is empty. There is no boundary ambiguity here (700 kg is well inside the 501-2,000 band, unlike the 500-501 kg edge case noted in the rate card's own ambiguities list) and no contractual basis identified for the additional amount billed. The billed amount exceeds the contract-supported total with no corresponding clause, surcharge, or accessorial to account for the difference, and \u00a75's whitelist bars any accessorial charge not itself in the schedule.",
+      "governing_clauses": [
+        "falcon-freight.md \u00a71",
+        "falcon-freight.md \u00a73",
+        "falcon-freight.md \u00a75"
+      ],
+      "memo_narrative": {
+        "what_happened": "Falcon billed consignment FF-8011 above the amount supported by the contract's base freight rate band and fuel surcharge calculation, with no accessorial or premium applicable to this shipment.",
+        "why": "The shipment's weight, distance, and service level clearly place it in the \u00a71 rate band with the \u00a73 fuel surcharge as the only applicable charge; \u00a75 bars any other accessorial charge absent a prior rate confirmation, and none is evidenced here, so the amount above is not contractually supported.",
+        "recommended_action": "Raise a billing dispute with Falcon Freight citing \u00a71 and \u00a73, request a corrected invoice for FF-8011, and ask the carrier to explain the source of the excess charge."
+      }
+    },
+    {
+      "finding_id": "line_delta:SAGAR-JUL-1:SG-7003",
+      "disposition": "dispute",
+      "justification": "The shipment record for SH-4229 shows billed_weight_kg=60, distance_km=85, service_level=standard, and special_handling=[] (no cold chain). Per \u00a71, freight is the weight component (\u20b96/kg \u00d7 60kg) plus the distance component (\u20b92/km \u00d7 85km), which the pricing trace correctly computes as 360 + 170 = the expected amount. Since special_handling does not include cold_chain, the \u00a73 cold-chain premium correctly did not fire (the trace shows fired: false), so no premium should apply on top of the base freight. The contract states only these two components and one conditional premium; nothing in the contract supports a higher billed amount for a standard, non-cold-chain consignment at this weight and distance. There is no ambiguity here \u2014 \u00a71's formula is unconditional and mechanical, and the shipment facts unambiguously place this consignment outside the \u00a73 premium trigger. The billed amount therefore reflects an overcharge relative to the governing rate card with no contractual basis.",
+      "governing_clauses": [
+        "sagar-roadlines.md \u00a71",
+        "sagar-roadlines.md \u00a73"
+      ],
+      "memo_narrative": {
+        "what_happened": "Sagar billed consignment SG-7003 (shipment SH-4229, 60kg, 85km, standard service, no cold chain) above the amount that the contract's weight-plus-distance formula produces.",
+        "why": "Under \u00a71, freight is strictly the sum of the \u20b96/kg weight component and the \u20b92/km distance component for this lane and weight; the \u00a73 cold-chain premium does not apply since the shipment carries no cold_chain special handling. Nothing in the contract supports billing above this computed total.",
+        "recommended_action": "Request a corrected invoice from Sagar Roadlines for consignment SG-7003 citing \u00a71, noting that no cold-chain premium under \u00a73 applies to this shipment."
+      }
+    },
+    {
+      "finding_id": "line_delta:SAGAR-JUL-1:SG-7009",
+      "disposition": "dispute",
+      "justification": "The shipment record shows billed_weight_kg=200 and distance_km=140 for SH-4235, with no special_handling (so no cold chain premium applies under \u00a73). Per \u00a71, freight is the weight component (\u20b96/kg \u00d7 200) plus the distance component (\u20b92/km \u00d7 140), which the pricing trace correctly computes as the expected amount. The billed amount exceeds this by the stated delta with no contractual basis identified in the trace (no surcharges, accessorials, or premiums fired). This is a straightforward overcharge relative to the governing rate card.",
+      "governing_clauses": [
+        "sagar-roadlines.md \u00a71",
+        "sagar-roadlines.md \u00a73"
+      ],
+      "memo_narrative": {
+        "what_happened": "Sagar billed consignment SG-7009 above the amount computed from the contract's per-kg and per-km freight formula for this shipment's actual weight and distance.",
+        "why": "Per \u00a71, freight is strictly the sum of the weight component (\u20b96/kg) and distance component (\u20b92/km); no cold chain premium (\u00a73) or other surcharge applies since the shipment carries no special handling, so the excess above the amount above is unsupported.",
+        "recommended_action": "Request a corrected invoice from Sagar Roadlines for consignment SG-7009, citing \u00a71, and reduce payment to the contract-computed amount above."
+      }
+    }
+  ],
+  "summary": {
+    "adjudicated_count": 8,
+    "by_disposition": {
+      "accept": 0,
+      "dispute": 6,
+      "escalate": 2
+    }
+  }
+}

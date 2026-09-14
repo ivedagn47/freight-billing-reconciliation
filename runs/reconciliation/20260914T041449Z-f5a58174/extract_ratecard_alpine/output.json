@@ -1,0 +1,124 @@
+{
+  "accessorial_charges": [
+    {
+      "name": "Fragile handling fee",
+      "type": "flat_fee",
+      "rate": null,
+      "amount": 150,
+      "condition": "special_handling includes 'fragile'",
+      "trigger": {
+        "attribute": "special_handling",
+        "op": "contains",
+        "value": "fragile"
+      },
+      "clause": "alpine-express.md \u00a74"
+    }
+  ],
+  "accessorial_policy": {
+    "type": "no_restriction_stated",
+    "allowed_names": [],
+    "clause": "",
+    "note": "The contract does not state any restriction limiting accessorial charges to a fixed list; only the fragile handling fee is mentioned."
+  },
+  "agreement_ref": "AEL/BFC/2025-03",
+  "ambiguities": [
+    {
+      "description": "The rate bands are defined as 'under 50 kg' (strict '<') and 'over 50 kg' (strict '>'), so a consignment with chargeable weight of exactly 50 kg falls into neither band and has no stated per-kg rate.",
+      "clause": "alpine-express.md \u00a72"
+    },
+    {
+      "description": "The volume incentive discount is based on consignments tendered 'in any calendar month', but the contract does not specify which date (ship date, booking date, or invoice date) defines that calendar month for counting purposes.",
+      "clause": "alpine-express.md \u00a75"
+    }
+  ],
+  "chargeable_weight_floor": {
+    "minimum_kg": 25,
+    "clause": "alpine-express.md \u00a71"
+  },
+  "currency": "INR",
+  "discounts": [
+    {
+      "name": "Volume incentive discount",
+      "type": "percentage_of_invoice_total",
+      "rate": 0.05,
+      "amount": null,
+      "condition": "Applies to the invoice total for any calendar month in which the Customer tenders more than 12 consignments",
+      "clause": "alpine-express.md \u00a75",
+      "threshold": {
+        "metric": "consignment_count",
+        "period": "calendar month",
+        "op": "gt",
+        "value": 12
+      }
+    }
+  ],
+  "effective_period": {
+    "raw_text": "1 March 2025 \u2013 28 February 2027",
+    "start": "2025-03-01",
+    "end": "2027-02-28"
+  },
+  "exclusions": [],
+  "flat_rates": [],
+  "notes": [
+    "Rate revisions require 60 days' written notice and take effect from the first day of the following calendar month (\u00a77)."
+  ],
+  "payment_terms": {
+    "invoicing_frequency": "monthly",
+    "payment_due_days": 30,
+    "dispute_window_days": null,
+    "clause": "alpine-express.md \u00a76"
+  },
+  "premiums": [],
+  "pricing_basis": {
+    "description": "Freight is charged on chargeable weight, defined as the higher of the consignment's actual weight and a 25 kg minimum chargeable weight, priced per kg according to a weight band.",
+    "clause": "alpine-express.md \u00a71, \u00a72"
+  },
+  "rate_bands": [
+    {
+      "name": "Under 50 kg",
+      "banded_on": "weight_kg",
+      "min": null,
+      "min_op": null,
+      "max": 50,
+      "max_op": "<",
+      "rate": 9.5,
+      "rate_unit": "per_kg",
+      "clause": "alpine-express.md \u00a72"
+    },
+    {
+      "name": "Over 50 kg",
+      "banded_on": "weight_kg",
+      "min": 50,
+      "min_op": ">",
+      "max": null,
+      "max_op": null,
+      "rate": 8.25,
+      "rate_unit": "per_kg",
+      "clause": "alpine-express.md \u00a72"
+    }
+  ],
+  "rounding_rule": {
+    "stated_in_contract": false,
+    "note": "No rounding rule is stated in the contract."
+  },
+  "service_level_rules": [
+    {
+      "service_level": "standard",
+      "allowed": true,
+      "clause": "alpine-express.md \u00a73",
+      "note": "All bookings travel on standard service."
+    },
+    {
+      "service_level": "express",
+      "allowed": false,
+      "clause": "alpine-express.md \u00a73",
+      "note": "Express products are not offered under this agreement."
+    }
+  ],
+  "surcharges": [],
+  "carrier": "alpine",
+  "source_contract": {
+    "file": "data/contracts/alpine-express.md",
+    "sha256": "caa39649f701795356f6545c0a6c86ea12b2037dc96080027bdf8f17801e6001"
+  }
+}

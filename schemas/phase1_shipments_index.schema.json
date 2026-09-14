@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "phase1-shipments-index",
+  "description": "Output of load_shipments: data/shipments.json indexed by carrier_consignment_ref. by_ref's entries are the trusted, already-validated shipment records -- their internal shape is not re-validated here.",
+  "type": "object",
+  "required": ["count", "by_ref"],
+  "additionalProperties": false,
+  "properties": {
+    "count": { "type": "integer", "minimum": 1 },
+    "by_ref": { "type": "object" }
+  }
+}

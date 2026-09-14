@@ -1,0 +1,14 @@
+{
+  "finding_id": "line_delta:SAGAR-JUL-1:SG-7009",
+  "disposition": "dispute",
+  "justification": "The shipment record shows billed_weight_kg=200 and distance_km=140 for SH-4235, with no special_handling (so no cold chain premium applies under \u00a73). Per \u00a71, freight is the weight component (\u20b96/kg \u00d7 200) plus the distance component (\u20b92/km \u00d7 140), which the pricing trace correctly computes as the expected amount. The billed amount exceeds this by the stated delta with no contractual basis identified in the trace (no surcharges, accessorials, or premiums fired). This is a straightforward overcharge relative to the governing rate card.",
+  "governing_clauses": [
+    "sagar-roadlines.md \u00a71",
+    "sagar-roadlines.md \u00a73"
+  ],
+  "memo_narrative": {
+    "what_happened": "Sagar billed consignment SG-7009 above the amount computed from the contract's per-kg and per-km freight formula for this shipment's actual weight and distance.",
+    "why": "Per \u00a71, freight is strictly the sum of the weight component (\u20b96/kg) and distance component (\u20b92/km); no cold chain premium (\u00a73) or other surcharge applies since the shipment carries no special handling, so the excess above the amount above is unsupported.",
+    "recommended_action": "Request a corrected invoice from Sagar Roadlines for consignment SG-7009, citing \u00a71, and reduce payment to the contract-computed amount above."
+  }
+}

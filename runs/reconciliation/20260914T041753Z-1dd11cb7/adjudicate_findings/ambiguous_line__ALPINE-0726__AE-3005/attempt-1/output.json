@@ -1,0 +1,14 @@
+{
+  "finding_id": "ambiguous_line:ALPINE-0726:AE-3005",
+  "disposition": "escalate",
+  "justification": "The consignment's chargeable weight (after the \u00a71 floor is applied) is exactly 50.0 kg. \u00a72 defines the per-kg rate for \"under 50 kg\" and \"over 50 kg\" using strict inequalities, leaving exactly 50 kg covered by neither band. This is not a computational error but a genuine gap in the rate card itself -- the carrier's own structured rate card explicitly flags this exact scenario as an unresolved ambiguity. Nothing elsewhere in the contract (service level, handling, volume incentive, or invoicing clauses) supplies a tie-breaking rule for the boundary weight, so there is no basis to pick either the 9.50 or 8.25 per-kg rate without guessing. Per policy, a genuine rate-band gap of this kind must not be resolved by selecting a band that isn't actually written in the contract, so this requires a human ruling rather than an accept or dispute call.",
+  "governing_clauses": [
+    "alpine-express.md \u00a71",
+    "alpine-express.md \u00a72"
+  ],
+  "memo_narrative": {
+    "what_happened": "This consignment's chargeable weight came out to exactly 50 kg, which sits precisely on the boundary between Alpine's two freight rate bands.",
+    "why": "Per \u00a72, the contract sets the per-kg rate for consignments \"under 50 kg\" and \"over 50 kg\" using strict less-than/greater-than language, so a weight of exactly 50 kg is not clearly covered by either rate -- the contract itself does not state a rate for this boundary case.",
+    "recommended_action": "Escalate to Alpine Express's account manager for a ruling on which per-kg rate applies to consignments at exactly 50 kg, and request that future contract language or an amendment close this gap."
+  }
+}

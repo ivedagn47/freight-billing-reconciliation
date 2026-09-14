@@ -1,0 +1,125 @@
+{
+  "duration_api_ms": 17096,
+  "stop_reason": "tool_use",
+  "session_id": "5bac4f15-5618-4244-97b0-eac467305598",
+  "total_cost_usd": 0.07348500000000001,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 11832,
+    "cache_read_input_tokens": 29920,
+    "output_tokens": 1420,
+    "output_tokens_details": {
+      "thinking_tokens": 552
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 11832,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 795,
+        "cache_read_input_tokens": 20485,
+        "cache_creation_input_tokens": 782,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 782
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 5890,
+      "outputTokens": 15,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.005965000000000001,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 1420,
+      "cacheReadInputTokens": 29920,
+      "cacheCreationInputTokens": 11832,
+      "webSearchRequests": 0,
+      "costUSD": 0.06752000000000001,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 552,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "extra_usage_disabled",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 3,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"finding_id\":\"line_delta:SAGAR-JUL-1:SG-7003\",\"disposition\":\"dispute\",\"justification\":\"The pricing trace cleanly reconstructs the contracted freight for this consignment under \u00a71: a weight component (60kg billed weight \u00d7 \u20b96/kg) plus a distance component (85km \u00d7 \u20b92/km), summing to the expected amount. The shipment record shows no special_handling entries, so the cold chain premium in \u00a73 correctly does not fire (consistent with the trace showing it as not fired). No accessorials or other surcharges appear anywhere in the evidence to explain the gap between the billed amount and the contract-derived figure. The only ambiguity noted on this rate card concerns whether 'booked lane distance' in \u00a71 differs from a shipment's actual distance_km, but only a single distance value (85km, matching the shipment record) appears anywhere in the evidence \u2014 there is no second, competing distance figure that would make this an unresolved two-readings situation for this specific consignment. With no contractual basis identified for the excess and the arithmetic verified band-by-band against \u00a71, the billed amount is not supported by the contract.\",\"governing_clauses\":[\"sagar-roadlines.md \u00a71\",\"sagar-roadlines.md \u00a73\"],\"memo_narrative\":{\"what_happened\":\"Sagar Roadlines billed consignment SG-7003 (shipment SH-4229) above the amount produced by applying the \u00a71 weight and distance components to the shipment's billed weight and distance, with no cold chain premium applicable since the shipment carries no special handling.\",\"why\":\"The contract's freight formula in \u00a71 (\u20b96/kg weight component plus \u20b92/km distance component) accounts fully for the expected charge, and no other clause in the agreement (no accessorials, no applicable premiums under \u00a73) explains the extra amount billed above that figure.\",\"recommended_action\":\"Request a corrected invoice from Sagar Roadlines for consignment SG-7003 citing \u00a71, or ask the carrier to identify what charge accounts for the amount above the \u00a71 formula if they believe it is owed.\"}}",
+  "structured_output": {
+    "finding_id": "line_delta:SAGAR-JUL-1:SG-7003",
+    "disposition": "dispute",
+    "justification": "The pricing trace cleanly reconstructs the contracted freight for this consignment under \u00a71: a weight component (60kg billed weight \u00d7 \u20b96/kg) plus a distance component (85km \u00d7 \u20b92/km), summing to the expected amount. The shipment record shows no special_handling entries, so the cold chain premium in \u00a73 correctly does not fire (consistent with the trace showing it as not fired). No accessorials or other surcharges appear anywhere in the evidence to explain the gap between the billed amount and the contract-derived figure. The only ambiguity noted on this rate card concerns whether 'booked lane distance' in \u00a71 differs from a shipment's actual distance_km, but only a single distance value (85km, matching the shipment record) appears anywhere in the evidence \u2014 there is no second, competing distance figure that would make this an unresolved two-readings situation for this specific consignment. With no contractual basis identified for the excess and the arithmetic verified band-by-band against \u00a71, the billed amount is not supported by the contract.",
+    "governing_clauses": [
+      "sagar-roadlines.md \u00a71",
+      "sagar-roadlines.md \u00a73"
+    ],
+    "memo_narrative": {
+      "what_happened": "Sagar Roadlines billed consignment SG-7003 (shipment SH-4229) above the amount produced by applying the \u00a71 weight and distance components to the shipment's billed weight and distance, with no cold chain premium applicable since the shipment carries no special handling.",
+      "why": "The contract's freight formula in \u00a71 (\u20b96/kg weight component plus \u20b92/km distance component) accounts fully for the expected charge, and no other clause in the agreement (no accessorials, no applicable premiums under \u00a73) explains the extra amount billed above that figure.",
+      "recommended_action": "Request a corrected invoice from Sagar Roadlines for consignment SG-7003 citing \u00a71, or ask the carrier to identify what charge accounts for the amount above the \u00a71 formula if they believe it is owed."
+    }
+  },
+  "ttft_ms": 6930,
+  "type": "result",
+  "duration_ms": 15802,
+  "uuid": "670d6ac8-4e33-4c30-8711-76545e41235b",
+  "ttft_stream_ms": 1302,
+  "time_to_request_ms": 31,
+  "first_content_frame_ms": 1840,
+  "queued_turn_count": 0,
+  "result_index": 0
+}

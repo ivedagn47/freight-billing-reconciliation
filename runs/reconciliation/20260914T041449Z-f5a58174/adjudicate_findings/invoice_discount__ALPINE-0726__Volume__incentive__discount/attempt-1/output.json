@@ -1,0 +1,13 @@
+{
+  "finding_id": "invoice_discount:ALPINE-0726:Volume incentive discount",
+  "disposition": "escalate",
+  "justification": "\u00a75 of the Alpine contract entitles BlueFin to a 5% volume discount on the invoice total for any calendar month in which more than 12 consignments are tendered. This invoice covers 40 consignments, and that count is 40 under every candidate date basis the pipeline tried (by invoice document, by booking-date calendar month, and by ship-date calendar month) \u2014 all comfortably above the 12-consignment threshold, so the entitlement to the discount is not itself ambiguous despite the contract's silence on which date defines the \"calendar month\" (a gap noted elsewhere in the rate card's ambiguities). The carrier declared a discount of 0.0 on this invoice, which on its face is inconsistent with \u00a75. However, the pipeline's own evidence notes that one line on this invoice is not yet pricing-determined, so the invoice total the 5% would apply to, and therefore the exact discount shortfall, cannot be computed yet. Because the amount is blocked by an unresolved line elsewhere on the invoice, this is not yet something a colleague can act on with a specific figure, so it should go to a human rather than be resolved as a straight dispute at this stage.",
+  "governing_clauses": [
+    "alpine-express.md \u00a75"
+  ],
+  "memo_narrative": {
+    "what_happened": "Alpine's July invoice covers 40 consignments \u2014 well above the 12-consignment monthly threshold under every way of counting the month \u2014 but the carrier applied no volume incentive discount to the invoice total.",
+    "why": "Per \u00a75, tendering more than 12 consignments in a calendar month entitles BlueFin to a 5% discount on that invoice's total, so a 0% discount appears to be a contractual shortfall; however, one line on this invoice is still pricing-undetermined, so the invoice total (and thus the exact discount owed) can't be finalized yet.",
+    "recommended_action": "Hold this discount question pending resolution of the outstanding line on the same invoice, then raise the \u00a75 volume discount shortfall with Alpine's account manager once the invoice total is finalized."
+  }
+}

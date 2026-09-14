@@ -1,0 +1,14 @@
+{
+  "finding_id": "duplicate:dup-FF-8003",
+  "disposition": "dispute",
+  "justification": "Consignment FF-8003, tied to a single shipment (SH-4003), was billed identically on two separate Falcon invoices (2026-07A and 2026-07B), each priced correctly against the contract in isolation but representing the same physical freight movement. The shipment record shows a single ship date, a single delivery event, and no special handling indicating a re-delivery, correction run, or split consignment that would justify a second legitimate charge. Clause 1 establishes base freight as a per-consignment charge for the booked lane distance, implying one payable freight charge per shipment; nothing in the contract or evidence supports two chargeable occurrences of the same consignment. Clause 8 provides the carrier's own mechanism (a credit note referencing the original consignment note) for correcting exactly this kind of duplicate invoicing, and no such credit note is present in the evidence to explain or authorize the second occurrence. Absent any indication of a genuine second freight movement, the second billing is an unauthorized duplicate charge.",
+  "governing_clauses": [
+    "falcon-freight.md \u00a71",
+    "falcon-freight.md \u00a78"
+  ],
+  "memo_narrative": {
+    "what_happened": "Falcon billed consignment FF-8003 (shipment SH-4003) twice, once on invoice FALCON-2026-07A and again on FALCON-2026-07B, for the identical amount both times.",
+    "why": "The shipment record shows a single delivery with no re-delivery or split-shipment indication, and the contract prices freight per consignment (\u00a71); with no credit note on file to explain a legitimate second charge under the carrier's own correction mechanism (\u00a78), the second occurrence is an unsupported duplicate.",
+    "recommended_action": "Request Falcon issue a credit note under \u00a78 against one of the two invoices (recommend crediting FALCON-2026-07B) to remove the duplicate charge for FF-8003, and confirm no other consignments were double-billed across these invoice cycles."
+  }
+}

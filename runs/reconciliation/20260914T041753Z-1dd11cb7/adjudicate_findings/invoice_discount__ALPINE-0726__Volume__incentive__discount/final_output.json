@@ -1,0 +1,13 @@
+{
+  "finding_id": "invoice_discount:ALPINE-0726:Volume incentive discount",
+  "disposition": "dispute",
+  "justification": "The invoice contains 40 consignments for the calendar month in question, far exceeding the \"more than 12 consignments\" threshold in \u00a75, and this count is identical (40) under all three candidate date bases (invoice document, booking date, ship date). Because every basis agrees, the rate card's noted ambiguity about which date defines the calendar month (alpine-express.md \u00a75) does not actually affect the outcome here \u2014 the invoice qualifies for the 5% volume incentive discount on any reading. The carrier's declared discount amount is stated as zero, which is not supported by \u00a75 given this clear qualification. This is a determinable entitlement failure: the carrier owed a discount and did not apply one. That said, one line on this invoice is not yet pricing-determined, so the exact discount shortfall in rupee terms cannot be finalized until that line is resolved \u2014 the dispute here is on entitlement, not on a computed shortfall figure.",
+  "governing_clauses": [
+    "alpine-express.md \u00a75"
+  ],
+  "memo_narrative": {
+    "what_happened": "Alpine invoice ALPINE-0726 covers 40 consignments for the month, but the carrier's invoice reflects no volume incentive discount applied.",
+    "why": "Under \u00a75, tendering more than 12 consignments in a calendar month entitles the customer to a 5% discount on that invoice's total; the 40-consignment count holds under every possible date basis, so the lack of any discount is not supported by the contract, even though one line's pricing is still pending and affects the final discount figure.",
+    "recommended_action": "Request a corrected invoice from Alpine applying the \u00a75 volume incentive discount, noting that the exact discount figure should be finalized once the one outstanding line on this invoice is priced."
+  }
+}

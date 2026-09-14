@@ -1,0 +1,125 @@
+{
+  "duration_api_ms": 21350,
+  "stop_reason": "tool_use",
+  "session_id": "000a1cc0-1fa3-4e5e-893e-3ae234ea1557",
+  "total_cost_usd": 0.074082,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 12087,
+    "cache_read_input_tokens": 30080,
+    "output_tokens": 1363,
+    "output_tokens_details": {
+      "thinking_tokens": 123
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 12087,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 642,
+        "cache_read_input_tokens": 20645,
+        "cache_creation_input_tokens": 877,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 877
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 6005,
+      "outputTokens": 15,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.00608,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 1363,
+      "cacheReadInputTokens": 30080,
+      "cacheCreationInputTokens": 12087,
+      "webSearchRequests": 0,
+      "costUSD": 0.06800199999999999,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 123,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "extra_usage_disabled",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 3,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"finding_id\":\"line_delta:SAGAR-JUL-1:SG-7003\",\"disposition\":\"dispute\",\"justification\":\"The pricing trace correctly applies \u00a71: a weight component of \u20b96.00/kg on the shipment record's billed weight of 60kg (\u20b9360) plus a distance component of \u20b92.00/km on the booked lane distance of 85km (\u20b9170), summing to the expected amount. The shipment carries no special_handling entries, so the cold chain premium under \u00a73 correctly does not fire. There is no service-level premium issue since only standard service is offered (\u00a72) and this shipment is standard. The billed amount exceeds this correctly-derived figure with no contractual basis identified for the difference, and nothing in the evidence points to an accessorial or surcharge that would explain it.\",\"governing_clauses\":[\"sagar-roadlines.md \u00a71\",\"sagar-roadlines.md \u00a73\"],\"memo_narrative\":{\"what_happened\":\"Sagar billed consignment SG-7003 above the amount produced by applying the contract's weight (\u20b96/kg) and distance (\u20b92/km) components to the shipment's actual 60kg/85km, with no cold chain or other surcharge applicable.\",\"why\":\"Under \u00a71 the freight charge is fixed as the sum of these two components, and \u00a73's cold chain premium does not apply since the shipment has no special handling flagged \u2014 there is no clause that supports the higher billed figure.\",\"recommended_action\":\"Request a corrected invoice from Sagar Roadlines for consignment SG-7003 citing \u00a71, noting the cold chain premium in \u00a73 does not apply to this shipment.\"}}",
+  "structured_output": {
+    "finding_id": "line_delta:SAGAR-JUL-1:SG-7003",
+    "disposition": "dispute",
+    "justification": "The pricing trace correctly applies \u00a71: a weight component of \u20b96.00/kg on the shipment record's billed weight of 60kg (\u20b9360) plus a distance component of \u20b92.00/km on the booked lane distance of 85km (\u20b9170), summing to the expected amount. The shipment carries no special_handling entries, so the cold chain premium under \u00a73 correctly does not fire. There is no service-level premium issue since only standard service is offered (\u00a72) and this shipment is standard. The billed amount exceeds this correctly-derived figure with no contractual basis identified for the difference, and nothing in the evidence points to an accessorial or surcharge that would explain it.",
+    "governing_clauses": [
+      "sagar-roadlines.md \u00a71",
+      "sagar-roadlines.md \u00a73"
+    ],
+    "memo_narrative": {
+      "what_happened": "Sagar billed consignment SG-7003 above the amount produced by applying the contract's weight (\u20b96/kg) and distance (\u20b92/km) components to the shipment's actual 60kg/85km, with no cold chain or other surcharge applicable.",
+      "why": "Under \u00a71 the freight charge is fixed as the sum of these two components, and \u00a73's cold chain premium does not apply since the shipment has no special handling flagged \u2014 there is no clause that supports the higher billed figure.",
+      "recommended_action": "Request a corrected invoice from Sagar Roadlines for consignment SG-7003 citing \u00a71, noting the cold chain premium in \u00a73 does not apply to this shipment."
+    }
+  },
+  "ttft_ms": 7505,
+  "type": "result",
+  "duration_ms": 19924,
+  "uuid": "ccdf4222-3a84-4717-9301-67f721847f1c",
+  "ttft_stream_ms": 6092,
+  "time_to_request_ms": 30,
+  "first_content_frame_ms": 6600,
+  "queued_turn_count": 0,
+  "result_index": 0
+}

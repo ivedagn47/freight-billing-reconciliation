@@ -1,0 +1,14 @@
+{
+  "finding_id": "ambiguous_line:ALPINE-0726:AE-3005",
+  "disposition": "escalate",
+  "justification": "The shipment record confirms billed_weight_kg is exactly 50.0, and the chargeable weight floor (\u00a71, 25kg minimum) does not change this since actual weight already exceeds the floor. Under \u00a72, the rate bands are stated as strictly \"under 50 kg\" (\u20b99.50/kg) and \"over 50 kg\" (\u20b98.25/kg), with no rate stated for exactly 50 kg. This is a genuine textual gap between adjacent bands, not a computable pricing scenario: reading \"under 50 kg\" to include 50 kg, or reading \"over 50 kg\" to include 50 kg, are both plausible but contradictory interpretations, and the contract gives no tiebreaker. The rate card's own ambiguities list independently confirms this exact gap at \u00a72. Per policy, a genuine rate-band gap that the deterministic pricing engine could not resolve must default to escalate rather than have either party (or me) pick a band that isn't actually written in the contract.",
+  "governing_clauses": [
+    "alpine-express.md \u00a71",
+    "alpine-express.md \u00a72"
+  ],
+  "memo_narrative": {
+    "what_happened": "This Alpine consignment (AE-3005, shipment SH-4111) has a chargeable weight of exactly 50 kg, which falls between the contract's two per-kg rate bands ('under 50 kg' and 'over 50 kg') and matches neither, so no expected freight amount could be computed.",
+    "why": "Contract \u00a72 defines rates using strict inequalities ('under 50 kg' / 'over 50 kg'), leaving no stated rate at exactly 50 kg -- this is a genuine drafting gap, not a computable pricing question, so it cannot be resolved by picking either band unilaterally.",
+    "recommended_action": "Escalate to Alpine Express's account manager to obtain a written ruling on which rate band applies to consignments at exactly 50 kg, and request the contract be amended (per \u00a77's rate-revision process) to close this gap for future invoices."
+  }
+}

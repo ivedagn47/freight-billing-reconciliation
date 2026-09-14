@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "phase0-greeting",
+  "description": "Output schema for the Phase 0 proof-of-runner agent node.",
+  "type": "object",
+  "required": ["node", "greeting", "topic_echo"],
+  "additionalProperties": false,
+  "properties": {
+    "node": {
+      "type": "string",
+      "enum": ["hello_agent"]
+    },
+    "greeting": {
+      "type": "string",
+      "minLength": 1
+    },
+    "topic_echo": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Must restate the topic it was given, proving the prompt/variable was actually received."
+    }
+  }
+}

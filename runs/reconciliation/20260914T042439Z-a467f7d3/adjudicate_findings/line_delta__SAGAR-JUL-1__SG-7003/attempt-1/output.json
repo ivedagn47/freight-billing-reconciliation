@@ -1,0 +1,14 @@
+{
+  "finding_id": "line_delta:SAGAR-JUL-1:SG-7003",
+  "disposition": "dispute",
+  "justification": "The pricing trace correctly applies \u00a71: a weight component of \u20b96.00/kg on the shipment record's billed weight of 60kg (\u20b9360) plus a distance component of \u20b92.00/km on the booked lane distance of 85km (\u20b9170), summing to the expected amount. The shipment carries no special_handling entries, so the cold chain premium under \u00a73 correctly does not fire. There is no service-level premium issue since only standard service is offered (\u00a72) and this shipment is standard. The billed amount exceeds this correctly-derived figure with no contractual basis identified for the difference, and nothing in the evidence points to an accessorial or surcharge that would explain it.",
+  "governing_clauses": [
+    "sagar-roadlines.md \u00a71",
+    "sagar-roadlines.md \u00a73"
+  ],
+  "memo_narrative": {
+    "what_happened": "Sagar billed consignment SG-7003 above the amount produced by applying the contract's weight (\u20b96/kg) and distance (\u20b92/km) components to the shipment's actual 60kg/85km, with no cold chain or other surcharge applicable.",
+    "why": "Under \u00a71 the freight charge is fixed as the sum of these two components, and \u00a73's cold chain premium does not apply since the shipment has no special handling flagged \u2014 there is no clause that supports the higher billed figure.",
+    "recommended_action": "Request a corrected invoice from Sagar Roadlines for consignment SG-7003 citing \u00a71, noting the cold chain premium in \u00a73 does not apply to this shipment."
+  }
+}

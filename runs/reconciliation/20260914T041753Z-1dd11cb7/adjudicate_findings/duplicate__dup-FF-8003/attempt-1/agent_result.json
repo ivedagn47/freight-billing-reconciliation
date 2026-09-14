@@ -1,0 +1,125 @@
+{
+  "duration_api_ms": 20532,
+  "stop_reason": "tool_use",
+  "session_id": "0199c2a2-39d2-41f1-a738-169d91db6516",
+  "total_cost_usd": 0.0836384,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 12809,
+    "cache_read_input_tokens": 30227,
+    "output_tokens": 2009,
+    "output_tokens_details": {
+      "thinking_tokens": 600
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 12809,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 714,
+        "cache_read_input_tokens": 20792,
+        "cache_creation_input_tokens": 1452,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1452
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 6159,
+      "outputTokens": 20,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.006259000000000001,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 2009,
+      "cacheReadInputTokens": 30227,
+      "cacheCreationInputTokens": 12809,
+      "webSearchRequests": 0,
+      "costUSD": 0.0773794,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 600,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "extra_usage_disabled",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 3,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"finding_id\":\"duplicate:dup-FF-8003\",\"disposition\":\"dispute\",\"justification\":\"Consignment FF-8003, tied to a single shipment (SH-4003), appears as a full freight line on two separate Falcon invoices (FALCON-2026-07A and FALCON-2026-07B), each individually priced correctly against the contract's per-km, weight-banded base freight (\u00a71) plus applicable fuel surcharge (\u00a73) for this 900 kg, 275 km, standard-service shipment with no special handling. The contract's freight schedule charges a consignment once for its carriage; nothing in the shipment record, invoice evidence, or contract (e.g. no re-delivery, correction, or split-shipment indicator) explains a legitimate second charge for the same consignment note. Absent such an explanation, the second occurrence is an unsupported duplicate charge that should not be paid twice.\",\"governing_clauses\":[\"falcon-freight.md \u00a71\",\"falcon-freight.md \u00a75\"],\"memo_narrative\":{\"what_happened\":\"Falcon billed consignment FF-8003 (shipment SH-4003) as a full freight line on two separate invoices, 07A and 07B, with identical amounts and no indication of a re-delivery, correction, or split shipment.\",\"why\":\"The contract's freight charges (\u00a71) are for carriage of a given consignment, and \u00a75 confirms no charges beyond the agreed schedule are payable without prior written agreement; a second, unexplained full charge for the same consignment is not supported by the contract or the shipment record.\",\"recommended_action\":\"Raise this as a duplicate-billing dispute with Falcon within the 45-day window (\u00a77), asking them to confirm which invoice (07A or 07B) is the valid billing for FF-8003 and to withdraw or credit-note (\u00a78) the duplicate.\"}}",
+  "structured_output": {
+    "finding_id": "duplicate:dup-FF-8003",
+    "disposition": "dispute",
+    "justification": "Consignment FF-8003, tied to a single shipment (SH-4003), appears as a full freight line on two separate Falcon invoices (FALCON-2026-07A and FALCON-2026-07B), each individually priced correctly against the contract's per-km, weight-banded base freight (\u00a71) plus applicable fuel surcharge (\u00a73) for this 900 kg, 275 km, standard-service shipment with no special handling. The contract's freight schedule charges a consignment once for its carriage; nothing in the shipment record, invoice evidence, or contract (e.g. no re-delivery, correction, or split-shipment indicator) explains a legitimate second charge for the same consignment note. Absent such an explanation, the second occurrence is an unsupported duplicate charge that should not be paid twice.",
+    "governing_clauses": [
+      "falcon-freight.md \u00a71",
+      "falcon-freight.md \u00a75"
+    ],
+    "memo_narrative": {
+      "what_happened": "Falcon billed consignment FF-8003 (shipment SH-4003) as a full freight line on two separate invoices, 07A and 07B, with identical amounts and no indication of a re-delivery, correction, or split shipment.",
+      "why": "The contract's freight charges (\u00a71) are for carriage of a given consignment, and \u00a75 confirms no charges beyond the agreed schedule are payable without prior written agreement; a second, unexplained full charge for the same consignment is not supported by the contract or the shipment record.",
+      "recommended_action": "Raise this as a duplicate-billing dispute with Falcon within the 45-day window (\u00a77), asking them to confirm which invoice (07A or 07B) is the valid billing for FF-8003 and to withdraw or credit-note (\u00a78) the duplicate."
+    }
+  },
+  "ttft_ms": 7943,
+  "type": "result",
+  "duration_ms": 19057,
+  "uuid": "2ab9d6ab-6b39-4c85-82b6-68f1271d6a46",
+  "ttft_stream_ms": 1357,
+  "time_to_request_ms": 30,
+  "first_content_frame_ms": 1566,
+  "queued_turn_count": 0,
+  "result_index": 0
+}

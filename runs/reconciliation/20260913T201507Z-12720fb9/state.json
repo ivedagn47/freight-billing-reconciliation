@@ -1,0 +1,54 @@
+{
+  "graph": "reconciliation",
+  "started_at": "2026-09-13T20:15:07Z",
+  "nodes": {
+    "discover_invoices": {
+      "status": "done",
+      "started_at": "2026-09-13T20:15:07Z",
+      "finished_at": "2026-09-13T20:15:07Z",
+      "output_path": "/Users/vedangi/Projects/freight-billing-reconciliation/freight-billing-reconciliation/.claude/worktrees/init-claude-md/runs/reconciliation/20260913T201507Z-12720fb9/discover_invoices/output.json",
+      "session_id": null
+    },
+    "parse_invoices": {
+      "status": "done",
+      "started_at": "2026-09-13T20:15:07Z",
+      "finished_at": "2026-09-13T20:15:07Z",
+      "output_path": "/Users/vedangi/Projects/freight-billing-reconciliation/freight-billing-reconciliation/.claude/worktrees/init-claude-md/runs/reconciliation/20260913T201507Z-12720fb9/parse_invoices/output.json",
+      "session_id": null
+    },
+    "load_shipments": {
+      "status": "done",
+      "started_at": "2026-09-13T20:15:07Z",
+      "finished_at": "2026-09-13T20:15:07Z",
+      "output_path": "/Users/vedangi/Projects/freight-billing-reconciliation/freight-billing-reconciliation/.claude/worktrees/init-claude-md/runs/reconciliation/20260913T201507Z-12720fb9/load_shipments/output.json",
+      "session_id": null
+    },
+    "match_and_normalise": {
+      "status": "done",
+      "started_at": "2026-09-13T20:15:07Z",
+      "finished_at": "2026-09-13T20:15:07Z",
+      "output_path": "/Users/vedangi/Projects/freight-billing-reconciliation/freight-billing-reconciliation/.claude/worktrees/init-claude-md/runs/reconciliation/20260913T201507Z-12720fb9/match_and_normalise/output.json",
+      "session_id": null
+    },
+    "extract_ratecard_alpine": {
+      "status": "done",
+      "started_at": "2026-09-13T20:15:07Z",
+      "finished_at": "2026-09-13T20:15:43Z",
+      "output_path": "/Users/vedangi/Projects/freight-billing-reconciliation/freight-billing-reconciliation/.claude/worktrees/init-claude-md/runs/reconciliation/20260913T201507Z-12720fb9/extract_ratecard_alpine/output.json",
+      "session_id": null
+    },
+    "extract_ratecard_falcon": {
+      "status": "done",
+      "started_at": "2026-09-13T20:15:43Z",
+      "finished_at": "2026-09-13T20:16:22Z",
+      "output_path": "/Users/vedangi/Projects/freight-billing-reconciliation/freight-billing-reconciliation/.claude/worktrees/init-claude-md/runs/reconciliation/20260913T201507Z-12720fb9/extract_ratecard_falcon/output.json",
+      "session_id": null
+    },
+    "extract_ratecard_sagar": {
+      "status": "failed",
+      "started_at": "2026-09-13T20:16:22Z",
+      "finished_at": "2026-09-13T20:17:11Z",
+      "error": "GateFailure: verify_ratecards failed:\n  - $.accessorial_policy.clause: 'sagar-roadlines.md' is not of the form '<file>.md \u00a7N[, \u00a7M...]'"
+    }
+  }
+}

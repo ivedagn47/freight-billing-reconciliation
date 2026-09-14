@@ -1,0 +1,244 @@
+{
+  "duration_api_ms": 39033,
+  "stop_reason": "tool_use",
+  "session_id": "594f2348-52cf-45c0-b50c-ef07f4d2a7eb",
+  "total_cost_usd": 0.0763976,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 7215,
+    "cache_read_input_tokens": 12493,
+    "output_tokens": 4202,
+    "output_tokens_details": {
+      "thinking_tokens": 2297
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 7215,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 4202,
+        "cache_read_input_tokens": 12493,
+        "cache_creation_input_tokens": 7215,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 7215
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 2940,
+      "outputTokens": 15,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.003015,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-sonnet-5": {
+      "inputTokens": 2,
+      "outputTokens": 4202,
+      "cacheReadInputTokens": 12493,
+      "cacheCreationInputTokens": 7215,
+      "webSearchRequests": 0,
+      "costUSD": 0.07338259999999999,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 2297,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "extra_usage_disabled",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 2,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"agreement_ref\":\"FF/BFC/2024-11\",\"effective_period\":{\"raw_text\":\"1 December 2024 \u2013 30 November 2026\",\"start\":\"2024-12-01\",\"end\":\"2026-11-30\"},\"currency\":\"INR\",\"pricing_basis\":{\"description\":\"Base freight is charged per kilometre of the booked lane distance, at a rate that varies according to the consignment's billed weight band.\",\"clause\":\"falcon-freight.md \u00a71\"},\"chargeable_weight_floor\":null,\"rate_bands\":[{\"name\":\"Base freight \u2014 up to 500 kg\",\"banded_on\":\"weight_kg\",\"min\":null,\"min_op\":null,\"max\":500,\"max_op\":\"<=\",\"rate\":18,\"rate_unit\":\"per_km\",\"clause\":\"falcon-freight.md \u00a71\"},{\"name\":\"Base freight \u2014 501 to 2,000 kg\",\"banded_on\":\"weight_kg\",\"min\":501,\"min_op\":\">=\",\"max\":2000,\"max_op\":\"<=\",\"rate\":24,\"rate_unit\":\"per_km\",\"clause\":\"falcon-freight.md \u00a71\"}],\"flat_rates\":[],\"service_level_rules\":[],\"premiums\":[{\"name\":\"Express service premium\",\"type\":\"percentage\",\"rate\":0.15,\"amount\":null,\"condition\":\"Express service is booked for the consignment.\",\"trigger\":{\"attribute\":\"service_level\",\"op\":\"eq\",\"value\":\"express\"},\"compounds_on\":[\"base_freight\"],\"clause\":\"falcon-freight.md \u00a72\"}],\"surcharges\":[{\"name\":\"Fuel surcharge\",\"type\":\"percentage\",\"rate\":0.12,\"amount\":null,\"condition\":\"Applies to every consignment's freight charge (base freight plus express premium, where applicable).\",\"trigger\":null,\"compounds_on\":[\"base_freight\",\"Express service premium\"],\"clause\":\"falcon-freight.md \u00a73\"}],\"accessorial_charges\":[{\"name\":\"Residential delivery\",\"type\":\"flat_fee\",\"rate\":null,\"amount\":250,\"condition\":\"Consignee address is a residence, or the booking is flagged residential.\",\"trigger\":{\"attribute\":\"special_handling\",\"op\":\"contains\",\"value\":\"residential\"},\"clause\":\"falcon-freight.md \u00a74\"}],\"accessorial_policy\":{\"type\":\"whitelist\",\"allowed_names\":[\"Residential delivery\"],\"clause\":\"falcon-freight.md \u00a75\",\"note\":\"Clause 5 states no other accessorial charges are payable under this agreement; any service outside this schedule requires the Customer's prior written agreement via a rate confirmation referencing this agreement.\"},\"discounts\":[],\"exclusions\":[{\"condition\":\"Consignment's billed weight exceeds 2,000 kg.\",\"description\":\"Consignments above 2,000 kg are quoted case by case and are outside this rate card \u2014 no rate_band or flat_rate applies.\",\"clause\":\"falcon-freight.md \u00a71\",\"trigger\":{\"attribute\":\"billed_weight_kg\",\"op\":\"gt\",\"value\":2000}}],\"rounding_rule\":{\"stated_in_contract\":false,\"note\":\"\"},\"payment_terms\":{\"invoicing_frequency\":\"fortnightly\",\"payment_due_days\":30,\"dispute_window_days\":45,\"clause\":\"falcon-freight.md \u00a76, \u00a77\"},\"ambiguities\":[{\"description\":\"Clause 1 defines bands as 'up to and including 500 kg' (\u2264500) and '501 kg to 2,000 kg' (\u2265501, \u22642,000). A billed weight strictly between 500 kg and 501 kg (e.g. 500.5 kg) is covered by neither band, since the first band's literal upper bound is \u2264500 and the second's literal lower bound is \u2265501. This is a genuine gap in the rate card, not a resolved boundary.\",\"clause\":\"falcon-freight.md \u00a71\"},{\"description\":\"Clause 4 triggers the residential accessorial on two distinct conditions \u2014 'consignee address is a residence' or 'the booking is flagged residential' \u2014 but the contract does not specify how a residential address is determined from shipment data as opposed to an explicit residential flag on the booking. The structured trigger here assumes both conditions are captured by a 'residential' entry in special_handling; if address-based residential status is tracked separately, this trigger would not fire for that case.\",\"clause\":\"falcon-freight.md \u00a74\"}],\"notes\":[\"Service covers full and part truckload road carriage on all-India lanes.\",\"The 12% fuel surcharge's compounding base depends on whether the express premium applied; per clause 3 it is levied on base freight alone when express was not booked, and on base freight plus express premium when it was.\"]}",
+  "structured_output": {
+    "agreement_ref": "FF/BFC/2024-11",
+    "effective_period": {
+      "raw_text": "1 December 2024 \u2013 30 November 2026",
+      "start": "2024-12-01",
+      "end": "2026-11-30"
+    },
+    "currency": "INR",
+    "pricing_basis": {
+      "description": "Base freight is charged per kilometre of the booked lane distance, at a rate that varies according to the consignment's billed weight band.",
+      "clause": "falcon-freight.md \u00a71"
+    },
+    "chargeable_weight_floor": null,
+    "rate_bands": [
+      {
+        "name": "Base freight \u2014 up to 500 kg",
+        "banded_on": "weight_kg",
+        "min": null,
+        "min_op": null,
+        "max": 500,
+        "max_op": "<=",
+        "rate": 18,
+        "rate_unit": "per_km",
+        "clause": "falcon-freight.md \u00a71"
+      },
+      {
+        "name": "Base freight \u2014 501 to 2,000 kg",
+        "banded_on": "weight_kg",
+        "min": 501,
+        "min_op": ">=",
+        "max": 2000,
+        "max_op": "<=",
+        "rate": 24,
+        "rate_unit": "per_km",
+        "clause": "falcon-freight.md \u00a71"
+      }
+    ],
+    "flat_rates": [],
+    "service_level_rules": [],
+    "premiums": [
+      {
+        "name": "Express service premium",
+        "type": "percentage",
+        "rate": 0.15,
+        "amount": null,
+        "condition": "Express service is booked for the consignment.",
+        "trigger": {
+          "attribute": "service_level",
+          "op": "eq",
+          "value": "express"
+        },
+        "compounds_on": [
+          "base_freight"
+        ],
+        "clause": "falcon-freight.md \u00a72"
+      }
+    ],
+    "surcharges": [
+      {
+        "name": "Fuel surcharge",
+        "type": "percentage",
+        "rate": 0.12,
+        "amount": null,
+        "condition": "Applies to every consignment's freight charge (base freight plus express premium, where applicable).",
+        "trigger": null,
+        "compounds_on": [
+          "base_freight",
+          "Express service premium"
+        ],
+        "clause": "falcon-freight.md \u00a73"
+      }
+    ],
+    "accessorial_charges": [
+      {
+        "name": "Residential delivery",
+        "type": "flat_fee",
+        "rate": null,
+        "amount": 250,
+        "condition": "Consignee address is a residence, or the booking is flagged residential.",
+        "trigger": {
+          "attribute": "special_handling",
+          "op": "contains",
+          "value": "residential"
+        },
+        "clause": "falcon-freight.md \u00a74"
+      }
+    ],
+    "accessorial_policy": {
+      "type": "whitelist",
+      "allowed_names": [
+        "Residential delivery"
+      ],
+      "clause": "falcon-freight.md \u00a75",
+      "note": "Clause 5 states no other accessorial charges are payable under this agreement; any service outside this schedule requires the Customer's prior written agreement via a rate confirmation referencing this agreement."
+    },
+    "discounts": [],
+    "exclusions": [
+      {
+        "condition": "Consignment's billed weight exceeds 2,000 kg.",
+        "description": "Consignments above 2,000 kg are quoted case by case and are outside this rate card \u2014 no rate_band or flat_rate applies.",
+        "clause": "falcon-freight.md \u00a71",
+        "trigger": {
+          "attribute": "billed_weight_kg",
+          "op": "gt",
+          "value": 2000
+        }
+      }
+    ],
+    "rounding_rule": {
+      "stated_in_contract": false,
+      "note": ""
+    },
+    "payment_terms": {
+      "invoicing_frequency": "fortnightly",
+      "payment_due_days": 30,
+      "dispute_window_days": 45,
+      "clause": "falcon-freight.md \u00a76, \u00a77"
+    },
+    "ambiguities": [
+      {
+        "description": "Clause 1 defines bands as 'up to and including 500 kg' (\u2264500) and '501 kg to 2,000 kg' (\u2265501, \u22642,000). A billed weight strictly between 500 kg and 501 kg (e.g. 500.5 kg) is covered by neither band, since the first band's literal upper bound is \u2264500 and the second's literal lower bound is \u2265501. This is a genuine gap in the rate card, not a resolved boundary.",
+        "clause": "falcon-freight.md \u00a71"
+      },
+      {
+        "description": "Clause 4 triggers the residential accessorial on two distinct conditions \u2014 'consignee address is a residence' or 'the booking is flagged residential' \u2014 but the contract does not specify how a residential address is determined from shipment data as opposed to an explicit residential flag on the booking. The structured trigger here assumes both conditions are captured by a 'residential' entry in special_handling; if address-based residential status is tracked separately, this trigger would not fire for that case.",
+        "clause": "falcon-freight.md \u00a74"
+      }
+    ],
+    "notes": [
+      "Service covers full and part truckload road carriage on all-India lanes.",
+      "The 12% fuel surcharge's compounding base depends on whether the express premium applied; per clause 3 it is levied on base freight alone when express was not booked, and on base freight plus express premium when it was."
+    ]
+  },
+  "ttft_ms": 24858,
+  "type": "result",
+  "duration_ms": 37799,
+  "uuid": "10ab4fce-01ac-4d2d-ac43-24bd442acb20",
+  "ttft_stream_ms": 1707,
+  "time_to_request_ms": 32,
+  "first_content_frame_ms": 2295,
+  "queued_turn_count": 0,
+  "result_index": 0
+}

@@ -1,0 +1,364 @@
+---
+name: adjudication
+description: Disposition policy for adjudicating freight billing reconciliation findings (accept/dispute/escalate) from deterministic evidence, and the memo-writing requirements that go with it.
+---
+
+# Freight billing adjudication policy
+
+You are adjudicating one finding from an automated freight billing
+reconciliation pipeline. Every number you have been given — billed
+amounts, expected amounts, deltas, dispute-unit amounts, pricing traces,
+invoice totals — was computed by deterministic code from the shipment
+records and the carrier's rate card, independently of you. Your job is
+judgment, not arithmetic: given that evidence, decide the disposition,
+write the justification, cite the governing clause(s), and draft the
+memo a carrier-relations colleague will act on.
+
+## What you decide
+
+- **`disposition`**: `accept`, `dispute`, or `escalate` — see policy below.
+- **`justification`**: your reasoning, in prose, citing the evidence you were given.
+- **`governing_clauses`**: the actual contract clause(s) that govern this finding, in the form `"<contract-file>.md §N"`. Cite the clauses that best support your reasoning — you are not limited to whichever clauses the deterministic evidence happened to reference; independently identify the governing clause(s) from the contract text you were given, and cite only clause numbers that actually appear in it.
+- **`memo_narrative`**: three short prose fields (`what_happened`, `why`, `recommended_action`) that a deterministic step will assemble into the final memo alongside the amounts and identifiers it already knows. Do not restate or invent a monetary figure in this prose — the assembler adds the real amount automatically. If you need to refer to "the amount," say "the amount above" or similar rather than writing a number.
+
+## What you must never do
+
+You have no tools and cannot change any file. But even in your own JSON
+answer, never include a monetary field, or restate/alter any monetary
+value from the evidence, under any key. Concretely, never:
+
+- calculate or restate `billed_amount`, `expected_amount`, or `delta`
+- invent a monetary amount not already present in the evidence you were given
+- change a dispute-unit amount, or state what you think it should be
+- change an invoice total
+- decide whether a monetary amount should be counted twice — that was already decided deterministically before you ever saw this finding, by construction of the finding you're looking at
+- modify or second-guess the shipment facts (weight, distance, service level, special handling) you were given
+- modify or second-guess the extracted rate-card rules you were given
+
+Your output schema has no field for any of this — if you find yourself
+wanting to write a number, that number belongs in your reasoning as
+*context* referencing the evidence's own figures, never as a new value
+you're asserting.
+
+## Disposition policy
+
+- **`accept`** — the billed amount is supported by the governing
+  contract and the shipment facts. Use this when the evidence shows no
+  determinable error: a `line_pricing_delta` finding whose delta is
+  actually within a defensible reading of the contract, or a finding
+  where your own reading of the clauses doesn't support treating the
+  billed amount as wrong.
+- **`dispute`** — there is a determinable contractual overcharge, an
+  unauthorized/uncontracted charge, a duplicate billing, or another
+  clearly established billing error, and the evidence lets you say so
+  with a specific governing clause. This is the disposition for money
+  BlueFin should not pay as billed.
+- **`escalate`** — the contract or data does not unambiguously determine
+  the correct treatment, and a human needs to decide. This includes
+  cases where the deterministic pipeline itself could not compute an
+  expected amount (an `ambiguous_line` finding), or where a rate card's
+  own recorded ambiguity bears directly on this finding, or where you
+  independently find the governing clause(s) don't clearly resolve the
+  question either way.
+
+**Never guess when contract language is genuinely ambiguous.** If two
+readings of a clause are both defensible and lead to different outcomes,
+that is `escalate`, not a coin flip toward `dispute` or `accept`.
+
+**For ambiguous pricing cases specifically** (findings where the
+deterministic pricing engine itself returned no expected amount): default
+to `escalate` unless the contract evidence you were given clearly
+establishes a different treatment despite the pricing engine's gap. Do
+not resolve a genuine rate-card gap yourself by picking a rate band that
+isn't actually written in the contract.
+
+**Do not treat the deterministic pipeline's own proposed reason as
+unquestionable.** You were given the pipeline's `adjudication_reason` as
+a starting point, not a verdict — read the actual evidence and reach your
+own conclusion. At the same time, never contradict a deterministic
+monetary fact (e.g. don't argue a delta is actually a different number)
+or invent a calculation the pipeline didn't perform — your disagreement,
+if any, is about disposition and interpretation, never about arithmetic.
+
+## Evidence hierarchy
+
+When evidence conflicts or is incomplete, weight it in this order:
+
+1. The **shipment record** (ground truth for what was actually shipped — weight, distance, service level, special handling).
+2. The **contract text you were given verbatim** — read it yourself; don't only trust the structured rate-card summary of it.
+3. The **structured rate card** (a faithful but agent-produced transcription of the contract — useful for quick lookup, but the contract text is authoritative if they ever seem to disagree).
+4. The **deterministic pricing trace / invoice evidence** — the arithmetic path the pipeline followed, given to you so you can verify its logic step by step, not just its conclusion.
+5. The **pipeline's own proposed reason** — context for why this finding exists, not a conclusion to defer to.
+
+## Type-specific guidance
+
+- **`line_pricing_delta`**: the pricing trace shows exactly how the expected amount was derived, band by band and surcharge by surcharge. Verify the trace against the contract text yourself before concluding `dispute`.
+- **`ambiguous_line`**: the pricing engine found a genuine gap (e.g. a weight or distance value the rate bands don't cover) or an explicit contract prohibition. Read why it's ambiguous; default to `escalate` per the policy above.
+- **`invoice_level_discount`**: an invoice-total-level rule (e.g. a volume discount) from the rate card. If the finding's evidence shows candidate counting bases disagreeing, or an amount blocked by an unresolved line elsewhere on the invoice, that unresolved state is itself a reason to lean toward `escalate` — you can still `dispute` the underlying entitlement-to-a-discount question if the contract clearly supports it, but say plainly in your justification if the exact amount remains pending.
+- **`duplicate_billing`**: reason about whether the duplicate occurrence could represent genuinely payable duplicate freight under the contract and the shipment/invoice evidence (e.g. a real re-delivery, a correction, a split shipment) rather than assuming every duplicate is automatically an error. If nothing in the evidence explains a second legitimate charge for the same shipment, `dispute` is appropriate. Never conclude by "removing" one occurrence — you are adjudicating whether the combined billing represents an error, not editing the underlying data.
+- **`credit_note_corroboration`**: the credit note's own amount already matches an already-counted line-level delta — there is no new money here. Your disposition should reflect whether the underlying discrepancy is a real billing error (usually mirroring what you'd conclude for the line it corroborates), and your justification should note that the carrier's own credit note supports that conclusion. Do not treat this as a second, separate dispute amount.
+- **`credit_note_novel`**: the credit note identifies a correction that does *not* match anything already captured by line-level pricing. Treat this as new evidence of a possible billing error in its own right.
+- **`invoice_total_mismatch`**: the carrier's own invoice doesn't add up to its own line items. This is usually a `dispute`-worthy documentation problem for the carrier to fix, unless the evidence suggests a rounding artifact too small to matter.
+
+## Contract citation requirements
+
+Every `governing_clauses` entry must be in the form `"<contract-file>.md §N"` (or `"...§N, §M"` for more than one), and every §N you cite must be a clause number that actually appears in the contract text you were given for this finding. Do not cite a clause from a different carrier's contract, and do not invent a clause number.
+
+## Memo requirements
+
+A memo is only produced for findings disposed `dispute` or `escalate` — write `memo_narrative` for every finding regardless (an `accept` narrative is simply not used downstream), but write it as if it might be read: concise, specific, and addressed to a carrier-relations colleague who needs to act on it, not to another engineer.
+
+- `what_happened`: one or two sentences stating the concrete fact — what was billed, what the contract/data shows, in plain language.
+- `why`: why this warrants dispute or escalation (or, for accept, why it doesn't) — reference the governing clause(s) by number.
+- `recommended_action`: a specific next step for the colleague — e.g. "request a corrected invoice from the carrier citing §3," or "escalate to [carrier]'s account manager for a ruling on consignments at exactly 50kg, as the contract does not state a rate at that boundary."
+
+Keep each field to one or two sentences. This is a memo, not a report.
+
+
+---
+
+## The finding to adjudicate
+
+```json
+{
+  "finding_id": "ambiguous_line:ALPINE-0726:AE-3005",
+  "finding_type": "ambiguous_line",
+  "affected_invoices": [
+    "ALPINE-0726"
+  ],
+  "affected_consignments": [
+    "AE-3005"
+  ],
+  "related_shipments": [
+    "SH-4111"
+  ],
+  "billed_amounts": [
+    475.0
+  ],
+  "expected_amount": null,
+  "delta": null,
+  "dispute_unit_id": null,
+  "dispute_amount": null,
+  "related_dispute_unit_id": null,
+  "governing_clauses": [
+    "alpine-express.md \u00a72"
+  ],
+  "evidence": {
+    "pricing_trace": {
+      "actual_weight_kg": "50.0",
+      "distance_km": "570",
+      "chargeable_weight_floor_applied": {
+        "minimum_kg": "25",
+        "actual_kg": "50.0",
+        "chargeable_kg": "50.0",
+        "clause": "alpine-express.md \u00a71"
+      },
+      "base_freight": null
+    }
+  },
+  "requires_adjudication": true,
+  "adjudication_reason": "no rate band covers weight_kg=50.0 -- this is a gap between adjacent bands in the contract, not a computable amount"
+}
+```
+
+## Shipment facts for the affected consignment(s)
+
+```json
+{
+  "AE-3005": {
+    "shipment_id": "SH-4111",
+    "carrier_consignment_ref": "AE-3005",
+    "carrier": "alpine",
+    "ship_date": "2026-07-06",
+    "origin": {
+      "city": "Bengaluru",
+      "pincode": "560001"
+    },
+    "destination": {
+      "city": "Hyderabad",
+      "pincode": "500081"
+    },
+    "distance_km": 570,
+    "billed_weight_kg": 50.0,
+    "declared_value_inr": 34950,
+    "service_level": "standard",
+    "special_handling": [],
+    "delivery_status": "delivered",
+    "delivered_at": "2026-07-08"
+  }
+}
+```
+
+## The governing rate card (alpine)
+
+```json
+{
+  "accessorial_charges": [
+    {
+      "name": "Fragile handling fee",
+      "type": "flat_fee",
+      "rate": null,
+      "amount": 150,
+      "condition": "special_handling includes 'fragile'",
+      "trigger": {
+        "attribute": "special_handling",
+        "op": "contains",
+        "value": "fragile"
+      },
+      "clause": "alpine-express.md \u00a74"
+    }
+  ],
+  "accessorial_policy": {
+    "type": "no_restriction_stated",
+    "allowed_names": [],
+    "clause": "",
+    "note": "The contract does not state any restriction limiting accessorial charges to a fixed list; only the fragile handling fee is mentioned."
+  },
+  "agreement_ref": "AEL/BFC/2025-03",
+  "ambiguities": [
+    {
+      "description": "The rate bands are defined as 'under 50 kg' (strict '<') and 'over 50 kg' (strict '>'), so a consignment with chargeable weight of exactly 50 kg falls into neither band and has no stated per-kg rate.",
+      "clause": "alpine-express.md \u00a72"
+    },
+    {
+      "description": "The volume incentive discount is based on consignments tendered 'in any calendar month', but the contract does not specify which date (ship date, booking date, or invoice date) defines that calendar month for counting purposes.",
+      "clause": "alpine-express.md \u00a75"
+    }
+  ],
+  "chargeable_weight_floor": {
+    "minimum_kg": 25,
+    "clause": "alpine-express.md \u00a71"
+  },
+  "currency": "INR",
+  "discounts": [
+    {
+      "name": "Volume incentive discount",
+      "type": "percentage_of_invoice_total",
+      "rate": 0.05,
+      "amount": null,
+      "condition": "Applies to the invoice total for any calendar month in which the Customer tenders more than 12 consignments",
+      "clause": "alpine-express.md \u00a75",
+      "threshold": {
+        "metric": "consignment_count",
+        "period": "calendar month",
+        "op": "gt",
+        "value": 12
+      }
+    }
+  ],
+  "effective_period": {
+    "raw_text": "1 March 2025 \u2013 28 February 2027",
+    "start": "2025-03-01",
+    "end": "2027-02-28"
+  },
+  "exclusions": [],
+  "flat_rates": [],
+  "notes": [
+    "Rate revisions require 60 days' written notice and take effect from the first day of the following calendar month (\u00a77)."
+  ],
+  "payment_terms": {
+    "invoicing_frequency": "monthly",
+    "payment_due_days": 30,
+    "dispute_window_days": null,
+    "clause": "alpine-express.md \u00a76"
+  },
+  "premiums": [],
+  "pricing_basis": {
+    "description": "Freight is charged on chargeable weight, defined as the higher of the consignment's actual weight and a 25 kg minimum chargeable weight, priced per kg according to a weight band.",
+    "clause": "alpine-express.md \u00a71, \u00a72"
+  },
+  "rate_bands": [
+    {
+      "name": "Under 50 kg",
+      "banded_on": "weight_kg",
+      "min": null,
+      "min_op": null,
+      "max": 50,
+      "max_op": "<",
+      "rate": 9.5,
+      "rate_unit": "per_kg",
+      "clause": "alpine-express.md \u00a72"
+    },
+    {
+      "name": "Over 50 kg",
+      "banded_on": "weight_kg",
+      "min": 50,
+      "min_op": ">",
+      "max": null,
+      "max_op": null,
+      "rate": 8.25,
+      "rate_unit": "per_kg",
+      "clause": "alpine-express.md \u00a72"
+    }
+  ],
+  "rounding_rule": {
+    "stated_in_contract": false,
+    "note": "No rounding rule is stated in the contract."
+  },
+  "service_level_rules": [
+    {
+      "service_level": "standard",
+      "allowed": true,
+      "clause": "alpine-express.md \u00a73",
+      "note": "All bookings travel on standard service."
+    },
+    {
+      "service_level": "express",
+      "allowed": false,
+      "clause": "alpine-express.md \u00a73",
+      "note": "Express products are not offered under this agreement."
+    }
+  ],
+  "surcharges": [],
+  "carrier": "alpine",
+  "source_contract": {
+    "file": "data/contracts/alpine-express.md",
+    "sha256": "caa39649f701795356f6545c0a6c86ea12b2037dc96080027bdf8f17801e6001"
+  }
+}
+```
+
+## The governing contract, verbatim (alpine-express.md)
+
+```
+# Services Agreement — Alpine Express Logistics
+
+**Agreement ref:** AEL/BFC/2025-03
+**Between:** BlueFin Commerce ("the Customer") and Alpine Express Logistics ("the Carrier")
+**Service:** surface parcel and light cargo, South India network
+**Term:** 1 March 2025 – 28 February 2027
+
+## Freight charges
+
+1. Freight is charged on **chargeable weight**, which is the higher of the
+   consignment's actual weight and the **minimum chargeable weight of
+   25 kg**.
+2. Rates:
+   - consignments **under 50 kg**: ₹9.50 per kg of chargeable weight
+   - consignments **over 50 kg**: ₹8.25 per kg of chargeable weight
+3. All bookings travel on standard service. Express products are not
+   offered under this agreement.
+
+## Handling
+
+4. Consignments booked as **fragile** are handled under the Carrier's
+   protected-handling process at **₹150.00 per consignment**, in addition
+   to freight.
+
+## Volume incentive
+
+5. In any calendar month in which the Customer tenders **more than 12
+   consignments**, the Carrier will apply a **5% discount to the invoice
+   total** for that month's invoice.
+
+## Invoicing and payment
+
+6. The Carrier invoices monthly. Payment is due 30 days from invoice date.
+7. Rate revisions require 60 days' written notice and take effect from the
+   first day of the following calendar month.
+
+```
+
+---
+
+Reply with ONLY a raw JSON object (no markdown, no code fences, no commentary) with exactly these fields: "finding_id" (must be exactly "ambiguous_line:ALPINE-0726:AE-3005"), "disposition" ("accept"/"dispute"/"escalate"), "justification", "governing_clauses" (array of strings, each "alpine-express.md §N"), and "memo_narrative" (an object with "what_happened", "why", "recommended_action"). Do not include any other field, and never include a monetary amount anywhere in your answer.

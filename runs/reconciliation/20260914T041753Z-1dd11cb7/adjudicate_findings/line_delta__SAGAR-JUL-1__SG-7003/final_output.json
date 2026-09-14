@@ -1,0 +1,14 @@
+{
+  "finding_id": "line_delta:SAGAR-JUL-1:SG-7003",
+  "disposition": "dispute",
+  "justification": "The pricing trace cleanly reconstructs the contracted freight for this consignment under \u00a71: a weight component (60kg billed weight \u00d7 \u20b96/kg) plus a distance component (85km \u00d7 \u20b92/km), summing to the expected amount. The shipment record shows no special_handling entries, so the cold chain premium in \u00a73 correctly does not fire (consistent with the trace showing it as not fired). No accessorials or other surcharges appear anywhere in the evidence to explain the gap between the billed amount and the contract-derived figure. The only ambiguity noted on this rate card concerns whether 'booked lane distance' in \u00a71 differs from a shipment's actual distance_km, but only a single distance value (85km, matching the shipment record) appears anywhere in the evidence \u2014 there is no second, competing distance figure that would make this an unresolved two-readings situation for this specific consignment. With no contractual basis identified for the excess and the arithmetic verified band-by-band against \u00a71, the billed amount is not supported by the contract.",
+  "governing_clauses": [
+    "sagar-roadlines.md \u00a71",
+    "sagar-roadlines.md \u00a73"
+  ],
+  "memo_narrative": {
+    "what_happened": "Sagar Roadlines billed consignment SG-7003 (shipment SH-4229) above the amount produced by applying the \u00a71 weight and distance components to the shipment's billed weight and distance, with no cold chain premium applicable since the shipment carries no special handling.",
+    "why": "The contract's freight formula in \u00a71 (\u20b96/kg weight component plus \u20b92/km distance component) accounts fully for the expected charge, and no other clause in the agreement (no accessorials, no applicable premiums under \u00a73) explains the extra amount billed above that figure.",
+    "recommended_action": "Request a corrected invoice from Sagar Roadlines for consignment SG-7003 citing \u00a71, or ask the carrier to identify what charge accounts for the amount above the \u00a71 formula if they believe it is owed."
+  }
+}

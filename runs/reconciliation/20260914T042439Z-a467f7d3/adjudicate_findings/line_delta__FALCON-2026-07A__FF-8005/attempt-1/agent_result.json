@@ -1,0 +1,127 @@
+{
+  "duration_api_ms": 23350,
+  "stop_reason": "tool_use",
+  "session_id": "17ff238f-6d6e-4cd4-9611-97e8dad06a42",
+  "total_cost_usd": 0.0901864,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 13522,
+    "cache_read_input_tokens": 30702,
+    "output_tokens": 2332,
+    "output_tokens_details": {
+      "thinking_tokens": 847
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 13522,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 799,
+        "cache_read_input_tokens": 21267,
+        "cache_creation_input_tokens": 1690,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1690
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 6535,
+      "outputTokens": 19,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.00663,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 2332,
+      "cacheReadInputTokens": 30702,
+      "cacheCreationInputTokens": 13522,
+      "webSearchRequests": 0,
+      "costUSD": 0.0835564,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 847,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "extra_usage_disabled",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 3,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"finding_id\":\"line_delta:FALCON-2026-07A:FF-8005\",\"disposition\":\"dispute\",\"justification\":\"The pricing trace correctly applies the contract to this shipment: 260 kg billed weight falls unambiguously within the 'up to and including 500 kg' band (\u00a71) at \u20b918/km over the 800 km lane, the express service premium of 15% applies per \u00a72 (service_level is express), and the 12% fuel surcharge compounds on base freight plus the express premium per \u00a73. No accessorial (\u00a74) fired since special_handling is empty, and \u00a75 bars any charge outside the schedule. This chain reproduces the expected amount exactly, leaving the billed amount unsupported by any contract mechanism. Unlike the fractional-weight ambiguity noted elsewhere in the rate card, 260 kg is squarely inside the lower band with no boundary issue, so there is no genuine interpretive gap here \u2014 the overcharge is a clean, determinable billing error.\",\"governing_clauses\":[\"falcon-freight.md \u00a71\",\"falcon-freight.md \u00a72\",\"falcon-freight.md \u00a73\",\"falcon-freight.md \u00a75\"],\"memo_narrative\":{\"what_happened\":\"Falcon billed consignment FF-8005 (260 kg, Mumbai\u2013Bengaluru, 800 km, express) above the amount that the contract's freight, express premium, and fuel surcharge formula produces.\",\"why\":\"Recomputing base freight under \u00a71's sub-500kg band, the \u00a72 express premium, and the \u00a73 fuel surcharge in sequence yields a lower total than billed, and \u00a75 prohibits any charge outside this schedule, so the excess above the amount above is not contractually supported.\",\"recommended_action\":\"Raise a billing dispute with Falcon citing \u00a71\u2013\u00a73 and \u00a75, requesting either a corrected invoice or an explanation for the excess charge on FF-8005, within the 45-day dispute window under \u00a77.\"}}",
+  "structured_output": {
+    "finding_id": "line_delta:FALCON-2026-07A:FF-8005",
+    "disposition": "dispute",
+    "justification": "The pricing trace correctly applies the contract to this shipment: 260 kg billed weight falls unambiguously within the 'up to and including 500 kg' band (\u00a71) at \u20b918/km over the 800 km lane, the express service premium of 15% applies per \u00a72 (service_level is express), and the 12% fuel surcharge compounds on base freight plus the express premium per \u00a73. No accessorial (\u00a74) fired since special_handling is empty, and \u00a75 bars any charge outside the schedule. This chain reproduces the expected amount exactly, leaving the billed amount unsupported by any contract mechanism. Unlike the fractional-weight ambiguity noted elsewhere in the rate card, 260 kg is squarely inside the lower band with no boundary issue, so there is no genuine interpretive gap here \u2014 the overcharge is a clean, determinable billing error.",
+    "governing_clauses": [
+      "falcon-freight.md \u00a71",
+      "falcon-freight.md \u00a72",
+      "falcon-freight.md \u00a73",
+      "falcon-freight.md \u00a75"
+    ],
+    "memo_narrative": {
+      "what_happened": "Falcon billed consignment FF-8005 (260 kg, Mumbai\u2013Bengaluru, 800 km, express) above the amount that the contract's freight, express premium, and fuel surcharge formula produces.",
+      "why": "Recomputing base freight under \u00a71's sub-500kg band, the \u00a72 express premium, and the \u00a73 fuel surcharge in sequence yields a lower total than billed, and \u00a75 prohibits any charge outside this schedule, so the excess above the amount above is not contractually supported.",
+      "recommended_action": "Raise a billing dispute with Falcon citing \u00a71\u2013\u00a73 and \u00a75, requesting either a corrected invoice or an explanation for the excess charge on FF-8005, within the 45-day dispute window under \u00a77."
+    }
+  },
+  "ttft_ms": 9940,
+  "type": "result",
+  "duration_ms": 21851,
+  "uuid": "55431c40-d948-4bf4-8df1-18081b63230c",
+  "ttft_stream_ms": 1000,
+  "time_to_request_ms": 35,
+  "first_content_frame_ms": 1256,
+  "queued_turn_count": 0,
+  "result_index": 0
+}

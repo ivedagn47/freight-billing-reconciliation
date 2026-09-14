@@ -1,0 +1,14 @@
+{
+  "finding_id": "line_delta:SAGAR-JUL-1:SG-7003",
+  "disposition": "dispute",
+  "justification": "The shipment record for SH-4229 shows billed_weight_kg=60, distance_km=85, service_level=standard, and special_handling=[] (no cold chain). Per \u00a71, freight is the weight component (\u20b96/kg \u00d7 60kg) plus the distance component (\u20b92/km \u00d7 85km), which the pricing trace correctly computes as 360 + 170 = the expected amount. Since special_handling does not include cold_chain, the \u00a73 cold-chain premium correctly did not fire (the trace shows fired: false), so no premium should apply on top of the base freight. The contract states only these two components and one conditional premium; nothing in the contract supports a higher billed amount for a standard, non-cold-chain consignment at this weight and distance. There is no ambiguity here \u2014 \u00a71's formula is unconditional and mechanical, and the shipment facts unambiguously place this consignment outside the \u00a73 premium trigger. The billed amount therefore reflects an overcharge relative to the governing rate card with no contractual basis.",
+  "governing_clauses": [
+    "sagar-roadlines.md \u00a71",
+    "sagar-roadlines.md \u00a73"
+  ],
+  "memo_narrative": {
+    "what_happened": "Sagar billed consignment SG-7003 (shipment SH-4229, 60kg, 85km, standard service, no cold chain) above the amount that the contract's weight-plus-distance formula produces.",
+    "why": "Under \u00a71, freight is strictly the sum of the \u20b96/kg weight component and the \u20b92/km distance component for this lane and weight; the \u00a73 cold-chain premium does not apply since the shipment carries no cold_chain special handling. Nothing in the contract supports billing above this computed total.",
+    "recommended_action": "Request a corrected invoice from Sagar Roadlines for consignment SG-7003 citing \u00a71, noting that no cold-chain premium under \u00a73 applies to this shipment."
+  }
+}

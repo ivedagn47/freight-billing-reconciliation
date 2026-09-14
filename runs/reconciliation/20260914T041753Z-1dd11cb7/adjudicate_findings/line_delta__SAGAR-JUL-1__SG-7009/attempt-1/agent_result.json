@@ -1,0 +1,125 @@
+{
+  "duration_api_ms": 18998,
+  "stop_reason": "tool_use",
+  "session_id": "92a337e3-96f1-494e-91a2-55c888a72e44",
+  "total_cost_usd": 0.0763538,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 12156,
+    "cache_read_input_tokens": 29929,
+    "output_tokens": 1575,
+    "output_tokens_details": {
+      "thinking_tokens": 329
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 12156,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 635,
+        "cache_read_input_tokens": 20494,
+        "cache_creation_input_tokens": 1097,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1097
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 5896,
+      "outputTokens": 18,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.005986,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 1575,
+      "cacheReadInputTokens": 29929,
+      "cacheCreationInputTokens": 12156,
+      "webSearchRequests": 0,
+      "costUSD": 0.07036780000000001,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 329,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "extra_usage_disabled",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 3,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"finding_id\":\"line_delta:SAGAR-JUL-1:SG-7009\",\"disposition\":\"dispute\",\"justification\":\"The pricing trace correctly applies \u00a71's formula: weight component (200 kg \u00d7 \u20b96/kg = 1200) plus distance component (140 km \u00d7 \u20b92/km = 280), for a contract-governed total of 1480. The cold chain premium in \u00a73 correctly did not fire since the shipment record shows no cold_chain special handling. The shipment's distance_km (140) is the only distance figure on record for this consignment, and the rate card's own ambiguity note about 'booked lane distance' vs. actual distance does not present a genuine conflict here since no alternate distance value exists in the evidence. The billed amount exceeds this correctly-derived total by the stated delta, which is an unsupported overcharge under \u00a71.\",\"governing_clauses\":[\"sagar-roadlines.md \u00a71\",\"sagar-roadlines.md \u00a73\"],\"memo_narrative\":{\"what_happened\":\"Sagar billed consignment SG-7009 above the amount that \u00a71's weight-plus-distance formula produces from the shipment's recorded 200 kg weight and 140 km distance, with no cold chain premium applicable per \u00a73.\",\"why\":\"The pricing trace confirms the contract math (weight and distance components) ties out exactly to the lower figure, so the amount above is not supported by \u00a71 or \u00a73 and represents an overcharge.\",\"recommended_action\":\"Send Sagar Roadlines a dispute referencing \u00a71 and request a corrected invoice or credit note for consignment SG-7009 per \u00a76.\"}}",
+  "structured_output": {
+    "finding_id": "line_delta:SAGAR-JUL-1:SG-7009",
+    "disposition": "dispute",
+    "justification": "The pricing trace correctly applies \u00a71's formula: weight component (200 kg \u00d7 \u20b96/kg = 1200) plus distance component (140 km \u00d7 \u20b92/km = 280), for a contract-governed total of 1480. The cold chain premium in \u00a73 correctly did not fire since the shipment record shows no cold_chain special handling. The shipment's distance_km (140) is the only distance figure on record for this consignment, and the rate card's own ambiguity note about 'booked lane distance' vs. actual distance does not present a genuine conflict here since no alternate distance value exists in the evidence. The billed amount exceeds this correctly-derived total by the stated delta, which is an unsupported overcharge under \u00a71.",
+    "governing_clauses": [
+      "sagar-roadlines.md \u00a71",
+      "sagar-roadlines.md \u00a73"
+    ],
+    "memo_narrative": {
+      "what_happened": "Sagar billed consignment SG-7009 above the amount that \u00a71's weight-plus-distance formula produces from the shipment's recorded 200 kg weight and 140 km distance, with no cold chain premium applicable per \u00a73.",
+      "why": "The pricing trace confirms the contract math (weight and distance components) ties out exactly to the lower figure, so the amount above is not supported by \u00a71 or \u00a73 and represents an overcharge.",
+      "recommended_action": "Send Sagar Roadlines a dispute referencing \u00a71 and request a corrected invoice or credit note for consignment SG-7009 per \u00a76."
+    }
+  },
+  "ttft_ms": 6956,
+  "type": "result",
+  "duration_ms": 17494,
+  "uuid": "85a0634c-43e4-4b47-966e-fccdb6cd60ef",
+  "ttft_stream_ms": 2886,
+  "time_to_request_ms": 32,
+  "first_content_frame_ms": 3556,
+  "queued_turn_count": 0,
+  "result_index": 0
+}

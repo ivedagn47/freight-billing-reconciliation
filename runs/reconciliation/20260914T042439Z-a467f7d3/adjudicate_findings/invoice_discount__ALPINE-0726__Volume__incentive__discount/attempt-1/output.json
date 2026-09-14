@@ -1,0 +1,13 @@
+{
+  "finding_id": "invoice_discount:ALPINE-0726:Volume incentive discount",
+  "disposition": "escalate",
+  "justification": "Under \u00a75, the 5% volume incentive discount applies to any calendar month in which BlueFin tendered more than 12 consignments. All three candidate counting bases (by invoice document, by booking-date calendar month, and by ship-date calendar month) independently agree this invoice covers 40 consignments, well above the >12 threshold, so entitlement to the discount is not in question. However, the carrier declared a discount of 0.0, which appears to be an oversight or omission on their part. The exact rupee shortfall cannot yet be computed because one line on this invoice remains pricing-undetermined; the 5% discount is applied to the invoice total per \u00a75, and that total is not yet finalized. This is not a case a colleague can act on with a concrete figure today, so it must be escalated rather than disputed until the blocking line is resolved and the invoice total (and thus the discount shortfall) can be computed.",
+  "governing_clauses": [
+    "alpine-express.md \u00a75"
+  ],
+  "memo_narrative": {
+    "what_happened": "Alpine's July invoice ALPINE-0726 covers 40 consignments, but the carrier applied no volume incentive discount despite this being well above the 12-consignment monthly threshold in \u00a75.",
+    "why": "All available date bases agree the invoice qualifies for the 5% discount under \u00a75, so entitlement is clear; however, the precise shortfall cannot be finalized yet because a separate line on this same invoice is still pricing-undetermined, meaning the invoice total the discount would apply to isn't settled.",
+    "recommended_action": "Hold this item pending resolution of the outstanding pricing-undetermined line on the same invoice, then recompute the 5% discount against the finalized invoice total and pursue the shortfall with Alpine citing \u00a75."
+  }
+}

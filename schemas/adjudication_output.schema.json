@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "adjudication-output",
+  "description": "The adjudication agent's ENTIRE output for one finding. Deliberately excludes every monetary field (billed_amount, expected_amount, delta, dispute_amount, total_in_dispute, or anything else numeric-financial) -- additionalProperties: false makes it structurally impossible for the agent to introduce one, regardless of what the prompt asks. All money in the final report comes only from Phases 1-4.",
+  "type": "object",
+  "required": ["finding_id", "disposition", "justification", "governing_clauses", "memo_narrative"],
+  "additionalProperties": false,
+  "properties": {
+    "finding_id": { "type": "string", "minLength": 1 },
+    "disposition": { "type": "string", "enum": ["accept", "dispute", "escalate"] },
+    "justification": { "type": "string", "minLength": 1 },
+    "governing_clauses": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "memo_narrative": {
+      "type": "object",
+      "required": ["what_happened", "why", "recommended_action"],
+      "additionalProperties": false,
+      "properties": {
+        "what_happened": { "type": "string", "minLength": 1 },
+        "why": { "type": "string", "minLength": 1 },
+        "recommended_action": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

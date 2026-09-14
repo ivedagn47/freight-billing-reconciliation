@@ -1,0 +1,225 @@
+{
+  "duration_api_ms": 35541,
+  "stop_reason": "tool_use",
+  "session_id": "4b777b1b-94f7-41b0-80d2-c8a4326746bf",
+  "total_cost_usd": 0.120765,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 19576,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 3954,
+    "output_tokens_details": {
+      "thinking_tokens": 2320
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 19576,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3954,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 19576,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 19576
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 2852,
+      "outputTokens": 13,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.002917,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-sonnet-5": {
+      "inputTokens": 2,
+      "outputTokens": 3954,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 19576,
+      "webSearchRequests": 0,
+      "costUSD": 0.117848,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 2320,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "extra_usage_disabled",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 2,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"accessorial_charges\":[{\"name\":\"Fragile handling\",\"type\":\"flat_fee\",\"rate\":null,\"amount\":150,\"condition\":\"special_handling includes 'fragile'\",\"trigger\":{\"attribute\":\"special_handling\",\"op\":\"contains\",\"value\":\"fragile\"},\"clause\":\"alpine-express.md \u00a74\"}],\"accessorial_policy\":{\"type\":\"no_restriction_stated\",\"allowed_names\":[],\"clause\":\"\",\"note\":\"The contract does not state that accessorial charges are restricted to a defined list; the only accessorial charge mentioned is the fragile handling fee (\u00a74).\"},\"agreement_ref\":\"AEL/BFC/2025-03\",\"ambiguities\":[{\"description\":\"Rates are defined as strictly 'under 50 kg' (\u00a72, band 1) and strictly 'over 50 kg' (\u00a72, band 2). A consignment whose chargeable weight is exactly 50 kg falls into neither band; the contract does not specify which rate applies at that boundary.\",\"clause\":\"alpine-express.md \u00a72\"},{\"description\":\"The volume incentive discount is triggered by 'more than 12 consignments' tendered 'in any calendar month' (\u00a75), while invoicing is done monthly (\u00a76). The contract does not specify whether the calendar month for counting consignments is defined by ship date, booking date, or invoice date, nor how this is reconciled if an invoicing period does not align exactly with a calendar month.\",\"clause\":\"alpine-express.md \u00a75, \u00a76\"}],\"chargeable_weight_floor\":{\"minimum_kg\":25,\"clause\":\"alpine-express.md \u00a71\"},\"currency\":\"INR\",\"discounts\":[{\"name\":\"Volume incentive discount\",\"type\":\"percentage_of_invoice_total\",\"rate\":0.05,\"amount\":null,\"condition\":\"Customer tenders more than 12 consignments in a calendar month\",\"clause\":\"alpine-express.md \u00a75\"}],\"effective_period\":{\"raw_text\":\"1 March 2025 \u2013 28 February 2027\",\"start\":\"2025-03-01\",\"end\":\"2027-02-28\"},\"exclusions\":[],\"flat_rates\":[],\"notes\":[\"Agreement is between BlueFin Commerce and Alpine Express Logistics for surface parcel and light cargo service on the South India network.\",\"Rate revisions require 60 days' written notice and take effect from the first day of the following calendar month (\u00a77).\"],\"payment_terms\":{\"invoicing_frequency\":\"monthly\",\"payment_due_days\":30,\"dispute_window_days\":null,\"clause\":\"alpine-express.md \u00a76\"},\"premiums\":[],\"pricing_basis\":{\"description\":\"Freight is charged on chargeable weight, which is the higher of the consignment's actual weight and the minimum chargeable weight of 25 kg.\",\"clause\":\"alpine-express.md \u00a71\"},\"rate_bands\":[{\"name\":\"Under 50 kg\",\"banded_on\":\"weight_kg\",\"min\":null,\"min_op\":null,\"max\":50,\"max_op\":\"<\",\"rate\":9.5,\"rate_unit\":\"per_kg\",\"clause\":\"alpine-express.md \u00a72\"},{\"name\":\"Over 50 kg\",\"banded_on\":\"weight_kg\",\"min\":50,\"min_op\":\">\",\"max\":null,\"max_op\":null,\"rate\":8.25,\"rate_unit\":\"per_kg\",\"clause\":\"alpine-express.md \u00a72\"}],\"rounding_rule\":{\"stated_in_contract\":false,\"note\":\"Contract does not specify a rounding rule for computed charges.\"},\"service_level_rules\":[{\"service_level\":\"standard\",\"allowed\":true,\"clause\":\"alpine-express.md \u00a73\",\"note\":\"All bookings travel on standard service under this agreement.\"},{\"service_level\":\"express\",\"allowed\":false,\"clause\":\"alpine-express.md \u00a73\",\"note\":\"Express products are not offered under this agreement.\"}],\"surcharges\":[]}",
+  "structured_output": {
+    "accessorial_charges": [
+      {
+        "name": "Fragile handling",
+        "type": "flat_fee",
+        "rate": null,
+        "amount": 150,
+        "condition": "special_handling includes 'fragile'",
+        "trigger": {
+          "attribute": "special_handling",
+          "op": "contains",
+          "value": "fragile"
+        },
+        "clause": "alpine-express.md \u00a74"
+      }
+    ],
+    "accessorial_policy": {
+      "type": "no_restriction_stated",
+      "allowed_names": [],
+      "clause": "",
+      "note": "The contract does not state that accessorial charges are restricted to a defined list; the only accessorial charge mentioned is the fragile handling fee (\u00a74)."
+    },
+    "agreement_ref": "AEL/BFC/2025-03",
+    "ambiguities": [
+      {
+        "description": "Rates are defined as strictly 'under 50 kg' (\u00a72, band 1) and strictly 'over 50 kg' (\u00a72, band 2). A consignment whose chargeable weight is exactly 50 kg falls into neither band; the contract does not specify which rate applies at that boundary.",
+        "clause": "alpine-express.md \u00a72"
+      },
+      {
+        "description": "The volume incentive discount is triggered by 'more than 12 consignments' tendered 'in any calendar month' (\u00a75), while invoicing is done monthly (\u00a76). The contract does not specify whether the calendar month for counting consignments is defined by ship date, booking date, or invoice date, nor how this is reconciled if an invoicing period does not align exactly with a calendar month.",
+        "clause": "alpine-express.md \u00a75, \u00a76"
+      }
+    ],
+    "chargeable_weight_floor": {
+      "minimum_kg": 25,
+      "clause": "alpine-express.md \u00a71"
+    },
+    "currency": "INR",
+    "discounts": [
+      {
+        "name": "Volume incentive discount",
+        "type": "percentage_of_invoice_total",
+        "rate": 0.05,
+        "amount": null,
+        "condition": "Customer tenders more than 12 consignments in a calendar month",
+        "clause": "alpine-express.md \u00a75"
+      }
+    ],
+    "effective_period": {
+      "raw_text": "1 March 2025 \u2013 28 February 2027",
+      "start": "2025-03-01",
+      "end": "2027-02-28"
+    },
+    "exclusions": [],
+    "flat_rates": [],
+    "notes": [
+      "Agreement is between BlueFin Commerce and Alpine Express Logistics for surface parcel and light cargo service on the South India network.",
+      "Rate revisions require 60 days' written notice and take effect from the first day of the following calendar month (\u00a77)."
+    ],
+    "payment_terms": {
+      "invoicing_frequency": "monthly",
+      "payment_due_days": 30,
+      "dispute_window_days": null,
+      "clause": "alpine-express.md \u00a76"
+    },
+    "premiums": [],
+    "pricing_basis": {
+      "description": "Freight is charged on chargeable weight, which is the higher of the consignment's actual weight and the minimum chargeable weight of 25 kg.",
+      "clause": "alpine-express.md \u00a71"
+    },
+    "rate_bands": [
+      {
+        "name": "Under 50 kg",
+        "banded_on": "weight_kg",
+        "min": null,
+        "min_op": null,
+        "max": 50,
+        "max_op": "<",
+        "rate": 9.5,
+        "rate_unit": "per_kg",
+        "clause": "alpine-express.md \u00a72"
+      },
+      {
+        "name": "Over 50 kg",
+        "banded_on": "weight_kg",
+        "min": 50,
+        "min_op": ">",
+        "max": null,
+        "max_op": null,
+        "rate": 8.25,
+        "rate_unit": "per_kg",
+        "clause": "alpine-express.md \u00a72"
+      }
+    ],
+    "rounding_rule": {
+      "stated_in_contract": false,
+      "note": "Contract does not specify a rounding rule for computed charges."
+    },
+    "service_level_rules": [
+      {
+        "service_level": "standard",
+        "allowed": true,
+        "clause": "alpine-express.md \u00a73",
+        "note": "All bookings travel on standard service under this agreement."
+      },
+      {
+        "service_level": "express",
+        "allowed": false,
+        "clause": "alpine-express.md \u00a73",
+        "note": "Express products are not offered under this agreement."
+      }
+    ],
+    "surcharges": []
+  },
+  "ttft_ms": 23687,
+  "type": "result",
+  "duration_ms": 34377,
+  "uuid": "3e54d079-4cf7-4624-9254-9e8f2271a323",
+  "ttft_stream_ms": 2184,
+  "time_to_request_ms": 31,
+  "first_content_frame_ms": 2581,
+  "queued_turn_count": 0,
+  "result_index": 0
+}

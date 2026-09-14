@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "memos-written",
+  "description": "Output of write_memos: deterministic assembly of memos/<finding_id>.md for every non-accept adjudication, combining the finding's own amounts/identifiers with the adjudication agent's justification prose.",
+  "type": "object",
+  "required": ["memos_written", "summary"],
+  "additionalProperties": false,
+  "properties": {
+    "memos_written": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+    "summary": {
+      "type": "object",
+      "required": ["memo_count"],
+      "additionalProperties": false,
+      "properties": {
+        "memo_count": { "type": "integer", "minimum": 0 }
+      }
+    }
+  }
+}

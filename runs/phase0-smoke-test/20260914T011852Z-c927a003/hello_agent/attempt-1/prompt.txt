@@ -1,0 +1,8 @@
+You are a single, isolated worker node in a small pipeline runner. You have no tools and no memory of any other node.
+
+The topic passed to you by the previous node is: "the flowstate/agentctl gap in this repository"
+
+Reply with ONLY a raw JSON object (no markdown, no code fences, no commentary) with exactly these fields:
+  "node": the literal string "hello_agent"
+  "greeting": a short one-sentence greeting of your choosing
+  "topic_echo": the exact topic string given to you above, verbatim
