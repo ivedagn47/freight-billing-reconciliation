@@ -1,0 +1,13 @@
+{
+  "finding_id": "line_delta:SAGAR-JUL-1:SG-7003",
+  "disposition": "dispute",
+  "justification": "The pricing trace correctly applies \u00a71: a weight component (billed weight \u00d7 \u20b96/kg) plus a distance component (distance_km \u00d7 \u20b92/km), summing to the contract-governed freight charge. The shipment record confirms standard service level and no special_handling entries, so the cold chain premium in \u00a73 correctly does not fire (there is no cold_chain flag on this shipment), and no other surcharge or accessorial applies under this contract. The billed amount exceeds this contract-derived figure by the delta shown in the evidence, with nothing in the shipment facts, service level, or special handling that would justify the difference. The only ambiguity noted on this rate card concerns whether 'booked lane distance' in \u00a71 could differ from a shipment's recorded distance_km, but no evidence here (shipment record or invoice) supplies an alternative booked-lane distance value that would reconcile the billed figure with the contract formula, so this ambiguity does not bear on the specific overcharge shown. This is a determinable contractual overcharge under \u00a71.",
+  "governing_clauses": [
+    "sagar-roadlines.md \u00a71"
+  ],
+  "memo_narrative": {
+    "what_happened": "Sagar billed consignment SG-7003 above the freight figure produced by applying the contract's weight-plus-distance formula to this shipment's billed weight and distance.",
+    "why": "Per \u00a71, freight is strictly the sum of the \u20b96/kg weight component and \u20b92/km distance component; the shipment carries no special handling, so the \u00a73 cold chain premium does not apply and there is no other contractual basis for the additional amount billed.",
+    "recommended_action": "Request a corrected invoice from Sagar for SG-7003 citing \u00a71, or ask them to explain the basis for the additional charge if they believe a different distance or component applies."
+  }
+}

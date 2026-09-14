@@ -1,0 +1,14 @@
+{
+  "finding_id": "line_delta:SAGAR-JUL-1:SG-7009",
+  "disposition": "dispute",
+  "justification": "The pricing trace correctly applies \u00a71's formula: weight component (200 kg \u00d7 \u20b96/kg = 1200) plus distance component (140 km \u00d7 \u20b92/km = 280), for a contract-governed total of 1480. The cold chain premium in \u00a73 correctly did not fire since the shipment record shows no cold_chain special handling. The shipment's distance_km (140) is the only distance figure on record for this consignment, and the rate card's own ambiguity note about 'booked lane distance' vs. actual distance does not present a genuine conflict here since no alternate distance value exists in the evidence. The billed amount exceeds this correctly-derived total by the stated delta, which is an unsupported overcharge under \u00a71.",
+  "governing_clauses": [
+    "sagar-roadlines.md \u00a71",
+    "sagar-roadlines.md \u00a73"
+  ],
+  "memo_narrative": {
+    "what_happened": "Sagar billed consignment SG-7009 above the amount that \u00a71's weight-plus-distance formula produces from the shipment's recorded 200 kg weight and 140 km distance, with no cold chain premium applicable per \u00a73.",
+    "why": "The pricing trace confirms the contract math (weight and distance components) ties out exactly to the lower figure, so the amount above is not supported by \u00a71 or \u00a73 and represents an overcharge.",
+    "recommended_action": "Send Sagar Roadlines a dispute referencing \u00a71 and request a corrected invoice or credit note for consignment SG-7009 per \u00a76."
+  }
+}

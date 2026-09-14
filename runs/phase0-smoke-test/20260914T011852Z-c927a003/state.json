@@ -1,0 +1,21 @@
+{
+  "graph": "phase0-smoke-test",
+  "started_at": "2026-09-14T01:18:52Z",
+  "nodes": {
+    "prepare": {
+      "status": "done",
+      "started_at": "2026-09-14T01:18:52Z",
+      "finished_at": "2026-09-14T01:18:52Z",
+      "output_path": "/Users/vedangi/Projects/freight-billing-reconciliation/freight-billing-reconciliation/.claude/worktrees/init-claude-md/runs/phase0-smoke-test/20260914T011852Z-c927a003/prepare/output.json",
+      "session_id": null
+    },
+    "hello_agent": {
+      "status": "done",
+      "started_at": "2026-09-14T01:18:52Z",
+      "finished_at": "2026-09-14T01:18:57Z",
+      "output_path": "/Users/vedangi/Projects/freight-billing-reconciliation/freight-billing-reconciliation/.claude/worktrees/init-claude-md/runs/phase0-smoke-test/20260914T011852Z-c927a003/hello_agent/output.json",
+      "session_id": "aeae9072-66de-4f4d-98d7-2425c7ee307d"
+    }
+  },
+  "finished_at": "2026-09-14T01:18:57Z"
+}

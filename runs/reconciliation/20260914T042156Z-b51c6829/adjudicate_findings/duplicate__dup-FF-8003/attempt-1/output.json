@@ -1,0 +1,14 @@
+{
+  "finding_id": "duplicate:dup-FF-8003",
+  "disposition": "dispute",
+  "justification": "Consignment FF-8003 corresponds to a single shipment, SH-4003 (Pune to Kolhapur, delivered once on 2026-07-06), yet it was billed in full on two separate Falcon invoices (07A and 07B), each at the same amount and each individually matching the contract-computed expected charge for that one shipment under \u00a71's per-km, weight-banded base freight (plus applicable premiums/surcharges). The shipment record shows no second movement, no re-delivery, and no split shipment that would justify a second charge, and nothing in the evidence (no credit note, no correction reference under \u00a78) explains a legitimate second occurrence. Since the contract's freight charge is for carriage actually rendered on a given consignment, and only one carriage occurred, the second billing of the same consignment has no contractual basis and represents a duplicate charge that should not be paid twice.",
+  "governing_clauses": [
+    "falcon-freight.md \u00a71",
+    "falcon-freight.md \u00a75"
+  ],
+  "memo_narrative": {
+    "what_happened": "Consignment FF-8003, tied to a single shipment (SH-4003), appears as a full line item on two separate Falcon invoices (07A and 07B) at the same billed figure.",
+    "why": "Only one carriage movement occurred for this consignment per the shipment record, and nothing in the evidence (no credit note under \u00a78, no re-delivery or split shipment) supports a second legitimate charge for the same freight under \u00a71's base freight terms or the \u00a75 accessorial whitelist.",
+    "recommended_action": "Contact Falcon to confirm this is a duplicate posting and request a credit note under \u00a78 removing the second occurrence, retaining only one payable instance of FF-8003."
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "finding_id": "line_delta:FALCON-2026-07A:FF-8011",
+  "disposition": "dispute",
+  "justification": "The shipment record shows a standard-service consignment of 700 kg over 800 km with no special handling. Applying the contract: base freight falls in the 501\u20132,000 kg band at the per-km rate specified in \u00a71, the express premium in \u00a72 correctly does not fire since service_level is \"standard\" (not express), and the 12% fuel surcharge in \u00a73 is applied on the base freight as required. This fully accounts for the expected amount in the pricing trace. The billed amount exceeds this by a fixed sum that cannot be explained by any contract mechanism: there is no special handling triggering the residential accessorial (\u00a74), and \u00a75 explicitly states no other accessorial charges are payable under this agreement absent a prior written rate confirmation, none of which is evidenced here. The extra amount therefore appears to be an unauthorized or uncontracted charge.",
+  "governing_clauses": [
+    "falcon-freight.md \u00a71",
+    "falcon-freight.md \u00a73",
+    "falcon-freight.md \u00a75"
+  ],
+  "memo_narrative": {
+    "what_happened": "Falcon billed consignment FF-8011 (SH-4011, 700 kg, Mumbai\u2013Bengaluru, standard service) above the amount the pricing trace derives from the contract's base freight and fuel surcharge calculation, per \u00a71 and \u00a73.",
+    "why": "The shipment has no special handling and no express service booked, so no accessorial or premium beyond the fuel surcharge applies; \u00a75 states no other accessorial charges are payable without a prior written rate confirmation, and none is on record, so the excess amount above appears unsupported by the contract.",
+    "recommended_action": "Raise a billing dispute with Falcon within the 45-day window per \u00a77, referencing \u00a71, \u00a73, and \u00a75, and request either a corrected invoice or documentation (e.g. a rate confirmation) justifying the additional charge."
+  }
+}

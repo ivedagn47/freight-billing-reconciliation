@@ -1,0 +1,126 @@
+{
+  "duration_api_ms": 17387,
+  "stop_reason": "tool_use",
+  "session_id": "9ecbce62-9210-402c-8232-2a3ac8c5da02",
+  "total_cost_usd": 0.071596,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 11813,
+    "cache_read_input_tokens": 9435,
+    "output_tokens": 1586,
+    "output_tokens_details": {
+      "thinking_tokens": 787
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 11813,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1586,
+        "cache_read_input_tokens": 9435,
+        "cache_creation_input_tokens": 11813,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 11813
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 6518,
+      "outputTokens": 15,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.006593000000000001,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-sonnet-5": {
+      "inputTokens": 2,
+      "outputTokens": 1586,
+      "cacheReadInputTokens": 9435,
+      "cacheCreationInputTokens": 11813,
+      "webSearchRequests": 0,
+      "costUSD": 0.065003,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 787,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "extra_usage_disabled",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 2,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"finding_id\":\"line_delta:FALCON-2026-07A:FF-8011\",\"disposition\":\"dispute\",\"justification\":\"Recomputing the freight charge from the shipment facts and contract text confirms the pricing trace: 700 kg falls in the \\\"501 kg to 2,000 kg\\\" band (\u00a71), so base freight is \u20b924/km \u00d7 800 km = 19,200. Express premium (\u00a72) correctly does not fire since service_level is \\\"standard,\\\" not \\\"express.\\\" Fuel surcharge (\u00a73) correctly applies 12% to the 19,200 base freight, adding 2,304, for a freight charge of 21,504. No accessorial applies \u2014 special_handling is empty, so residential delivery (\u00a74) is correctly not triggered \u2014 and \u00a75 is explicit that no other accessorial charges are payable under this agreement absent a prior written rate confirmation, none of which is evidenced here. The billed amount exceeds this fully-supported, contract-traced total, and nothing in the contract or shipment record accounts for the difference. This is a determinable overcharge, not an ambiguous case: every band, premium, and surcharge in the trace checks out against the verbatim contract text, so the excess is simply unsupported billing.\",\"governing_clauses\":[\"falcon-freight.md \u00a71\",\"falcon-freight.md \u00a73\",\"falcon-freight.md \u00a75\"],\"memo_narrative\":{\"what_happened\":\"Falcon billed consignment FF-8011 above the amount supported by the contract-traced calculation for this 700 kg, 800 km standard-service shipment.\",\"why\":\"The base freight band (\u00a71) and fuel surcharge (\u00a73) both check out exactly against the contract when recomputed from the shipment record, no accessorial or premium is triggered, and \u00a75 bars any charge outside the schedule without a prior written rate confirmation \u2014 so the amount above the calculated total is unsupported.\",\"recommended_action\":\"Raise a dispute with Falcon citing \u00a71, \u00a73, and \u00a75, request an itemized breakdown or corrected invoice for FF-8011, and confirm no rate confirmation exists authorizing an additional charge.\"}}",
+  "structured_output": {
+    "finding_id": "line_delta:FALCON-2026-07A:FF-8011",
+    "disposition": "dispute",
+    "justification": "Recomputing the freight charge from the shipment facts and contract text confirms the pricing trace: 700 kg falls in the \"501 kg to 2,000 kg\" band (\u00a71), so base freight is \u20b924/km \u00d7 800 km = 19,200. Express premium (\u00a72) correctly does not fire since service_level is \"standard,\" not \"express.\" Fuel surcharge (\u00a73) correctly applies 12% to the 19,200 base freight, adding 2,304, for a freight charge of 21,504. No accessorial applies \u2014 special_handling is empty, so residential delivery (\u00a74) is correctly not triggered \u2014 and \u00a75 is explicit that no other accessorial charges are payable under this agreement absent a prior written rate confirmation, none of which is evidenced here. The billed amount exceeds this fully-supported, contract-traced total, and nothing in the contract or shipment record accounts for the difference. This is a determinable overcharge, not an ambiguous case: every band, premium, and surcharge in the trace checks out against the verbatim contract text, so the excess is simply unsupported billing.",
+    "governing_clauses": [
+      "falcon-freight.md \u00a71",
+      "falcon-freight.md \u00a73",
+      "falcon-freight.md \u00a75"
+    ],
+    "memo_narrative": {
+      "what_happened": "Falcon billed consignment FF-8011 above the amount supported by the contract-traced calculation for this 700 kg, 800 km standard-service shipment.",
+      "why": "The base freight band (\u00a71) and fuel surcharge (\u00a73) both check out exactly against the contract when recomputed from the shipment record, no accessorial or premium is triggered, and \u00a75 bars any charge outside the schedule without a prior written rate confirmation \u2014 so the amount above the calculated total is unsupported.",
+      "recommended_action": "Raise a dispute with Falcon citing \u00a71, \u00a73, and \u00a75, request an itemized breakdown or corrected invoice for FF-8011, and confirm no rate confirmation exists authorizing an additional charge."
+    }
+  },
+  "ttft_ms": 9477,
+  "type": "result",
+  "duration_ms": 16091,
+  "uuid": "fe95419b-9174-4735-92f9-2d3547a95784",
+  "ttft_stream_ms": 940,
+  "time_to_request_ms": 34,
+  "first_content_frame_ms": 1363,
+  "queued_turn_count": 0,
+  "result_index": 0
+}

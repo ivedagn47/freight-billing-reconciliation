@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "priced-lines",
+  "description": "Output of price_lines: every matched invoice line run through the deterministic rate-card interpreter. pricing_outcome is never a disposition -- accept/dispute/escalate is decided in a later phase. trace is intentionally open-shaped (it varies by carrier and by which rule path fired); pricing_gate, not this schema, enforces the invariants that matter (exactly one outcome per line, no fabricated amounts, delta consistency, clause provenance).",
+  "type": "object",
+  "required": ["priced_lines", "summary"],
+  "additionalProperties": false,
+  "properties": {
+    "priced_lines": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "invoice", "consignment_ref", "carrier", "shipment_id", "billed_amount",
+          "delta", "pricing_outcome", "expected_amount", "reason", "clauses", "trace"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "invoice": { "type": "string", "minLength": 1 },
+          "consignment_ref": { "type": "string", "minLength": 1 },
+          "carrier": { "type": "string", "minLength": 1 },
+          "shipment_id": { "type": ["string", "null"] },
+          "billed_amount": { "type": "number" },
+          "delta": { "type": ["number", "null"] },
+          "pricing_outcome": { "type": "string", "enum": ["determined", "ambiguous", "out_of_scope"] },
+          "expected_amount": { "type": ["number", "null"] },
+          "reason": { "type": ["string", "null"] },
+          "clauses": { "type": "array", "items": { "type": "string" } },
+          "trace": { "type": "object" }
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": ["line_count", "determined", "ambiguous", "out_of_scope"],
+      "additionalProperties": false,
+      "properties": {
+        "line_count": { "type": "integer", "minimum": 0 },
+        "determined": { "type": "integer", "minimum": 0 },
+        "ambiguous": { "type": "integer", "minimum": 0 },
+        "out_of_scope": { "type": "integer", "minimum": 0 }
+      }
+    }
+  }
+}

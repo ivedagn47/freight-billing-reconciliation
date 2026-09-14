@@ -1,0 +1,5 @@
+{
+  "node": "hello_agent",
+  "greeting": "Hello! Ready to note what I know about this gap.",
+  "topic_echo": "the flowstate/agentctl gap in this repository"
+}

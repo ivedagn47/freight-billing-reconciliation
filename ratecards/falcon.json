@@ -1,0 +1,138 @@
+{
+  "accessorial_charges": [
+    {
+      "name": "residential_delivery",
+      "type": "flat_fee",
+      "rate": null,
+      "amount": 250,
+      "condition": "Consignee address is a residence, or the booking is flagged residential.",
+      "trigger": {
+        "attribute": "special_handling",
+        "op": "contains",
+        "value": "residential"
+      },
+      "clause": "falcon-freight.md \u00a74"
+    }
+  ],
+  "accessorial_policy": {
+    "type": "whitelist",
+    "allowed_names": [
+      "residential_delivery"
+    ],
+    "clause": "falcon-freight.md \u00a75",
+    "note": "Clause 5 states no other accessorial charges are payable under this agreement beyond residential delivery (clause 4); any other service requires prior written agreement evidenced by a rate confirmation."
+  },
+  "agreement_ref": "FF/BFC/2024-11",
+  "ambiguities": [
+    {
+      "description": "Clause 1 bands are 'up to and including 500 kg' (<=500) at \u20b918.00/km and '501 kg to 2,000 kg' (>=501, <=2000) at \u20b924.00/km. A fractional billed weight strictly between 500 and 501 kg (e.g. 500.5 kg) falls in neither band as literally written.",
+      "clause": "falcon-freight.md \u00a71"
+    },
+    {
+      "description": "Clause 4's condition covers two distinct triggers ('consignee address is a residence' OR 'booking is flagged residential') but the contract does not specify a shipment data field for either factor separately; the structured trigger here uses special_handling contains 'residential' as the closest single machine-evaluable proxy, which may not fully capture an address-based residential determination distinct from an explicit booking flag.",
+      "clause": "falcon-freight.md \u00a74"
+    }
+  ],
+  "chargeable_weight_floor": null,
+  "currency": "INR",
+  "discounts": [],
+  "effective_period": {
+    "raw_text": "1 December 2024 \u2013 30 November 2026",
+    "start": "2024-12-01",
+    "end": "2026-11-30"
+  },
+  "exclusions": [
+    {
+      "condition": "billed_weight_kg > 2000",
+      "description": "Consignments above 2,000 kg are quoted case by case and are outside this rate card.",
+      "clause": "falcon-freight.md \u00a71",
+      "trigger": {
+        "attribute": "billed_weight_kg",
+        "op": "gt",
+        "value": 2000
+      }
+    }
+  ],
+  "flat_rates": [],
+  "notes": [
+    "Service scope is full and part truckload road carriage, all-India lanes (contract header).",
+    "Clause 8 permits the Carrier to issue credit notes correcting earlier invoices, referencing the original consignment note number and the invoice corrected."
+  ],
+  "payment_terms": {
+    "invoicing_frequency": "fortnightly",
+    "payment_due_days": 30,
+    "dispute_window_days": 45,
+    "clause": "falcon-freight.md \u00a76, \u00a77"
+  },
+  "premiums": [
+    {
+      "name": "express_service_premium",
+      "type": "percentage",
+      "rate": 0.15,
+      "amount": null,
+      "condition": "Express service is booked.",
+      "trigger": {
+        "attribute": "service_level",
+        "op": "eq",
+        "value": "express"
+      },
+      "compounds_on": [
+        "base_freight"
+      ],
+      "clause": "falcon-freight.md \u00a72"
+    }
+  ],
+  "pricing_basis": {
+    "description": "Base freight is charged per kilometre of the booked lane distance, at a rate that varies by the consignment's billed weight band. An express service premium and a fuel surcharge apply on top where applicable.",
+    "clause": "falcon-freight.md \u00a71, \u00a72, \u00a73"
+  },
+  "rate_bands": [
+    {
+      "name": "up to and including 500 kg",
+      "banded_on": "weight_kg",
+      "min": null,
+      "min_op": null,
+      "max": 500,
+      "max_op": "<=",
+      "rate": 18,
+      "rate_unit": "per_km",
+      "clause": "falcon-freight.md \u00a71"
+    },
+    {
+      "name": "501 kg to 2,000 kg",
+      "banded_on": "weight_kg",
+      "min": 501,
+      "min_op": ">=",
+      "max": 2000,
+      "max_op": "<=",
+      "rate": 24,
+      "rate_unit": "per_km",
+      "clause": "falcon-freight.md \u00a71"
+    }
+  ],
+  "rounding_rule": {
+    "stated_in_contract": false,
+    "note": ""
+  },
+  "service_level_rules": [],
+  "surcharges": [
+    {
+      "name": "fuel_surcharge",
+      "type": "percentage",
+      "rate": 0.12,
+      "amount": null,
+      "condition": "Applies to the freight charge, i.e. base freight plus express premium where applicable.",
+      "trigger": null,
+      "compounds_on": [
+        "base_freight",
+        "express_service_premium"
+      ],
+      "clause": "falcon-freight.md \u00a73"
+    }
+  ],
+  "carrier": "falcon",
+  "source_contract": {
+    "file": "data/contracts/falcon-freight.md",
+    "sha256": "6e37557aad7f22da8103e960de6807385088ff0f4bca6fe8da22726998233ca0"
+  }
+}

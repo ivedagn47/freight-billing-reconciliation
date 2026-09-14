@@ -1,0 +1,125 @@
+{
+  "duration_api_ms": 19303,
+  "stop_reason": "tool_use",
+  "session_id": "eeaf34e1-1fb4-4c31-b395-72d79bb5f355",
+  "total_cost_usd": 0.0765078,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 12248,
+    "cache_read_input_tokens": 30219,
+    "output_tokens": 1523,
+    "output_tokens_details": {
+      "thinking_tokens": 669
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 12248,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 780,
+        "cache_read_input_tokens": 20784,
+        "cache_creation_input_tokens": 899,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 899
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 6159,
+      "outputTokens": 15,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.006234000000000001,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 1523,
+      "cacheReadInputTokens": 30219,
+      "cacheCreationInputTokens": 12248,
+      "webSearchRequests": 0,
+      "costUSD": 0.0702738,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 669,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "extra_usage_disabled",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 3,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"finding_id\":\"duplicate:dup-FF-8003\",\"disposition\":\"dispute\",\"justification\":\"Consignment FF-8003, tied to a single shipment (SH-4003), was billed identically on two separate Falcon invoices (2026-07A and 2026-07B), each priced correctly against the contract in isolation but representing the same physical freight movement. The shipment record shows a single ship date, a single delivery event, and no special handling indicating a re-delivery, correction run, or split consignment that would justify a second legitimate charge. Clause 1 establishes base freight as a per-consignment charge for the booked lane distance, implying one payable freight charge per shipment; nothing in the contract or evidence supports two chargeable occurrences of the same consignment. Clause 8 provides the carrier's own mechanism (a credit note referencing the original consignment note) for correcting exactly this kind of duplicate invoicing, and no such credit note is present in the evidence to explain or authorize the second occurrence. Absent any indication of a genuine second freight movement, the second billing is an unauthorized duplicate charge.\",\"governing_clauses\":[\"falcon-freight.md \u00a71\",\"falcon-freight.md \u00a78\"],\"memo_narrative\":{\"what_happened\":\"Falcon billed consignment FF-8003 (shipment SH-4003) twice, once on invoice FALCON-2026-07A and again on FALCON-2026-07B, for the identical amount both times.\",\"why\":\"The shipment record shows a single delivery with no re-delivery or split-shipment indication, and the contract prices freight per consignment (\u00a71); with no credit note on file to explain a legitimate second charge under the carrier's own correction mechanism (\u00a78), the second occurrence is an unsupported duplicate.\",\"recommended_action\":\"Request Falcon issue a credit note under \u00a78 against one of the two invoices (recommend crediting FALCON-2026-07B) to remove the duplicate charge for FF-8003, and confirm no other consignments were double-billed across these invoice cycles.\"}}",
+  "structured_output": {
+    "finding_id": "duplicate:dup-FF-8003",
+    "disposition": "dispute",
+    "justification": "Consignment FF-8003, tied to a single shipment (SH-4003), was billed identically on two separate Falcon invoices (2026-07A and 2026-07B), each priced correctly against the contract in isolation but representing the same physical freight movement. The shipment record shows a single ship date, a single delivery event, and no special handling indicating a re-delivery, correction run, or split consignment that would justify a second legitimate charge. Clause 1 establishes base freight as a per-consignment charge for the booked lane distance, implying one payable freight charge per shipment; nothing in the contract or evidence supports two chargeable occurrences of the same consignment. Clause 8 provides the carrier's own mechanism (a credit note referencing the original consignment note) for correcting exactly this kind of duplicate invoicing, and no such credit note is present in the evidence to explain or authorize the second occurrence. Absent any indication of a genuine second freight movement, the second billing is an unauthorized duplicate charge.",
+    "governing_clauses": [
+      "falcon-freight.md \u00a71",
+      "falcon-freight.md \u00a78"
+    ],
+    "memo_narrative": {
+      "what_happened": "Falcon billed consignment FF-8003 (shipment SH-4003) twice, once on invoice FALCON-2026-07A and again on FALCON-2026-07B, for the identical amount both times.",
+      "why": "The shipment record shows a single delivery with no re-delivery or split-shipment indication, and the contract prices freight per consignment (\u00a71); with no credit note on file to explain a legitimate second charge under the carrier's own correction mechanism (\u00a78), the second occurrence is an unsupported duplicate.",
+      "recommended_action": "Request Falcon issue a credit note under \u00a78 against one of the two invoices (recommend crediting FALCON-2026-07B) to remove the duplicate charge for FF-8003, and confirm no other consignments were double-billed across these invoice cycles."
+    }
+  },
+  "ttft_ms": 8829,
+  "type": "result",
+  "duration_ms": 17854,
+  "uuid": "7cd53b47-16aa-48ed-8ecf-f63fb5800844",
+  "ttft_stream_ms": 1587,
+  "time_to_request_ms": 32,
+  "first_content_frame_ms": 2071,
+  "queued_turn_count": 0,
+  "result_index": 0
+}

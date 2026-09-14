@@ -1,0 +1,778 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ratecard-extraction",
+  "description": "Subset of the ratecard schema used for the agent's structured output only. carrier and source_contract are deliberately excluded: this pipeline computes the contract's sha256 itself and injects carrier/source_contract after the agent turn, so a hash never depends on the model reporting it correctly.",
+  "type": "object",
+  "required": [
+    "agreement_ref",
+    "effective_period",
+    "currency",
+    "pricing_basis",
+    "chargeable_weight_floor",
+    "rate_bands",
+    "flat_rates",
+    "service_level_rules",
+    "premiums",
+    "surcharges",
+    "accessorial_charges",
+    "accessorial_policy",
+    "discounts",
+    "exclusions",
+    "rounding_rule",
+    "payment_terms",
+    "ambiguities",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "agreement_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "effective_period": {
+      "type": "object",
+      "required": [
+        "raw_text",
+        "start",
+        "end"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "raw_text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "start": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "end": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "currency": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pricing_basis": {
+      "type": "object",
+      "required": [
+        "description",
+        "clause"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "clause": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "chargeable_weight_floor": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "minimum_kg": {
+          "type": "number"
+        },
+        "clause": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "rate_bands": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "banded_on",
+          "min",
+          "min_op",
+          "max",
+          "max_op",
+          "rate",
+          "rate_unit",
+          "clause"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "banded_on": {
+            "type": "string",
+            "enum": [
+              "weight_kg",
+              "distance_km"
+            ]
+          },
+          "min": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "min_op": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              ">",
+              ">=",
+              null
+            ]
+          },
+          "max": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "max_op": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              "<",
+              "<=",
+              null
+            ]
+          },
+          "rate": {
+            "type": "number"
+          },
+          "rate_unit": {
+            "type": "string",
+            "enum": [
+              "per_kg",
+              "per_km"
+            ]
+          },
+          "clause": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "flat_rates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "basis",
+          "rate",
+          "rate_unit",
+          "clause"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "basis": {
+            "type": "string",
+            "enum": [
+              "weight_kg",
+              "distance_km",
+              "consignment"
+            ]
+          },
+          "rate": {
+            "type": "number"
+          },
+          "rate_unit": {
+            "type": "string",
+            "enum": [
+              "per_kg",
+              "per_km",
+              "flat"
+            ]
+          },
+          "clause": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "service_level_rules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "service_level",
+          "allowed",
+          "clause",
+          "note"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "service_level": {
+            "type": "string",
+            "minLength": 1
+          },
+          "allowed": {
+            "type": "boolean"
+          },
+          "clause": {
+            "type": "string",
+            "minLength": 1
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "premiums": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "type",
+          "rate",
+          "amount",
+          "condition",
+          "trigger",
+          "compounds_on",
+          "clause"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "percentage",
+              "flat_fee"
+            ]
+          },
+          "rate": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "amount": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "condition": {
+            "type": "string",
+            "minLength": 1
+          },
+          "trigger": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "description": "Null means the rule applies unconditionally. Otherwise a single machine-evaluable predicate over one shipment/line attribute.",
+            "required": [
+              "attribute",
+              "op",
+              "value"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "attribute": {
+                "type": "string",
+                "enum": [
+                  "service_level",
+                  "special_handling",
+                  "billed_weight_kg",
+                  "distance_km"
+                ]
+              },
+              "op": {
+                "type": "string",
+                "enum": [
+                  "eq",
+                  "contains",
+                  "gt",
+                  "gte",
+                  "lt",
+                  "lte"
+                ]
+              },
+              "value": {}
+            }
+          },
+          "compounds_on": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "clause": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "surcharges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "type",
+          "rate",
+          "amount",
+          "condition",
+          "trigger",
+          "compounds_on",
+          "clause"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "percentage",
+              "flat_fee"
+            ]
+          },
+          "rate": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "amount": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "condition": {
+            "type": "string",
+            "minLength": 1
+          },
+          "trigger": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "description": "Null means the rule applies unconditionally. Otherwise a single machine-evaluable predicate over one shipment/line attribute.",
+            "required": [
+              "attribute",
+              "op",
+              "value"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "attribute": {
+                "type": "string",
+                "enum": [
+                  "service_level",
+                  "special_handling",
+                  "billed_weight_kg",
+                  "distance_km"
+                ]
+              },
+              "op": {
+                "type": "string",
+                "enum": [
+                  "eq",
+                  "contains",
+                  "gt",
+                  "gte",
+                  "lt",
+                  "lte"
+                ]
+              },
+              "value": {}
+            }
+          },
+          "compounds_on": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "clause": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "accessorial_charges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "type",
+          "rate",
+          "amount",
+          "condition",
+          "trigger",
+          "clause"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "percentage",
+              "flat_fee"
+            ]
+          },
+          "rate": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "amount": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "condition": {
+            "type": "string",
+            "minLength": 1
+          },
+          "trigger": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "description": "Null means the rule applies unconditionally. Otherwise a single machine-evaluable predicate over one shipment/line attribute.",
+            "required": [
+              "attribute",
+              "op",
+              "value"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "attribute": {
+                "type": "string",
+                "enum": [
+                  "service_level",
+                  "special_handling",
+                  "billed_weight_kg",
+                  "distance_km"
+                ]
+              },
+              "op": {
+                "type": "string",
+                "enum": [
+                  "eq",
+                  "contains",
+                  "gt",
+                  "gte",
+                  "lt",
+                  "lte"
+                ]
+              },
+              "value": {}
+            }
+          },
+          "clause": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "accessorial_policy": {
+      "type": "object",
+      "required": [
+        "type",
+        "allowed_names",
+        "clause",
+        "note"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "whitelist",
+            "no_restriction_stated"
+          ]
+        },
+        "allowed_names": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "clause": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        }
+      }
+    },
+    "discounts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "type",
+          "rate",
+          "amount",
+          "condition",
+          "clause",
+          "threshold"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "percentage_of_invoice_total",
+              "flat"
+            ]
+          },
+          "rate": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "amount": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "condition": {
+            "type": "string",
+            "minLength": 1
+          },
+          "clause": {
+            "type": "string",
+            "minLength": 1
+          },
+          "threshold": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "description": "Null if the discount has no numeric threshold condition. Otherwise a machine-evaluable invoice-level metric comparison.",
+            "required": [
+              "metric",
+              "period",
+              "op",
+              "value"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "metric": {
+                "type": "string",
+                "enum": [
+                  "consignment_count"
+                ]
+              },
+              "period": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "description": "The time window named by the contract for this metric, e.g. 'calendar_month', verbatim-ish as stated -- NOT a resolution of which date field defines it."
+              },
+              "op": {
+                "type": "string",
+                "enum": [
+                  "gt",
+                  "gte",
+                  "lt",
+                  "lte"
+                ]
+              },
+              "value": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      }
+    },
+    "exclusions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "condition",
+          "description",
+          "clause",
+          "trigger"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "condition": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "clause": {
+            "type": "string",
+            "minLength": 1
+          },
+          "trigger": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "description": "Null means the rule applies unconditionally. Otherwise a single machine-evaluable predicate over one shipment/line attribute.",
+            "required": [
+              "attribute",
+              "op",
+              "value"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "attribute": {
+                "type": "string",
+                "enum": [
+                  "service_level",
+                  "special_handling",
+                  "billed_weight_kg",
+                  "distance_km"
+                ]
+              },
+              "op": {
+                "type": "string",
+                "enum": [
+                  "eq",
+                  "contains",
+                  "gt",
+                  "gte",
+                  "lt",
+                  "lte"
+                ]
+              },
+              "value": {}
+            }
+          }
+        }
+      }
+    },
+    "rounding_rule": {
+      "type": "object",
+      "required": [
+        "stated_in_contract",
+        "note"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "stated_in_contract": {
+          "type": "boolean"
+        },
+        "note": {
+          "type": "string"
+        }
+      }
+    },
+    "payment_terms": {
+      "type": "object",
+      "required": [
+        "invoicing_frequency",
+        "payment_due_days",
+        "dispute_window_days",
+        "clause"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "invoicing_frequency": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "payment_due_days": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "dispute_window_days": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "clause": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "ambiguities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "description",
+          "clause"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "clause": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

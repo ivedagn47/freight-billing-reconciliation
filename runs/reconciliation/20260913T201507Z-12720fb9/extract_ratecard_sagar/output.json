@@ -1,0 +1,107 @@
+{
+  "agreement_ref": "SRL/BFC/2025-08",
+  "effective_period": {
+    "raw_text": "1 August 2025 \u2013 31 July 2027",
+    "start": "2025-08-01",
+    "end": "2027-07-31"
+  },
+  "currency": "INR",
+  "pricing_basis": {
+    "description": "Freight per consignment is the sum of a weight component (\u20b96.00 per kg of billed weight) and a distance component (\u20b92.00 per km of the booked lane distance).",
+    "clause": "sagar-roadlines.md \u00a71"
+  },
+  "chargeable_weight_floor": null,
+  "rate_bands": [],
+  "flat_rates": [
+    {
+      "name": "Weight component",
+      "basis": "weight_kg",
+      "rate": 6,
+      "rate_unit": "per_kg",
+      "clause": "sagar-roadlines.md \u00a71"
+    },
+    {
+      "name": "Distance component",
+      "basis": "distance_km",
+      "rate": 2,
+      "rate_unit": "per_km",
+      "clause": "sagar-roadlines.md \u00a71"
+    }
+  ],
+  "service_level_rules": [
+    {
+      "service_level": "standard",
+      "allowed": true,
+      "clause": "sagar-roadlines.md \u00a72",
+      "note": "Only standard service is offered under this agreement."
+    }
+  ],
+  "premiums": [
+    {
+      "name": "Cold chain premium",
+      "type": "percentage",
+      "rate": 0.2,
+      "amount": null,
+      "condition": "Consignment is booked as cold chain (travels in a refrigerated vehicle)",
+      "trigger": {
+        "attribute": "special_handling",
+        "op": "contains",
+        "value": "cold_chain"
+      },
+      "compounds_on": [
+        "base_freight"
+      ],
+      "clause": "sagar-roadlines.md \u00a73"
+    }
+  ],
+  "surcharges": [],
+  "accessorial_charges": [],
+  "accessorial_policy": {
+    "type": "no_restriction_stated",
+    "allowed_names": [],
+    "clause": "sagar-roadlines.md",
+    "note": "The contract does not name any accessorial charges or state any restriction on what accessorials may be billed."
+  },
+  "discounts": [],
+  "exclusions": [
+    {
+      "condition": "The c-note number on an invoice line cannot be matched to a Customer booking",
+      "description": "Invoice lines whose consignment note (c-note) number cannot be matched to a Customer booking are not payable until reconciled.",
+      "clause": "sagar-roadlines.md \u00a75",
+      "trigger": null
+    }
+  ],
+  "rounding_rule": {
+    "stated_in_contract": false,
+    "note": "The contract does not state any rounding rule for computed charges."
+  },
+  "payment_terms": {
+    "invoicing_frequency": "fortnightly",
+    "payment_due_days": 21,
+    "dispute_window_days": null,
+    "clause": "sagar-roadlines.md \u00a74"
+  },
+  "ambiguities": [
+    {
+      "description": "Clause 4 states invoices are issued 'as trips are pooled, typically fortnightly' -- the actual invoicing cycle/period is described only as typical, not fixed, so the exact invoicing boundary dates are indeterminate.",
+      "clause": "sagar-roadlines.md \u00a74"
+    },
+    {
+      "description": "Clause 5's non-payability rule for unmatched c-note lines depends on a booking-match/join outcome, which is not expressible via any of the available shipment attributes (service_level, special_handling, billed_weight_kg, distance_km), so no structured trigger could be encoded for this exclusion.",
+      "clause": "sagar-roadlines.md \u00a75"
+    },
+    {
+      "description": "Clause 1's distance component is rated on 'booked lane distance', which is not explicitly defined as identical to a shipment record's actual/measured distance_km; if booked lane distance can differ from recorded distance, which value to rate against is ambiguous.",
+      "clause": "sagar-roadlines.md \u00a71"
+    }
+  ],
+  "notes": [
+    "Clause 6 permits the Carrier to issue credit notes correcting earlier invoices, referencing the original c-note and invoice; this is a billing-process rule rather than a pricing rule and has no rate-card representation.",
+    "No rate bands, no chargeable weight floor, and no weight/distance-threshold exclusions are stated anywhere in this contract."
+  ],
+  "carrier": "sagar",
+  "source_contract": {
+    "file": "data/contracts/sagar-roadlines.md",
+    "sha256": "43c3f2dfc4e0eade16e79d4924f4b83c8748dc1a06dfaf3bc2694369aaa5ad95"
+  }
+}

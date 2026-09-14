@@ -1,0 +1,602 @@
+{
+  "findings": [
+    {
+      "finding_id": "invoice_discount:ALPINE-0726:Volume incentive discount",
+      "finding_type": "invoice_level_discount",
+      "affected_invoices": [
+        "ALPINE-0726"
+      ],
+      "affected_consignments": [
+        "AE-3001",
+        "AE-3002",
+        "AE-3003",
+        "AE-3004",
+        "AE-3005",
+        "AE-3006",
+        "AE-3007",
+        "AE-3008",
+        "AE-3009",
+        "AE-3010",
+        "AE-3011",
+        "AE-3012",
+        "AE-3013",
+        "AE-3014",
+        "AE-3015",
+        "AE-3016",
+        "AE-3017",
+        "AE-3018",
+        "AE-3019",
+        "AE-3020",
+        "AE-3021",
+        "AE-3022",
+        "AE-3023",
+        "AE-3024",
+        "AE-3025",
+        "AE-3026",
+        "AE-3027",
+        "AE-3028",
+        "AE-3029",
+        "AE-3030",
+        "AE-3031",
+        "AE-3032",
+        "AE-3033",
+        "AE-3034",
+        "AE-3035",
+        "AE-3036",
+        "AE-3037",
+        "AE-3038",
+        "AE-3039",
+        "AE-3040"
+      ],
+      "related_shipments": [],
+      "billed_amounts": [],
+      "expected_amount": null,
+      "delta": null,
+      "dispute_unit_id": null,
+      "dispute_amount": null,
+      "related_dispute_unit_id": null,
+      "governing_clauses": [
+        "alpine-express.md \u00a75"
+      ],
+      "evidence": {
+        "consignment_count": 40,
+        "candidate_consignment_count_bases": {
+          "by_invoice_document": 40,
+          "by_booking_date_calendar_month": 40,
+          "by_ship_date_calendar_month": 40
+        },
+        "threshold": {
+          "metric": "consignment_count",
+          "period": "calendar month",
+          "op": "gt",
+          "value": 12
+        },
+        "declared_discount_amount": 0.0,
+        "expected_discount_amount": null,
+        "note": "1 line(s) on this invoice are not yet pricing-determined; the exact discount shortfall cannot be computed until they are resolved"
+      },
+      "requires_adjudication": true,
+      "adjudication_reason": "invoice qualifies for 'Volume incentive discount' under every computable date basis (40 consignments, threshold gt 12), but the carrier's declared discount is 0.0"
+    },
+    {
+      "finding_id": "duplicate:dup-FF-8003",
+      "finding_type": "duplicate_billing",
+      "affected_invoices": [
+        "FALCON-2026-07A",
+        "FALCON-2026-07B"
+      ],
+      "affected_consignments": [
+        "FF-8003"
+      ],
+      "related_shipments": [
+        "SH-4003"
+      ],
+      "billed_amounts": [
+        7392.0,
+        7392.0
+      ],
+      "expected_amount": null,
+      "delta": null,
+      "dispute_unit_id": "du:duplicate:dup-FF-8003",
+      "dispute_amount": 7392.0,
+      "related_dispute_unit_id": null,
+      "governing_clauses": [],
+      "evidence": {
+        "occurrences": [
+          {
+            "invoice": "FALCON-2026-07A",
+            "consignment_ref": "FF-8003",
+            "shipment_id": "SH-4003",
+            "billed_amount": 7392.0,
+            "expected_amount": 7392.0,
+            "delta": 0.0,
+            "pricing_outcome": "determined",
+            "provenance": {
+              "file": "data/invoices/FALCON-2026-07A.txt",
+              "locator": "consignment block 3 (ref=FF-8003)"
+            }
+          },
+          {
+            "invoice": "FALCON-2026-07B",
+            "consignment_ref": "FF-8003",
+            "shipment_id": "SH-4003",
+            "billed_amount": 7392.0,
+            "expected_amount": 7392.0,
+            "delta": 0.0,
+            "pricing_outcome": "determined",
+            "provenance": {
+              "file": "data/invoices/FALCON-2026-07B.txt",
+              "locator": "consignment block 8 (ref=FF-8003)"
+            }
+          }
+        ],
+        "formula": "sum(billed_amounts) - max(billed_amounts)"
+      },
+      "requires_adjudication": true,
+      "adjudication_reason": "consignment 'FF-8003' is billed on 2 separate invoices for what Phase 1 matched to a single shipment; only one occurrence should be payable"
+    },
+    {
+      "finding_id": "credit_note:FALCON-CN-01:FF-8005",
+      "finding_type": "credit_note_corroboration",
+      "affected_invoices": [
+        "FALCON-2026-07A"
+      ],
+      "affected_consignments": [
+        "FF-8005"
+      ],
+      "related_shipments": [
+        "SH-4005"
+      ],
+      "billed_amounts": [],
+      "expected_amount": null,
+      "delta": null,
+      "dispute_unit_id": null,
+      "dispute_amount": null,
+      "related_dispute_unit_id": "du:line:FALCON-2026-07A:FF-8005",
+      "governing_clauses": [],
+      "evidence": {
+        "credit_note_id": "FALCON-CN-01",
+        "credit_note_file": "data/invoices/FALCON-CN-01.txt",
+        "against_invoice": "FALCON-2026-07A",
+        "credit_amount": -496.8,
+        "explanation_lines": [
+          "Correction: fuel surcharge invoiced at 15% in error; contractual",
+          "rate is 12%. Credit for the difference."
+        ],
+        "related_line_delta": 496.8,
+        "related_line_pricing_outcome": "determined"
+      },
+      "requires_adjudication": true,
+      "adjudication_reason": "credit note amount (-496.8) matches the already independently-detected line-level pricing delta (496.8) -- corroborating evidence only, no new dispute amount (already counted at the line level)"
+    },
+    {
+      "finding_id": "credit_note:SAGAR-CN-01:SG-7056",
+      "finding_type": "credit_note_unrelated",
+      "affected_invoices": [
+        "SAGAR-AUG-1"
+      ],
+      "affected_consignments": [
+        "SG-7056"
+      ],
+      "related_shipments": [],
+      "billed_amounts": [],
+      "expected_amount": null,
+      "delta": null,
+      "dispute_unit_id": null,
+      "dispute_amount": null,
+      "related_dispute_unit_id": null,
+      "governing_clauses": [],
+      "evidence": {
+        "credit_note_id": "SAGAR-CN-01",
+        "credit_note_file": "data/invoices/SAGAR-CN-01.csv",
+        "against_invoice": "SAGAR-AUG-1",
+        "credit_amount": -156.0,
+        "explanation_lines": []
+      },
+      "requires_adjudication": false,
+      "adjudication_reason": "references 'SAGAR-AUG-1'/'SG-7056', which is not an in-scope July invoice/consignment -- recorded for completeness, does not affect this report's July dispute accounting"
+    },
+    {
+      "finding_id": "ambiguous_line:ALPINE-0726:AE-3005",
+      "finding_type": "ambiguous_line",
+      "affected_invoices": [
+        "ALPINE-0726"
+      ],
+      "affected_consignments": [
+        "AE-3005"
+      ],
+      "related_shipments": [
+        "SH-4111"
+      ],
+      "billed_amounts": [
+        475.0
+      ],
+      "expected_amount": null,
+      "delta": null,
+      "dispute_unit_id": null,
+      "dispute_amount": null,
+      "related_dispute_unit_id": null,
+      "governing_clauses": [
+        "alpine-express.md \u00a72"
+      ],
+      "evidence": {
+        "pricing_trace": {
+          "actual_weight_kg": "50.0",
+          "distance_km": "570",
+          "chargeable_weight_floor_applied": {
+            "minimum_kg": "25",
+            "actual_kg": "50.0",
+            "chargeable_kg": "50.0",
+            "clause": "alpine-express.md \u00a71"
+          },
+          "base_freight": null
+        }
+      },
+      "requires_adjudication": true,
+      "adjudication_reason": "no rate band covers weight_kg=50.0 -- this is a gap between adjacent bands in the contract, not a computable amount"
+    },
+    {
+      "finding_id": "line_delta:FALCON-2026-07A:FF-8005",
+      "finding_type": "line_pricing_delta",
+      "affected_invoices": [
+        "FALCON-2026-07A"
+      ],
+      "affected_consignments": [
+        "FF-8005"
+      ],
+      "related_shipments": [
+        "SH-4005"
+      ],
+      "billed_amounts": [
+        19044.0
+      ],
+      "expected_amount": 18547.2,
+      "delta": 496.8,
+      "dispute_unit_id": "du:line:FALCON-2026-07A:FF-8005",
+      "dispute_amount": 496.8,
+      "related_dispute_unit_id": null,
+      "governing_clauses": [
+        "falcon-freight.md \u00a71",
+        "falcon-freight.md \u00a72",
+        "falcon-freight.md \u00a73"
+      ],
+      "evidence": {
+        "pricing_trace": {
+          "actual_weight_kg": "260",
+          "distance_km": "800",
+          "chargeable_weight_floor_applied": null,
+          "base_freight": {
+            "mechanism": "rate_band",
+            "band_matched": "up to and including 500 kg",
+            "rate": "18",
+            "rate_unit": "per_km",
+            "multiplier": "800",
+            "amount": "14400",
+            "clause": "falcon-freight.md \u00a71"
+          },
+          "premiums_and_surcharges_applied": [
+            {
+              "name": "express_service_premium",
+              "type": "percentage",
+              "fired": true,
+              "compounds_on": [
+                "base_freight"
+              ],
+              "applied_to": "14400",
+              "rate_or_amount": 0.15,
+              "amount": "2160.00",
+              "clause": "falcon-freight.md \u00a72"
+            },
+            {
+              "name": "fuel_surcharge",
+              "type": "percentage",
+              "fired": true,
+              "compounds_on": [
+                "base_freight",
+                "express_service_premium"
+              ],
+              "applied_to": "16560.00",
+              "rate_or_amount": 0.12,
+              "amount": "1987.2000",
+              "clause": "falcon-freight.md \u00a73"
+            }
+          ],
+          "freight_charge_before_accessorials": "18547.2000",
+          "accessorials_applied": [
+            {
+              "name": "residential_delivery",
+              "fired": false,
+              "amount": "0",
+              "clause": "falcon-freight.md \u00a74"
+            }
+          ],
+          "total_before_rounding": "18547.2000",
+          "rounding": {
+            "mode": "ROUND_HALF_UP to the nearest 0.01 INR",
+            "note": "Not specified by any contract (all three rate cards mark rounding_rule.stated_in_contract=false). Applied as this pipeline's own currency-precision policy, since INR has no unit smaller than the paisa."
+          }
+        }
+      },
+      "requires_adjudication": true,
+      "adjudication_reason": "billed amount differs from the contract-governed expected amount by 496.8"
+    },
+    {
+      "finding_id": "line_delta:FALCON-2026-07A:FF-8011",
+      "finding_type": "line_pricing_delta",
+      "affected_invoices": [
+        "FALCON-2026-07A"
+      ],
+      "affected_consignments": [
+        "FF-8011"
+      ],
+      "related_shipments": [
+        "SH-4011"
+      ],
+      "billed_amounts": [
+        22704.0
+      ],
+      "expected_amount": 21504.0,
+      "delta": 1200.0,
+      "dispute_unit_id": "du:line:FALCON-2026-07A:FF-8011",
+      "dispute_amount": 1200.0,
+      "related_dispute_unit_id": null,
+      "governing_clauses": [
+        "falcon-freight.md \u00a71",
+        "falcon-freight.md \u00a73"
+      ],
+      "evidence": {
+        "pricing_trace": {
+          "actual_weight_kg": "700",
+          "distance_km": "800",
+          "chargeable_weight_floor_applied": null,
+          "base_freight": {
+            "mechanism": "rate_band",
+            "band_matched": "501 kg to 2,000 kg",
+            "rate": "24",
+            "rate_unit": "per_km",
+            "multiplier": "800",
+            "amount": "19200",
+            "clause": "falcon-freight.md \u00a71"
+          },
+          "premiums_and_surcharges_applied": [
+            {
+              "name": "express_service_premium",
+              "type": "percentage",
+              "fired": false,
+              "compounds_on": [
+                "base_freight"
+              ],
+              "applied_to": "19200",
+              "rate_or_amount": 0.15,
+              "amount": "0",
+              "clause": "falcon-freight.md \u00a72"
+            },
+            {
+              "name": "fuel_surcharge",
+              "type": "percentage",
+              "fired": true,
+              "compounds_on": [
+                "base_freight",
+                "express_service_premium"
+              ],
+              "applied_to": "19200",
+              "rate_or_amount": 0.12,
+              "amount": "2304.00",
+              "clause": "falcon-freight.md \u00a73"
+            }
+          ],
+          "freight_charge_before_accessorials": "21504.00",
+          "accessorials_applied": [
+            {
+              "name": "residential_delivery",
+              "fired": false,
+              "amount": "0",
+              "clause": "falcon-freight.md \u00a74"
+            }
+          ],
+          "total_before_rounding": "21504.00",
+          "rounding": {
+            "mode": "ROUND_HALF_UP to the nearest 0.01 INR",
+            "note": "Not specified by any contract (all three rate cards mark rounding_rule.stated_in_contract=false). Applied as this pipeline's own currency-precision policy, since INR has no unit smaller than the paisa."
+          }
+        }
+      },
+      "requires_adjudication": true,
+      "adjudication_reason": "billed amount differs from the contract-governed expected amount by 1200.0"
+    },
+    {
+      "finding_id": "line_delta:SAGAR-JUL-1:SG-7003",
+      "finding_type": "line_pricing_delta",
+      "affected_invoices": [
+        "SAGAR-JUL-1"
+      ],
+      "affected_consignments": [
+        "SG-7003"
+      ],
+      "related_shipments": [
+        "SH-4229"
+      ],
+      "billed_amounts": [
+        570.0
+      ],
+      "expected_amount": 530.0,
+      "delta": 40.0,
+      "dispute_unit_id": "du:line:SAGAR-JUL-1:SG-7003",
+      "dispute_amount": 40.0,
+      "related_dispute_unit_id": null,
+      "governing_clauses": [
+        "sagar-roadlines.md \u00a71"
+      ],
+      "evidence": {
+        "pricing_trace": {
+          "actual_weight_kg": "60",
+          "distance_km": "85",
+          "chargeable_weight_floor_applied": null,
+          "base_freight": {
+            "mechanism": "flat_rates",
+            "components": [
+              {
+                "name": "weight component",
+                "rate": "6",
+                "rate_unit": "per_kg",
+                "basis": "weight_kg",
+                "quantity": "60",
+                "amount": "360",
+                "clause": "sagar-roadlines.md \u00a71"
+              },
+              {
+                "name": "distance component",
+                "rate": "2",
+                "rate_unit": "per_km",
+                "basis": "distance_km",
+                "quantity": "85",
+                "amount": "170",
+                "clause": "sagar-roadlines.md \u00a71"
+              }
+            ],
+            "amount": "530"
+          },
+          "premiums_and_surcharges_applied": [
+            {
+              "name": "cold chain premium",
+              "type": "percentage",
+              "fired": false,
+              "compounds_on": [
+                "base_freight"
+              ],
+              "applied_to": "530",
+              "rate_or_amount": 0.2,
+              "amount": "0",
+              "clause": "sagar-roadlines.md \u00a73"
+            }
+          ],
+          "freight_charge_before_accessorials": "530",
+          "accessorials_applied": [],
+          "total_before_rounding": "530",
+          "rounding": {
+            "mode": "ROUND_HALF_UP to the nearest 0.01 INR",
+            "note": "Not specified by any contract (all three rate cards mark rounding_rule.stated_in_contract=false). Applied as this pipeline's own currency-precision policy, since INR has no unit smaller than the paisa."
+          }
+        }
+      },
+      "requires_adjudication": true,
+      "adjudication_reason": "billed amount differs from the contract-governed expected amount by 40.0"
+    },
+    {
+      "finding_id": "line_delta:SAGAR-JUL-1:SG-7009",
+      "finding_type": "line_pricing_delta",
+      "affected_invoices": [
+        "SAGAR-JUL-1"
+      ],
+      "affected_consignments": [
+        "SG-7009"
+      ],
+      "related_shipments": [
+        "SH-4235"
+      ],
+      "billed_amounts": [
+        1680.0
+      ],
+      "expected_amount": 1480.0,
+      "delta": 200.0,
+      "dispute_unit_id": "du:line:SAGAR-JUL-1:SG-7009",
+      "dispute_amount": 200.0,
+      "related_dispute_unit_id": null,
+      "governing_clauses": [
+        "sagar-roadlines.md \u00a71"
+      ],
+      "evidence": {
+        "pricing_trace": {
+          "actual_weight_kg": "200",
+          "distance_km": "140",
+          "chargeable_weight_floor_applied": null,
+          "base_freight": {
+            "mechanism": "flat_rates",
+            "components": [
+              {
+                "name": "weight component",
+                "rate": "6",
+                "rate_unit": "per_kg",
+                "basis": "weight_kg",
+                "quantity": "200",
+                "amount": "1200",
+                "clause": "sagar-roadlines.md \u00a71"
+              },
+              {
+                "name": "distance component",
+                "rate": "2",
+                "rate_unit": "per_km",
+                "basis": "distance_km",
+                "quantity": "140",
+                "amount": "280",
+                "clause": "sagar-roadlines.md \u00a71"
+              }
+            ],
+            "amount": "1480"
+          },
+          "premiums_and_surcharges_applied": [
+            {
+              "name": "cold chain premium",
+              "type": "percentage",
+              "fired": false,
+              "compounds_on": [
+                "base_freight"
+              ],
+              "applied_to": "1480",
+              "rate_or_amount": 0.2,
+              "amount": "0",
+              "clause": "sagar-roadlines.md \u00a73"
+            }
+          ],
+          "freight_charge_before_accessorials": "1480",
+          "accessorials_applied": [],
+          "total_before_rounding": "1480",
+          "rounding": {
+            "mode": "ROUND_HALF_UP to the nearest 0.01 INR",
+            "note": "Not specified by any contract (all three rate cards mark rounding_rule.stated_in_contract=false). Applied as this pipeline's own currency-precision policy, since INR has no unit smaller than the paisa."
+          }
+        }
+      },
+      "requires_adjudication": true,
+      "adjudication_reason": "billed amount differs from the contract-governed expected amount by 200.0"
+    }
+  ],
+  "dispute_units": [
+    {
+      "dispute_unit_id": "du:duplicate:dup-FF-8003",
+      "amount": 7392.0,
+      "finding_id": "duplicate:dup-FF-8003",
+      "finding_type": "duplicate_billing"
+    },
+    {
+      "dispute_unit_id": "du:line:FALCON-2026-07A:FF-8005",
+      "amount": 496.8,
+      "finding_id": "line_delta:FALCON-2026-07A:FF-8005",
+      "finding_type": "line_pricing_delta"
+    },
+    {
+      "dispute_unit_id": "du:line:FALCON-2026-07A:FF-8011",
+      "amount": 1200.0,
+      "finding_id": "line_delta:FALCON-2026-07A:FF-8011",
+      "finding_type": "line_pricing_delta"
+    },
+    {
+      "dispute_unit_id": "du:line:SAGAR-JUL-1:SG-7003",
+      "amount": 40.0,
+      "finding_id": "line_delta:SAGAR-JUL-1:SG-7003",
+      "finding_type": "line_pricing_delta"
+    },
+    {
+      "dispute_unit_id": "du:line:SAGAR-JUL-1:SG-7009",
+      "amount": 200.0,
+      "finding_id": "line_delta:SAGAR-JUL-1:SG-7009",
+      "finding_type": "line_pricing_delta"
+    }
+  ],
+  "summary": {
+    "finding_count": 9,
+    "dispute_unit_count": 5,
+    "total_dispute_unit_amount_if_all_disputed": 9328.8,
+    "requires_adjudication_count": 8
+  }
+}

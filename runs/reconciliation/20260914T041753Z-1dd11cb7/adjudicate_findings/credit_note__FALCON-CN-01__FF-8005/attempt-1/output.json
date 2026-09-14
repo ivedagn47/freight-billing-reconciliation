@@ -1,0 +1,13 @@
+{
+  "finding_id": "credit_note:FALCON-CN-01:FF-8005",
+  "disposition": "dispute",
+  "justification": "Clause 3 fixes the fuel surcharge at a flat 12% of the freight charge (base freight plus express premium), with no variable rate or carrier discretion. Falcon's own credit note FALCON-CN-01 admits the invoice applied 15% \"in error\" and states the contractual rate is 12%, which corroborates the independently-determined line-level pricing delta for FF-8005 (already computed as a dispute at the line level via du:line:FALCON-2026-07A:FF-8005). This is not a case of contract ambiguity \u2014 \u00a73's 12% rate is stated plainly and the carrier's own correction confirms the same reading \u2014 so the underlying billing error is well established. Because the credit note amount matches the already-counted line delta exactly, this finding contributes no new dispute amount; it simply corroborates the existing line-level dispute.",
+  "governing_clauses": [
+    "falcon-freight.md \u00a73"
+  ],
+  "memo_narrative": {
+    "what_happened": "Falcon applied a 15% fuel surcharge on consignment FF-8005 instead of the contractual 12% rate, and later issued its own credit note (FALCON-CN-01) acknowledging the error.",
+    "why": "Clause 3 fixes the fuel surcharge at 12% of the freight charge with no exceptions, and Falcon's own credit note confirms the 15% figure was billed in error, so this is a clear, carrier-admitted overcharge rather than a matter of interpretation.",
+    "recommended_action": "No separate action needed on this credit note beyond confirming it is applied against the already-flagged line-level dispute for FF-8005 on invoice FALCON-2026-07A; do not treat it as an additional deduction."
+  }
+}

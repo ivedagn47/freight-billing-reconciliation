@@ -1,0 +1,175 @@
+{
+  "target_period": "2026-07",
+  "files": [
+    {
+      "file": "data/invoices/ALPINE-0726.json",
+      "carrier": "alpine",
+      "doc_type": "invoice",
+      "invoice_id": "ALPINE-0726",
+      "period": "2026-07",
+      "period_ambiguous": false,
+      "in_scope": true,
+      "reason": "period 2026-07 matches target period 2026-07"
+    },
+    {
+      "file": "data/invoices/ALPINE-0826.json",
+      "carrier": "alpine",
+      "doc_type": "invoice",
+      "invoice_id": "ALPINE-0826",
+      "period": "2026-08",
+      "period_ambiguous": false,
+      "in_scope": false,
+      "reason": "period 2026-08 does not match target period 2026-07"
+    },
+    {
+      "file": "data/invoices/ALPINE-0926.json",
+      "carrier": "alpine",
+      "doc_type": "invoice",
+      "invoice_id": "ALPINE-0926",
+      "period": "2026-09",
+      "period_ambiguous": false,
+      "in_scope": false,
+      "reason": "period 2026-09 does not match target period 2026-07"
+    },
+    {
+      "file": "data/invoices/FALCON-2026-07A.txt",
+      "carrier": "falcon",
+      "doc_type": "invoice",
+      "invoice_id": "FALCON-2026-07A",
+      "period": "2026-07",
+      "period_ambiguous": false,
+      "in_scope": true,
+      "reason": "period 2026-07 matches target period 2026-07"
+    },
+    {
+      "file": "data/invoices/FALCON-2026-07B.txt",
+      "carrier": "falcon",
+      "doc_type": "invoice",
+      "invoice_id": "FALCON-2026-07B",
+      "period": "2026-07",
+      "period_ambiguous": false,
+      "in_scope": true,
+      "reason": "period 2026-07 matches target period 2026-07"
+    },
+    {
+      "file": "data/invoices/FALCON-2026-08A.txt",
+      "carrier": "falcon",
+      "doc_type": "invoice",
+      "invoice_id": "FALCON-2026-08A",
+      "period": "2026-08",
+      "period_ambiguous": false,
+      "in_scope": false,
+      "reason": "period 2026-08 does not match target period 2026-07"
+    },
+    {
+      "file": "data/invoices/FALCON-2026-08B.txt",
+      "carrier": "falcon",
+      "doc_type": "invoice",
+      "invoice_id": "FALCON-2026-08B",
+      "period": "2026-08",
+      "period_ambiguous": false,
+      "in_scope": false,
+      "reason": "period 2026-08 does not match target period 2026-07"
+    },
+    {
+      "file": "data/invoices/FALCON-2026-09A.txt",
+      "carrier": "falcon",
+      "doc_type": "invoice",
+      "invoice_id": "FALCON-2026-09A",
+      "period": "2026-09",
+      "period_ambiguous": false,
+      "in_scope": false,
+      "reason": "period 2026-09 does not match target period 2026-07"
+    },
+    {
+      "file": "data/invoices/FALCON-2026-09B.txt",
+      "carrier": "falcon",
+      "doc_type": "invoice",
+      "invoice_id": "FALCON-2026-09B",
+      "period": "2026-09",
+      "period_ambiguous": false,
+      "in_scope": false,
+      "reason": "period 2026-09 does not match target period 2026-07"
+    },
+    {
+      "file": "data/invoices/FALCON-CN-01.txt",
+      "carrier": "falcon",
+      "doc_type": "credit_note",
+      "invoice_id": "FALCON-CN-01",
+      "period": null,
+      "period_ambiguous": false,
+      "in_scope": false,
+      "reason": "credit_note: not part of line-level reconciliation scope"
+    },
+    {
+      "file": "data/invoices/SAGAR-AUG-1.csv",
+      "carrier": "sagar",
+      "doc_type": "invoice",
+      "invoice_id": "SAGAR-AUG-1",
+      "period": "2026-08",
+      "period_ambiguous": false,
+      "in_scope": false,
+      "reason": "period 2026-08 does not match target period 2026-07"
+    },
+    {
+      "file": "data/invoices/SAGAR-AUG-2.csv",
+      "carrier": "sagar",
+      "doc_type": "invoice",
+      "invoice_id": "SAGAR-AUG-2",
+      "period": "2026-08",
+      "period_ambiguous": false,
+      "in_scope": false,
+      "reason": "period 2026-08 does not match target period 2026-07"
+    },
+    {
+      "file": "data/invoices/SAGAR-CN-01.csv",
+      "carrier": "sagar",
+      "doc_type": "credit_note",
+      "invoice_id": "SAGAR-CN-01",
+      "period": null,
+      "period_ambiguous": false,
+      "in_scope": false,
+      "reason": "credit_note: not part of line-level reconciliation scope"
+    },
+    {
+      "file": "data/invoices/SAGAR-JUL-1.csv",
+      "carrier": "sagar",
+      "doc_type": "invoice",
+      "invoice_id": "SAGAR-JUL-1",
+      "period": "2026-07",
+      "period_ambiguous": false,
+      "in_scope": true,
+      "reason": "period 2026-07 matches target period 2026-07"
+    },
+    {
+      "file": "data/invoices/SAGAR-JUL-2.csv",
+      "carrier": "sagar",
+      "doc_type": "invoice",
+      "invoice_id": "SAGAR-JUL-2",
+      "period": "2026-07",
+      "period_ambiguous": false,
+      "in_scope": true,
+      "reason": "period 2026-07 matches target period 2026-07"
+    },
+    {
+      "file": "data/invoices/SAGAR-SEP-1.csv",
+      "carrier": "sagar",
+      "doc_type": "invoice",
+      "invoice_id": "SAGAR-SEP-1",
+      "period": "2026-09",
+      "period_ambiguous": false,
+      "in_scope": false,
+      "reason": "period 2026-09 does not match target period 2026-07"
+    },
+    {
+      "file": "data/invoices/SAGAR-SEP-2.csv",
+      "carrier": "sagar",
+      "doc_type": "invoice",
+      "invoice_id": "SAGAR-SEP-2",
+      "period": "2026-09",
+      "period_ambiguous": false,
+      "in_scope": false,
+      "reason": "period 2026-09 does not match target period 2026-07"
+    }
+  ]
+}

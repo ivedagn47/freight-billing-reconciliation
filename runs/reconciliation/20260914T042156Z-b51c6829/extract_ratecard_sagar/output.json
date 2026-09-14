@@ -1,0 +1,103 @@
+{
+  "agreement_ref": "SRL/BFC/2025-08",
+  "effective_period": {
+    "raw_text": "1 August 2025 \u2013 31 July 2027",
+    "start": "2025-08-01",
+    "end": "2027-07-31"
+  },
+  "currency": "INR",
+  "pricing_basis": {
+    "description": "Freight per consignment is the sum of a weight component (\u20b96.00 per kg of billed weight) and a distance component (\u20b92.00 per km of the booked lane distance).",
+    "clause": "sagar-roadlines.md \u00a71"
+  },
+  "chargeable_weight_floor": null,
+  "rate_bands": [],
+  "flat_rates": [
+    {
+      "name": "weight component",
+      "basis": "weight_kg",
+      "rate": 6,
+      "rate_unit": "per_kg",
+      "clause": "sagar-roadlines.md \u00a71"
+    },
+    {
+      "name": "distance component",
+      "basis": "distance_km",
+      "rate": 2,
+      "rate_unit": "per_km",
+      "clause": "sagar-roadlines.md \u00a71"
+    }
+  ],
+  "service_level_rules": [
+    {
+      "service_level": "standard",
+      "allowed": true,
+      "clause": "sagar-roadlines.md \u00a72",
+      "note": "Only standard service is offered under this agreement."
+    }
+  ],
+  "premiums": [
+    {
+      "name": "cold chain premium",
+      "type": "percentage",
+      "rate": 0.2,
+      "amount": null,
+      "condition": "Consignment booked as cold chain (travels in refrigerated vehicle).",
+      "trigger": {
+        "attribute": "special_handling",
+        "op": "contains",
+        "value": "cold_chain"
+      },
+      "compounds_on": [
+        "base_freight"
+      ],
+      "clause": "sagar-roadlines.md \u00a73"
+    }
+  ],
+  "surcharges": [],
+  "accessorial_charges": [],
+  "accessorial_policy": {
+    "type": "no_restriction_stated",
+    "allowed_names": [],
+    "clause": "sagar-roadlines.md",
+    "note": "The contract does not state any list of allowed/restricted accessorial charges; the only extra charge described is the cold chain premium (\u00a73), and no whitelist or restriction language appears anywhere in the agreement."
+  },
+  "discounts": [],
+  "exclusions": [
+    {
+      "condition": "Invoice line's c-note number cannot be matched to a Customer booking.",
+      "description": "Lines that cannot be matched to a Customer booking are not payable until reconciled.",
+      "clause": "sagar-roadlines.md \u00a75",
+      "trigger": null
+    }
+  ],
+  "rounding_rule": {
+    "stated_in_contract": false,
+    "note": "No rounding rule is stated in the contract."
+  },
+  "payment_terms": {
+    "invoicing_frequency": "fortnightly (as trips are pooled)",
+    "payment_due_days": 21,
+    "dispute_window_days": null,
+    "clause": "sagar-roadlines.md \u00a74"
+  },
+  "ambiguities": [
+    {
+      "description": "Clause 1 prices the distance component on 'the booked lane distance,' but it is not stated whether this is the same value as a shipment record's actual/traveled distance_km, or a separately booked/planned lane distance that could differ from it.",
+      "clause": "sagar-roadlines.md \u00a71"
+    },
+    {
+      "description": "Clause 4 states invoicing is 'typically fortnightly,' which is described as a typical practice rather than a firm contractual cadence, leaving the actual invoicing interval unspecified/variable.",
+      "clause": "sagar-roadlines.md \u00a74"
+    }
+  ],
+  "notes": [
+    "Only standard service level is offered under this agreement (\u00a72); the contract defines no express or other service tiers.",
+    "Per \u00a76, credit notes correcting earlier invoices must reference the original c-note number and the invoice being corrected, and must cover the full corrected amount."
+  ],
+  "carrier": "sagar",
+  "source_contract": {
+    "file": "data/contracts/sagar-roadlines.md",
+    "sha256": "43c3f2dfc4e0eade16e79d4924f4b83c8748dc1a06dfaf3bc2694369aaa5ad95"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "finding_id": "line_delta:SAGAR-JUL-1:SG-7009",
+  "disposition": "dispute",
+  "justification": "The pricing trace correctly applies \u00a71's formula: weight component = 200 kg x Rs 6/kg = Rs 1200, distance component = 140 km x Rs 2/km (matching the shipment record's distance_km, the only lane-distance figure available) = Rs 280, for a freight total per \u00a71. The shipment's special_handling array is empty, so the \u00a73 cold chain premium correctly does not fire, and no other surcharge or accessorial applies. The billed amount exceeds this correctly-derived contract total, with no contractual basis identified for the difference. This is a straightforward overcharge relative to \u00a71's stated rates, not a case of genuine rate-card ambiguity affecting this consignment.",
+  "governing_clauses": [
+    "sagar-roadlines.md \u00a71"
+  ],
+  "memo_narrative": {
+    "what_happened": "Sagar billed consignment SG-7009 above the amount that \u00a71's weight (Rs 6/kg) and distance (Rs 2/km) components produce for this shipment's 200 kg / 140 km figures.",
+    "why": "No special handling or surcharge applies to this shipment, so \u00a71's flat per-kg and per-km rates are the full contractual basis for the charge; the amount billed above that has no basis in any clause of the agreement.",
+    "recommended_action": "Request a corrected invoice from Sagar Roadlines for consignment SG-7009 citing \u00a71, and recover the amount above via the next fortnightly settlement."
+  }
+}

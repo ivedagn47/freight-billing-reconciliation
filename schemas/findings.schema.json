@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "phase4-findings",
+  "description": "Output of detect_findings: invoice-level and cross-line findings that cannot be decided by pricing one line in isolation. No disposition (accept/dispute/escalate) appears anywhere here -- that is the later adjudication step's responsibility. dispute_unit_id/dispute_amount are this phase's disjoint-money bookkeeping; findings_gate (not this schema) proves they never double-count a line-level delta.",
+  "type": "object",
+  "required": ["findings", "dispute_units", "summary"],
+  "additionalProperties": false,
+  "properties": {
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "finding_id", "finding_type", "affected_invoices", "affected_consignments",
+          "related_shipments", "billed_amounts", "expected_amount", "delta",
+          "dispute_unit_id", "dispute_amount", "related_dispute_unit_id",
+          "governing_clauses", "evidence", "requires_adjudication", "adjudication_reason"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "finding_id": { "type": "string", "minLength": 1 },
+          "finding_type": {
+            "type": "string",
+            "enum": [
+              "invoice_total_mismatch", "invoice_level_discount", "duplicate_billing",
+              "credit_note_unrelated", "credit_note_corroboration", "credit_note_novel",
+              "line_pricing_delta", "ambiguous_line"
+            ]
+          },
+          "affected_invoices": { "type": "array", "items": { "type": "string" } },
+          "affected_consignments": { "type": "array", "items": { "type": "string" } },
+          "related_shipments": { "type": "array", "items": { "type": "string" } },
+          "billed_amounts": { "type": "array", "items": { "type": "number" } },
+          "expected_amount": { "type": ["number", "null"] },
+          "delta": { "type": ["number", "null"] },
+          "dispute_unit_id": { "type": ["string", "null"] },
+          "dispute_amount": { "type": ["number", "null"] },
+          "related_dispute_unit_id": { "type": ["string", "null"] },
+          "governing_clauses": { "type": "array", "items": { "type": "string" } },
+          "evidence": { "type": "object" },
+          "requires_adjudication": { "type": "boolean" },
+          "adjudication_reason": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "dispute_units": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["dispute_unit_id", "amount", "finding_id", "finding_type"],
+        "additionalProperties": false,
+        "properties": {
+          "dispute_unit_id": { "type": "string", "minLength": 1 },
+          "amount": { "type": "number" },
+          "finding_id": { "type": "string", "minLength": 1 },
+          "finding_type": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": ["finding_count", "dispute_unit_count", "total_dispute_unit_amount_if_all_disputed", "requires_adjudication_count"],
+      "additionalProperties": false,
+      "properties": {
+        "finding_count": { "type": "integer", "minimum": 0 },
+        "dispute_unit_count": { "type": "integer", "minimum": 0 },
+        "total_dispute_unit_amount_if_all_disputed": { "type": "number" },
+        "requires_adjudication_count": { "type": "integer", "minimum": 0 }
+      }
+    }
+  }
+}

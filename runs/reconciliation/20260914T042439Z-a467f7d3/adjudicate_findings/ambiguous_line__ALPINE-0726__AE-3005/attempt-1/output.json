@@ -1,0 +1,14 @@
+{
+  "finding_id": "ambiguous_line:ALPINE-0726:AE-3005",
+  "disposition": "escalate",
+  "justification": "The shipment's actual weight is exactly 50.0 kg, which already meets and exceeds the 25 kg chargeable-weight floor (\u00a71), so chargeable weight is 50.0 kg. Clause \u00a72 sets a per-kg rate for consignments \"under 50 kg\" (strict less-than) and a separate rate for consignments \"over 50 kg\" (strict greater-than). A consignment at exactly 50 kg satisfies neither condition as literally written, so the contract does not state a per-kg rate applicable to this consignment. This is not a case where the shipment facts are unclear -- the facts are certain -- but the rate-band boundaries in \u00a72 leave a genuine textual gap at exactly 50 kg, which the rate card's own recorded ambiguities list confirms (it flags this exact scenario). Because two readings are plausible (rounding down to the \"under 50kg\" band, or up to the \"over 50kg\" band) and neither is compelled by the text, I cannot determine which rate governs, so no expected amount can be soundly derived. This matches the policy default for ambiguous_line findings: escalate rather than pick a band that isn't actually written in the contract.",
+  "governing_clauses": [
+    "alpine-express.md \u00a71",
+    "alpine-express.md \u00a72"
+  ],
+  "memo_narrative": {
+    "what_happened": "The consignment's chargeable weight came out to exactly 50 kg, and the contract's per-kg rate bands are written as strictly 'under 50 kg' and strictly 'over 50 kg,' so neither band literally covers this weight.",
+    "why": "Alpine Express's own contract (\u00a72) leaves a textual gap at exactly the 50 kg boundary, and there's no other clause resolving which rate should apply -- this is a genuine ambiguity, not something we can resolve by picking one side.",
+    "recommended_action": "Escalate to Alpine Express's account manager for a written ruling on which per-kg rate applies to consignments at exactly 50 kg, and ask that \u00a72 be clarified (e.g., to '50 kg or less' / 'over 50 kg') in future contract revisions."
+  }
+}

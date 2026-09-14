@@ -1,0 +1,3731 @@
+{
+  "invoices": [
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "file": "data/invoices/ALPINE-0726.json",
+      "declared_line_count": 40,
+      "declared_total": 20624.26,
+      "declared_discount": 0.0
+    },
+    {
+      "invoice": "FALCON-2026-07A",
+      "carrier": "falcon",
+      "file": "data/invoices/FALCON-2026-07A.txt",
+      "declared_line_count": null,
+      "declared_total": 181637.6,
+      "declared_discount": null
+    },
+    {
+      "invoice": "FALCON-2026-07B",
+      "carrier": "falcon",
+      "file": "data/invoices/FALCON-2026-07B.txt",
+      "declared_line_count": null,
+      "declared_total": 205527.2,
+      "declared_discount": null
+    },
+    {
+      "invoice": "SAGAR-JUL-1",
+      "carrier": "sagar",
+      "file": "data/invoices/SAGAR-JUL-1.csv",
+      "declared_line_count": null,
+      "declared_total": 30259.2,
+      "declared_discount": null
+    },
+    {
+      "invoice": "SAGAR-JUL-2",
+      "carrier": "sagar",
+      "file": "data/invoices/SAGAR-JUL-2.csv",
+      "declared_line_count": null,
+      "declared_total": 20556.0,
+      "declared_discount": null
+    }
+  ],
+  "lines": [
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3001",
+      "billed_amount": 304.0,
+      "billed_components": [],
+      "stated_attributes": {
+        "weight_kg": 32.0,
+        "stated_chargeable_weight_kg": 32.0,
+        "stated_rate_per_kg": 9.5
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[0] sl=1"
+      },
+      "raw": {
+        "sl": 1,
+        "consignment_no": "AE-3001",
+        "booking_date": "2026-07-02",
+        "actual_weight_kg": 32,
+        "chargeable_weight_kg": 32,
+        "rate_per_kg": 9.5,
+        "handling_fee": 0,
+        "line_amount": 304.0
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3002",
+      "billed_amount": 561.0,
+      "billed_components": [],
+      "stated_attributes": {
+        "weight_kg": 68.0,
+        "stated_chargeable_weight_kg": 68.0,
+        "stated_rate_per_kg": 8.25
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[1] sl=2"
+      },
+      "raw": {
+        "sl": 2,
+        "consignment_no": "AE-3002",
+        "booking_date": "2026-07-03",
+        "actual_weight_kg": 68,
+        "chargeable_weight_kg": 68,
+        "rate_per_kg": 8.25,
+        "handling_fee": 0,
+        "line_amount": 561.0
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3003",
+      "billed_amount": 237.5,
+      "billed_components": [],
+      "stated_attributes": {
+        "weight_kg": 18.0,
+        "stated_chargeable_weight_kg": 25.0,
+        "stated_rate_per_kg": 9.5
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[2] sl=3"
+      },
+      "raw": {
+        "sl": 3,
+        "consignment_no": "AE-3003",
+        "booking_date": "2026-07-04",
+        "actual_weight_kg": 18,
+        "chargeable_weight_kg": 25.0,
+        "rate_per_kg": 9.5,
+        "handling_fee": 0,
+        "line_amount": 237.5
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3004",
+      "billed_amount": 990.0,
+      "billed_components": [],
+      "stated_attributes": {
+        "weight_kg": 120.0,
+        "stated_chargeable_weight_kg": 120.0,
+        "stated_rate_per_kg": 8.25
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[3] sl=4"
+      },
+      "raw": {
+        "sl": 4,
+        "consignment_no": "AE-3004",
+        "booking_date": "2026-07-05",
+        "actual_weight_kg": 120,
+        "chargeable_weight_kg": 120,
+        "rate_per_kg": 8.25,
+        "handling_fee": 0,
+        "line_amount": 990.0
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3005",
+      "billed_amount": 475.0,
+      "billed_components": [],
+      "stated_attributes": {
+        "weight_kg": 50.0,
+        "stated_chargeable_weight_kg": 50.0,
+        "stated_rate_per_kg": 9.5
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[4] sl=5"
+      },
+      "raw": {
+        "sl": 5,
+        "consignment_no": "AE-3005",
+        "booking_date": "2026-07-06",
+        "actual_weight_kg": 50.0,
+        "chargeable_weight_kg": 50.0,
+        "rate_per_kg": 9.5,
+        "handling_fee": 0,
+        "line_amount": 475.0
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3006",
+      "billed_amount": 392.25,
+      "billed_components": [
+        {
+          "label": "handling_fee",
+          "amount": 150.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 25.5,
+        "stated_chargeable_weight_kg": 25.5,
+        "stated_rate_per_kg": 9.5
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[5] sl=6"
+      },
+      "raw": {
+        "sl": 6,
+        "consignment_no": "AE-3006",
+        "booking_date": "2026-07-07",
+        "actual_weight_kg": 25.5,
+        "chargeable_weight_kg": 25.5,
+        "rate_per_kg": 9.5,
+        "handling_fee": 150,
+        "line_amount": 392.25
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3007",
+      "billed_amount": 660.0,
+      "billed_components": [],
+      "stated_attributes": {
+        "weight_kg": 80.0,
+        "stated_chargeable_weight_kg": 80.0,
+        "stated_rate_per_kg": 8.25
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[6] sl=7"
+      },
+      "raw": {
+        "sl": 7,
+        "consignment_no": "AE-3007",
+        "booking_date": "2026-07-08",
+        "actual_weight_kg": 80,
+        "chargeable_weight_kg": 80,
+        "rate_per_kg": 8.25,
+        "handling_fee": 0,
+        "line_amount": 660.0
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3008",
+      "billed_amount": 453.75,
+      "billed_components": [],
+      "stated_attributes": {
+        "weight_kg": 55.0,
+        "stated_chargeable_weight_kg": 55.0,
+        "stated_rate_per_kg": 8.25
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[7] sl=8"
+      },
+      "raw": {
+        "sl": 8,
+        "consignment_no": "AE-3008",
+        "booking_date": "2026-07-09",
+        "actual_weight_kg": 55,
+        "chargeable_weight_kg": 55,
+        "rate_per_kg": 8.25,
+        "handling_fee": 0,
+        "line_amount": 453.75
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3009",
+      "billed_amount": 380.0,
+      "billed_components": [],
+      "stated_attributes": {
+        "weight_kg": 40.0,
+        "stated_chargeable_weight_kg": 40.0,
+        "stated_rate_per_kg": 9.5
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[8] sl=9"
+      },
+      "raw": {
+        "sl": 9,
+        "consignment_no": "AE-3009",
+        "booking_date": "2026-07-10",
+        "actual_weight_kg": 40,
+        "chargeable_weight_kg": 40,
+        "rate_per_kg": 9.5,
+        "handling_fee": 0,
+        "line_amount": 380.0
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3010",
+      "billed_amount": 783.75,
+      "billed_components": [],
+      "stated_attributes": {
+        "weight_kg": 95.0,
+        "stated_chargeable_weight_kg": 95.0,
+        "stated_rate_per_kg": 8.25
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[9] sl=10"
+      },
+      "raw": {
+        "sl": 10,
+        "consignment_no": "AE-3010",
+        "booking_date": "2026-07-11",
+        "actual_weight_kg": 95,
+        "chargeable_weight_kg": 95,
+        "rate_per_kg": 8.25,
+        "handling_fee": 0,
+        "line_amount": 783.75
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3011",
+      "billed_amount": 285.0,
+      "billed_components": [],
+      "stated_attributes": {
+        "weight_kg": 30.0,
+        "stated_chargeable_weight_kg": 30.0,
+        "stated_rate_per_kg": 9.5
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[10] sl=11"
+      },
+      "raw": {
+        "sl": 11,
+        "consignment_no": "AE-3011",
+        "booking_date": "2026-07-12",
+        "actual_weight_kg": 30,
+        "chargeable_weight_kg": 30,
+        "rate_per_kg": 9.5,
+        "handling_fee": 0,
+        "line_amount": 285.0
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3012",
+      "billed_amount": 645.0,
+      "billed_components": [
+        {
+          "label": "handling_fee",
+          "amount": 150.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 60.0,
+        "stated_chargeable_weight_kg": 60.0,
+        "stated_rate_per_kg": 8.25
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[11] sl=12"
+      },
+      "raw": {
+        "sl": 12,
+        "consignment_no": "AE-3012",
+        "booking_date": "2026-07-13",
+        "actual_weight_kg": 60,
+        "chargeable_weight_kg": 60,
+        "rate_per_kg": 8.25,
+        "handling_fee": 150,
+        "line_amount": 645.0
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3013",
+      "billed_amount": 237.5,
+      "billed_components": [],
+      "stated_attributes": {
+        "weight_kg": 22.0,
+        "stated_chargeable_weight_kg": 25.0,
+        "stated_rate_per_kg": 9.5
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[12] sl=13"
+      },
+      "raw": {
+        "sl": 13,
+        "consignment_no": "AE-3013",
+        "booking_date": "2026-07-14",
+        "actual_weight_kg": 22,
+        "chargeable_weight_kg": 25.0,
+        "rate_per_kg": 9.5,
+        "handling_fee": 0,
+        "line_amount": 237.5
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3014",
+      "billed_amount": 589.88,
+      "billed_components": [],
+      "stated_attributes": {
+        "weight_kg": 71.5,
+        "stated_chargeable_weight_kg": 71.5,
+        "stated_rate_per_kg": 8.25
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[13] sl=14"
+      },
+      "raw": {
+        "sl": 14,
+        "consignment_no": "AE-3014",
+        "booking_date": "2026-07-15",
+        "actual_weight_kg": 71.5,
+        "chargeable_weight_kg": 71.5,
+        "rate_per_kg": 8.25,
+        "handling_fee": 0,
+        "line_amount": 589.88
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3015",
+      "billed_amount": 342.0,
+      "billed_components": [],
+      "stated_attributes": {
+        "weight_kg": 36.0,
+        "stated_chargeable_weight_kg": 36.0,
+        "stated_rate_per_kg": 9.5
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[14] sl=15"
+      },
+      "raw": {
+        "sl": 15,
+        "consignment_no": "AE-3015",
+        "booking_date": "2026-07-16",
+        "actual_weight_kg": 36,
+        "chargeable_weight_kg": 36,
+        "rate_per_kg": 9.5,
+        "handling_fee": 0,
+        "line_amount": 342.0
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3016",
+      "billed_amount": 726.0,
+      "billed_components": [],
+      "stated_attributes": {
+        "weight_kg": 88.0,
+        "stated_chargeable_weight_kg": 88.0,
+        "stated_rate_per_kg": 8.25
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[15] sl=16"
+      },
+      "raw": {
+        "sl": 16,
+        "consignment_no": "AE-3016",
+        "booking_date": "2026-07-17",
+        "actual_weight_kg": 88,
+        "chargeable_weight_kg": 88,
+        "rate_per_kg": 8.25,
+        "handling_fee": 0,
+        "line_amount": 726.0
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3017",
+      "billed_amount": 446.5,
+      "billed_components": [],
+      "stated_attributes": {
+        "weight_kg": 47.0,
+        "stated_chargeable_weight_kg": 47.0,
+        "stated_rate_per_kg": 9.5
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[16] sl=17"
+      },
+      "raw": {
+        "sl": 17,
+        "consignment_no": "AE-3017",
+        "booking_date": "2026-07-18",
+        "actual_weight_kg": 47,
+        "chargeable_weight_kg": 47,
+        "rate_per_kg": 9.5,
+        "handling_fee": 0,
+        "line_amount": 446.5
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3018",
+      "billed_amount": 1016.25,
+      "billed_components": [
+        {
+          "label": "handling_fee",
+          "amount": 150.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 105.0,
+        "stated_chargeable_weight_kg": 105.0,
+        "stated_rate_per_kg": 8.25
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[17] sl=18"
+      },
+      "raw": {
+        "sl": 18,
+        "consignment_no": "AE-3018",
+        "booking_date": "2026-07-19",
+        "actual_weight_kg": 105,
+        "chargeable_weight_kg": 105,
+        "rate_per_kg": 8.25,
+        "handling_fee": 150,
+        "line_amount": 1016.25
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3019",
+      "billed_amount": 266.0,
+      "billed_components": [],
+      "stated_attributes": {
+        "weight_kg": 28.0,
+        "stated_chargeable_weight_kg": 28.0,
+        "stated_rate_per_kg": 9.5
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[18] sl=19"
+      },
+      "raw": {
+        "sl": 19,
+        "consignment_no": "AE-3019",
+        "booking_date": "2026-07-20",
+        "actual_weight_kg": 28,
+        "chargeable_weight_kg": 28,
+        "rate_per_kg": 9.5,
+        "handling_fee": 0,
+        "line_amount": 266.0
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3020",
+      "billed_amount": 544.5,
+      "billed_components": [],
+      "stated_attributes": {
+        "weight_kg": 66.0,
+        "stated_chargeable_weight_kg": 66.0,
+        "stated_rate_per_kg": 8.25
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[19] sl=20"
+      },
+      "raw": {
+        "sl": 20,
+        "consignment_no": "AE-3020",
+        "booking_date": "2026-07-21",
+        "actual_weight_kg": 66,
+        "chargeable_weight_kg": 66,
+        "rate_per_kg": 8.25,
+        "handling_fee": 0,
+        "line_amount": 544.5
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3021",
+      "billed_amount": 304.0,
+      "billed_components": [],
+      "stated_attributes": {
+        "weight_kg": 32.0,
+        "stated_chargeable_weight_kg": 32.0,
+        "stated_rate_per_kg": 9.5
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[20] sl=21"
+      },
+      "raw": {
+        "sl": 21,
+        "consignment_no": "AE-3021",
+        "booking_date": "2026-07-22",
+        "actual_weight_kg": 32,
+        "chargeable_weight_kg": 32,
+        "rate_per_kg": 9.5,
+        "handling_fee": 0,
+        "line_amount": 304.0
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3022",
+      "billed_amount": 561.0,
+      "billed_components": [],
+      "stated_attributes": {
+        "weight_kg": 68.0,
+        "stated_chargeable_weight_kg": 68.0,
+        "stated_rate_per_kg": 8.25
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[21] sl=22"
+      },
+      "raw": {
+        "sl": 22,
+        "consignment_no": "AE-3022",
+        "booking_date": "2026-07-23",
+        "actual_weight_kg": 68,
+        "chargeable_weight_kg": 68,
+        "rate_per_kg": 8.25,
+        "handling_fee": 0,
+        "line_amount": 561.0
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3023",
+      "billed_amount": 237.5,
+      "billed_components": [],
+      "stated_attributes": {
+        "weight_kg": 18.0,
+        "stated_chargeable_weight_kg": 25.0,
+        "stated_rate_per_kg": 9.5
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[22] sl=23"
+      },
+      "raw": {
+        "sl": 23,
+        "consignment_no": "AE-3023",
+        "booking_date": "2026-07-24",
+        "actual_weight_kg": 18,
+        "chargeable_weight_kg": 25.0,
+        "rate_per_kg": 9.5,
+        "handling_fee": 0,
+        "line_amount": 237.5
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3024",
+      "billed_amount": 1140.0,
+      "billed_components": [
+        {
+          "label": "handling_fee",
+          "amount": 150.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 120.0,
+        "stated_chargeable_weight_kg": 120.0,
+        "stated_rate_per_kg": 8.25
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[23] sl=24"
+      },
+      "raw": {
+        "sl": 24,
+        "consignment_no": "AE-3024",
+        "booking_date": "2026-07-25",
+        "actual_weight_kg": 120,
+        "chargeable_weight_kg": 120,
+        "rate_per_kg": 8.25,
+        "handling_fee": 150,
+        "line_amount": 1140.0
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3025",
+      "billed_amount": 427.5,
+      "billed_components": [],
+      "stated_attributes": {
+        "weight_kg": 45.0,
+        "stated_chargeable_weight_kg": 45.0,
+        "stated_rate_per_kg": 9.5
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[24] sl=25"
+      },
+      "raw": {
+        "sl": 25,
+        "consignment_no": "AE-3025",
+        "booking_date": "2026-07-26",
+        "actual_weight_kg": 45,
+        "chargeable_weight_kg": 45,
+        "rate_per_kg": 9.5,
+        "handling_fee": 0,
+        "line_amount": 427.5
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3026",
+      "billed_amount": 242.25,
+      "billed_components": [],
+      "stated_attributes": {
+        "weight_kg": 25.5,
+        "stated_chargeable_weight_kg": 25.5,
+        "stated_rate_per_kg": 9.5
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[25] sl=26"
+      },
+      "raw": {
+        "sl": 26,
+        "consignment_no": "AE-3026",
+        "booking_date": "2026-07-01",
+        "actual_weight_kg": 25.5,
+        "chargeable_weight_kg": 25.5,
+        "rate_per_kg": 9.5,
+        "handling_fee": 0,
+        "line_amount": 242.25
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3027",
+      "billed_amount": 660.0,
+      "billed_components": [],
+      "stated_attributes": {
+        "weight_kg": 80.0,
+        "stated_chargeable_weight_kg": 80.0,
+        "stated_rate_per_kg": 8.25
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[26] sl=27"
+      },
+      "raw": {
+        "sl": 27,
+        "consignment_no": "AE-3027",
+        "booking_date": "2026-07-02",
+        "actual_weight_kg": 80,
+        "chargeable_weight_kg": 80,
+        "rate_per_kg": 8.25,
+        "handling_fee": 0,
+        "line_amount": 660.0
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3028",
+      "billed_amount": 453.75,
+      "billed_components": [],
+      "stated_attributes": {
+        "weight_kg": 55.0,
+        "stated_chargeable_weight_kg": 55.0,
+        "stated_rate_per_kg": 8.25
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[27] sl=28"
+      },
+      "raw": {
+        "sl": 28,
+        "consignment_no": "AE-3028",
+        "booking_date": "2026-07-03",
+        "actual_weight_kg": 55,
+        "chargeable_weight_kg": 55,
+        "rate_per_kg": 8.25,
+        "handling_fee": 0,
+        "line_amount": 453.75
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3029",
+      "billed_amount": 380.0,
+      "billed_components": [],
+      "stated_attributes": {
+        "weight_kg": 40.0,
+        "stated_chargeable_weight_kg": 40.0,
+        "stated_rate_per_kg": 9.5
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[28] sl=29"
+      },
+      "raw": {
+        "sl": 29,
+        "consignment_no": "AE-3029",
+        "booking_date": "2026-07-04",
+        "actual_weight_kg": 40,
+        "chargeable_weight_kg": 40,
+        "rate_per_kg": 9.5,
+        "handling_fee": 0,
+        "line_amount": 380.0
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3030",
+      "billed_amount": 933.75,
+      "billed_components": [
+        {
+          "label": "handling_fee",
+          "amount": 150.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 95.0,
+        "stated_chargeable_weight_kg": 95.0,
+        "stated_rate_per_kg": 8.25
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[29] sl=30"
+      },
+      "raw": {
+        "sl": 30,
+        "consignment_no": "AE-3030",
+        "booking_date": "2026-07-05",
+        "actual_weight_kg": 95,
+        "chargeable_weight_kg": 95,
+        "rate_per_kg": 8.25,
+        "handling_fee": 150,
+        "line_amount": 933.75
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3031",
+      "billed_amount": 285.0,
+      "billed_components": [],
+      "stated_attributes": {
+        "weight_kg": 30.0,
+        "stated_chargeable_weight_kg": 30.0,
+        "stated_rate_per_kg": 9.5
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[30] sl=31"
+      },
+      "raw": {
+        "sl": 31,
+        "consignment_no": "AE-3031",
+        "booking_date": "2026-07-06",
+        "actual_weight_kg": 30,
+        "chargeable_weight_kg": 30,
+        "rate_per_kg": 9.5,
+        "handling_fee": 0,
+        "line_amount": 285.0
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3032",
+      "billed_amount": 495.0,
+      "billed_components": [],
+      "stated_attributes": {
+        "weight_kg": 60.0,
+        "stated_chargeable_weight_kg": 60.0,
+        "stated_rate_per_kg": 8.25
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[31] sl=32"
+      },
+      "raw": {
+        "sl": 32,
+        "consignment_no": "AE-3032",
+        "booking_date": "2026-07-07",
+        "actual_weight_kg": 60,
+        "chargeable_weight_kg": 60,
+        "rate_per_kg": 8.25,
+        "handling_fee": 0,
+        "line_amount": 495.0
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3033",
+      "billed_amount": 237.5,
+      "billed_components": [],
+      "stated_attributes": {
+        "weight_kg": 22.0,
+        "stated_chargeable_weight_kg": 25.0,
+        "stated_rate_per_kg": 9.5
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[32] sl=33"
+      },
+      "raw": {
+        "sl": 33,
+        "consignment_no": "AE-3033",
+        "booking_date": "2026-07-08",
+        "actual_weight_kg": 22,
+        "chargeable_weight_kg": 25.0,
+        "rate_per_kg": 9.5,
+        "handling_fee": 0,
+        "line_amount": 237.5
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3034",
+      "billed_amount": 589.88,
+      "billed_components": [],
+      "stated_attributes": {
+        "weight_kg": 71.5,
+        "stated_chargeable_weight_kg": 71.5,
+        "stated_rate_per_kg": 8.25
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[33] sl=34"
+      },
+      "raw": {
+        "sl": 34,
+        "consignment_no": "AE-3034",
+        "booking_date": "2026-07-09",
+        "actual_weight_kg": 71.5,
+        "chargeable_weight_kg": 71.5,
+        "rate_per_kg": 8.25,
+        "handling_fee": 0,
+        "line_amount": 589.88
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3035",
+      "billed_amount": 342.0,
+      "billed_components": [],
+      "stated_attributes": {
+        "weight_kg": 36.0,
+        "stated_chargeable_weight_kg": 36.0,
+        "stated_rate_per_kg": 9.5
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[34] sl=35"
+      },
+      "raw": {
+        "sl": 35,
+        "consignment_no": "AE-3035",
+        "booking_date": "2026-07-10",
+        "actual_weight_kg": 36,
+        "chargeable_weight_kg": 36,
+        "rate_per_kg": 9.5,
+        "handling_fee": 0,
+        "line_amount": 342.0
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3036",
+      "billed_amount": 876.0,
+      "billed_components": [
+        {
+          "label": "handling_fee",
+          "amount": 150.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 88.0,
+        "stated_chargeable_weight_kg": 88.0,
+        "stated_rate_per_kg": 8.25
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[35] sl=36"
+      },
+      "raw": {
+        "sl": 36,
+        "consignment_no": "AE-3036",
+        "booking_date": "2026-07-11",
+        "actual_weight_kg": 88,
+        "chargeable_weight_kg": 88,
+        "rate_per_kg": 8.25,
+        "handling_fee": 150,
+        "line_amount": 876.0
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3037",
+      "billed_amount": 446.5,
+      "billed_components": [],
+      "stated_attributes": {
+        "weight_kg": 47.0,
+        "stated_chargeable_weight_kg": 47.0,
+        "stated_rate_per_kg": 9.5
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[36] sl=37"
+      },
+      "raw": {
+        "sl": 37,
+        "consignment_no": "AE-3037",
+        "booking_date": "2026-07-12",
+        "actual_weight_kg": 47,
+        "chargeable_weight_kg": 47,
+        "rate_per_kg": 9.5,
+        "handling_fee": 0,
+        "line_amount": 446.5
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3038",
+      "billed_amount": 866.25,
+      "billed_components": [],
+      "stated_attributes": {
+        "weight_kg": 105.0,
+        "stated_chargeable_weight_kg": 105.0,
+        "stated_rate_per_kg": 8.25
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[37] sl=38"
+      },
+      "raw": {
+        "sl": 38,
+        "consignment_no": "AE-3038",
+        "booking_date": "2026-07-13",
+        "actual_weight_kg": 105,
+        "chargeable_weight_kg": 105,
+        "rate_per_kg": 8.25,
+        "handling_fee": 0,
+        "line_amount": 866.25
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3039",
+      "billed_amount": 266.0,
+      "billed_components": [],
+      "stated_attributes": {
+        "weight_kg": 28.0,
+        "stated_chargeable_weight_kg": 28.0,
+        "stated_rate_per_kg": 9.5
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[38] sl=39"
+      },
+      "raw": {
+        "sl": 39,
+        "consignment_no": "AE-3039",
+        "booking_date": "2026-07-14",
+        "actual_weight_kg": 28,
+        "chargeable_weight_kg": 28,
+        "rate_per_kg": 9.5,
+        "handling_fee": 0,
+        "line_amount": 266.0
+      }
+    },
+    {
+      "invoice": "ALPINE-0726",
+      "carrier": "alpine",
+      "consignment_ref": "AE-3040",
+      "billed_amount": 544.5,
+      "billed_components": [],
+      "stated_attributes": {
+        "weight_kg": 66.0,
+        "stated_chargeable_weight_kg": 66.0,
+        "stated_rate_per_kg": 8.25
+      },
+      "provenance": {
+        "file": "data/invoices/ALPINE-0726.json",
+        "locator": "lines[39] sl=40"
+      },
+      "raw": {
+        "sl": 40,
+        "consignment_no": "AE-3040",
+        "booking_date": "2026-07-15",
+        "actual_weight_kg": 66,
+        "chargeable_weight_kg": 66,
+        "rate_per_kg": 8.25,
+        "handling_fee": 0,
+        "line_amount": 544.5
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07A",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8001",
+      "billed_amount": 17472.0,
+      "billed_components": [
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 17472.0
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Mumbai",
+        "destination": "Hyderabad",
+        "distance_km": 650.0,
+        "weight_kg": 900.0,
+        "service_level": "standard"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07A.txt",
+        "locator": "consignment block 1 (ref=FF-8001)"
+      },
+      "raw": {
+        "lines": [
+          "1. Consignment FF-8001",
+          "Mumbai to Hyderabad, 650 km, 900 kg, standard",
+          "Freight incl. fuel surcharge: Rs 17,472.00",
+          "LINE TOTAL: Rs 17,472.00"
+        ]
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07A",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8002",
+      "billed_amount": 3628.8,
+      "billed_components": [
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 3628.8
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Pune",
+        "destination": "Mumbai",
+        "distance_km": 180.0,
+        "weight_kg": 120.0,
+        "service_level": "standard"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07A.txt",
+        "locator": "consignment block 2 (ref=FF-8002)"
+      },
+      "raw": {
+        "lines": [
+          "2. Consignment FF-8002",
+          "Pune to Mumbai, 180 km, 120 kg, standard",
+          "Freight incl. fuel surcharge: Rs 3,628.80",
+          "LINE TOTAL: Rs 3,628.80"
+        ]
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07A",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8003",
+      "billed_amount": 7392.0,
+      "billed_components": [
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 7392.0
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Pune",
+        "destination": "Kolhapur",
+        "distance_km": 275.0,
+        "weight_kg": 900.0,
+        "service_level": "standard"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07A.txt",
+        "locator": "consignment block 3 (ref=FF-8003)"
+      },
+      "raw": {
+        "lines": [
+          "3. Consignment FF-8003",
+          "Pune to Kolhapur, 275 km, 900 kg, standard",
+          "Freight incl. fuel surcharge: Rs 7,392.00",
+          "LINE TOTAL: Rs 7,392.00"
+        ]
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07A",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8004",
+      "billed_amount": 8064.0,
+      "billed_components": [
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 8064.0
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Nashik",
+        "destination": "Pune",
+        "distance_km": 300.0,
+        "weight_kg": 1800.0,
+        "service_level": "standard"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07A.txt",
+        "locator": "consignment block 4 (ref=FF-8004)"
+      },
+      "raw": {
+        "lines": [
+          "4. Consignment FF-8004",
+          "Nashik to Pune, 300 km, 1800 kg, standard",
+          "Freight incl. fuel surcharge: Rs 8,064.00",
+          "LINE TOTAL: Rs 8,064.00"
+        ]
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07A",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8005",
+      "billed_amount": 19044.0,
+      "billed_components": [
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 19044.0
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Mumbai",
+        "destination": "Bengaluru",
+        "distance_km": 800.0,
+        "weight_kg": 260.0,
+        "service_level": "express"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07A.txt",
+        "locator": "consignment block 5 (ref=FF-8005)"
+      },
+      "raw": {
+        "lines": [
+          "5. Consignment FF-8005",
+          "Mumbai to Bengaluru, 800 km, 260 kg, express",
+          "Freight incl. fuel surcharge: Rs 19,044.00",
+          "LINE TOTAL: Rs 19,044.00"
+        ]
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07A",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8006",
+      "billed_amount": 6048.0,
+      "billed_components": [
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 6048.0
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Nashik",
+        "destination": "Pune",
+        "distance_km": 300.0,
+        "weight_kg": 260.0,
+        "service_level": "standard"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07A.txt",
+        "locator": "consignment block 6 (ref=FF-8006)"
+      },
+      "raw": {
+        "lines": [
+          "6. Consignment FF-8006",
+          "Nashik to Pune, 300 km, 260 kg, standard",
+          "Freight incl. fuel surcharge: Rs 6,048.00",
+          "LINE TOTAL: Rs 6,048.00"
+        ]
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07A",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8007",
+      "billed_amount": 21754.0,
+      "billed_components": [
+        {
+          "label": "Residential delivery",
+          "amount": 250.0
+        },
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 21504.0
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Mumbai",
+        "destination": "Bengaluru",
+        "distance_km": 800.0,
+        "weight_kg": 1800.0,
+        "service_level": "standard"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07A.txt",
+        "locator": "consignment block 7 (ref=FF-8007)"
+      },
+      "raw": {
+        "lines": [
+          "7. Consignment FF-8007",
+          "Mumbai to Bengaluru, 800 km, 1800 kg, standard",
+          "Residential delivery: Rs 250.00",
+          "Freight incl. fuel surcharge: Rs 21,504.00",
+          "LINE TOTAL: Rs 21,754.00"
+        ]
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07A",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8008",
+      "billed_amount": 6048.0,
+      "billed_components": [
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 6048.0
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Nashik",
+        "destination": "Pune",
+        "distance_km": 300.0,
+        "weight_kg": 260.0,
+        "service_level": "standard"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07A.txt",
+        "locator": "consignment block 8 (ref=FF-8008)"
+      },
+      "raw": {
+        "lines": [
+          "8. Consignment FF-8008",
+          "Nashik to Pune, 300 km, 260 kg, standard",
+          "Freight incl. fuel surcharge: Rs 6,048.00",
+          "LINE TOTAL: Rs 6,048.00"
+        ]
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07A",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8009",
+      "billed_amount": 11289.6,
+      "billed_components": [
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 11289.6
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Mumbai",
+        "destination": "Surat",
+        "distance_km": 420.0,
+        "weight_kg": 1200.0,
+        "service_level": "standard"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07A.txt",
+        "locator": "consignment block 9 (ref=FF-8009)"
+      },
+      "raw": {
+        "lines": [
+          "9. Consignment FF-8009",
+          "Mumbai to Surat, 420 km, 1200 kg, standard",
+          "Freight incl. fuel surcharge: Rs 11,289.60",
+          "LINE TOTAL: Rs 11,289.60"
+        ]
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07A",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8010",
+      "billed_amount": 14142.24,
+      "billed_components": [
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 14142.24
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Mumbai",
+        "destination": "Indore",
+        "distance_km": 610.0,
+        "weight_kg": 120.0,
+        "service_level": "express"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07A.txt",
+        "locator": "consignment block 10 (ref=FF-8010)"
+      },
+      "raw": {
+        "lines": [
+          "10. Consignment FF-8010",
+          "Mumbai to Indore, 610 km, 120 kg, express",
+          "Freight incl. fuel surcharge: Rs 14,142.24",
+          "LINE TOTAL: Rs 14,142.24"
+        ]
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07A",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8011",
+      "billed_amount": 22704.0,
+      "billed_components": [
+        {
+          "label": "Detention charge at consignee",
+          "amount": 1200.0
+        },
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 21504.0
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Mumbai",
+        "destination": "Bengaluru",
+        "distance_km": 800.0,
+        "weight_kg": 700.0,
+        "service_level": "standard"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07A.txt",
+        "locator": "consignment block 11 (ref=FF-8011)"
+      },
+      "raw": {
+        "lines": [
+          "11. Consignment FF-8011",
+          "Mumbai to Bengaluru, 800 km, 700 kg, standard",
+          "Detention charge at consignee: Rs 1,200.00",
+          "Freight incl. fuel surcharge: Rs 21,504.00",
+          "LINE TOTAL: Rs 22,704.00"
+        ]
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07A",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8012",
+      "billed_amount": 4838.4,
+      "billed_components": [
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 4838.4
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Pune",
+        "destination": "Mumbai",
+        "distance_km": 180.0,
+        "weight_kg": 1800.0,
+        "service_level": "standard"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07A.txt",
+        "locator": "consignment block 12 (ref=FF-8012)"
+      },
+      "raw": {
+        "lines": [
+          "12. Consignment FF-8012",
+          "Pune to Mumbai, 180 km, 1800 kg, standard",
+          "Freight incl. fuel surcharge: Rs 4,838.40",
+          "LINE TOTAL: Rs 4,838.40"
+        ]
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07A",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8013",
+      "billed_amount": 9139.2,
+      "billed_components": [
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 9139.2
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Mumbai",
+        "destination": "Nagpur",
+        "distance_km": 340.0,
+        "weight_kg": 1800.0,
+        "service_level": "standard"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07A.txt",
+        "locator": "consignment block 13 (ref=FF-8013)"
+      },
+      "raw": {
+        "lines": [
+          "13. Consignment FF-8013",
+          "Mumbai to Nagpur, 340 km, 1800 kg, standard",
+          "Freight incl. fuel surcharge: Rs 9,139.20",
+          "LINE TOTAL: Rs 9,139.20"
+        ]
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07A",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8014",
+      "billed_amount": 5794.0,
+      "billed_components": [
+        {
+          "label": "Residential delivery",
+          "amount": 250.0
+        },
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 5544.0
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Pune",
+        "destination": "Kolhapur",
+        "distance_km": 275.0,
+        "weight_kg": 260.0,
+        "service_level": "standard"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07A.txt",
+        "locator": "consignment block 14 (ref=FF-8014)"
+      },
+      "raw": {
+        "lines": [
+          "14. Consignment FF-8014",
+          "Pune to Kolhapur, 275 km, 260 kg, standard",
+          "Residential delivery: Rs 250.00",
+          "Freight incl. fuel surcharge: Rs 5,544.00",
+          "LINE TOTAL: Rs 5,794.00"
+        ]
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07A",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8015",
+      "billed_amount": 5564.16,
+      "billed_components": [
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 5564.16
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Pune",
+        "destination": "Mumbai",
+        "distance_km": 180.0,
+        "weight_kg": 900.0,
+        "service_level": "express"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07A.txt",
+        "locator": "consignment block 15 (ref=FF-8015)"
+      },
+      "raw": {
+        "lines": [
+          "15. Consignment FF-8015",
+          "Pune to Mumbai, 180 km, 900 kg, express",
+          "Freight incl. fuel surcharge: Rs 5,564.16",
+          "LINE TOTAL: Rs 5,564.16"
+        ]
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07A",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8016",
+      "billed_amount": 5544.0,
+      "billed_components": [
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 5544.0
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Pune",
+        "destination": "Kolhapur",
+        "distance_km": 275.0,
+        "weight_kg": 120.0,
+        "service_level": "standard"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07A.txt",
+        "locator": "consignment block 16 (ref=FF-8016)"
+      },
+      "raw": {
+        "lines": [
+          "16. Consignment FF-8016",
+          "Pune to Kolhapur, 275 km, 120 kg, standard",
+          "Freight incl. fuel surcharge: Rs 5,544.00",
+          "LINE TOTAL: Rs 5,544.00"
+        ]
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07A",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8017",
+      "billed_amount": 9139.2,
+      "billed_components": [
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 9139.2
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Mumbai",
+        "destination": "Nagpur",
+        "distance_km": 340.0,
+        "weight_kg": 1500.0,
+        "service_level": "standard"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07A.txt",
+        "locator": "consignment block 17 (ref=FF-8017)"
+      },
+      "raw": {
+        "lines": [
+          "17. Consignment FF-8017",
+          "Mumbai to Nagpur, 340 km, 1500 kg, standard",
+          "Freight incl. fuel surcharge: Rs 9,139.20",
+          "LINE TOTAL: Rs 9,139.20"
+        ]
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07A",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8018",
+      "billed_amount": 4032.0,
+      "billed_components": [
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 4032.0
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Thane",
+        "destination": "Pune",
+        "distance_km": 150.0,
+        "weight_kg": 900.0,
+        "service_level": "standard"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07A.txt",
+        "locator": "consignment block 18 (ref=FF-8018)"
+      },
+      "raw": {
+        "lines": [
+          "18. Consignment FF-8018",
+          "Thane to Pune, 150 km, 900 kg, standard",
+          "Freight incl. fuel surcharge: Rs 4,032.00",
+          "LINE TOTAL: Rs 4,032.00"
+        ]
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07B",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8019",
+      "billed_amount": 13977.6,
+      "billed_components": [
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 13977.6
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Mumbai",
+        "destination": "Vadodara",
+        "distance_km": 520.0,
+        "weight_kg": 900.0,
+        "service_level": "standard"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07B.txt",
+        "locator": "consignment block 1 (ref=FF-8019)"
+      },
+      "raw": {
+        "lines": [
+          "1. Consignment FF-8019",
+          "Mumbai to Vadodara, 520 km, 900 kg, standard",
+          "Freight incl. fuel surcharge: Rs 13,977.60",
+          "LINE TOTAL: Rs 13,977.60"
+        ]
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07B",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8020",
+      "billed_amount": 10684.8,
+      "billed_components": [
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 10684.8
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Mumbai",
+        "destination": "Ahmedabad",
+        "distance_km": 530.0,
+        "weight_kg": 350.0,
+        "service_level": "standard"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07B.txt",
+        "locator": "consignment block 2 (ref=FF-8020)"
+      },
+      "raw": {
+        "lines": [
+          "2. Consignment FF-8020",
+          "Mumbai to Ahmedabad, 530 km, 350 kg, standard",
+          "Freight incl. fuel surcharge: Rs 10,684.80",
+          "LINE TOTAL: Rs 10,684.80"
+        ]
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07B",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8021",
+      "billed_amount": 5544.0,
+      "billed_components": [
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 5544.0
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Pune",
+        "destination": "Kolhapur",
+        "distance_km": 275.0,
+        "weight_kg": 260.0,
+        "service_level": "standard"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07B.txt",
+        "locator": "consignment block 3 (ref=FF-8021)"
+      },
+      "raw": {
+        "lines": [
+          "3. Consignment FF-8021",
+          "Pune to Kolhapur, 275 km, 260 kg, standard",
+          "Freight incl. fuel surcharge: Rs 5,544.00",
+          "LINE TOTAL: Rs 5,544.00"
+        ]
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07B",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8022",
+      "billed_amount": 4032.0,
+      "billed_components": [
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 4032.0
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Thane",
+        "destination": "Pune",
+        "distance_km": 150.0,
+        "weight_kg": 1800.0,
+        "service_level": "standard"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07B.txt",
+        "locator": "consignment block 4 (ref=FF-8022)"
+      },
+      "raw": {
+        "lines": [
+          "4. Consignment FF-8022",
+          "Thane to Pune, 150 km, 1800 kg, standard",
+          "Freight incl. fuel surcharge: Rs 4,032.00",
+          "LINE TOTAL: Rs 4,032.00"
+        ]
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07B",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8023",
+      "billed_amount": 16074.24,
+      "billed_components": [
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 16074.24
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Mumbai",
+        "destination": "Vadodara",
+        "distance_km": 520.0,
+        "weight_kg": 1500.0,
+        "service_level": "express"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07B.txt",
+        "locator": "consignment block 5 (ref=FF-8023)"
+      },
+      "raw": {
+        "lines": [
+          "5. Consignment FF-8023",
+          "Mumbai to Vadodara, 520 km, 1500 kg, express",
+          "Freight incl. fuel surcharge: Rs 16,074.24",
+          "LINE TOTAL: Rs 16,074.24"
+        ]
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07B",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8024",
+      "billed_amount": 12297.6,
+      "billed_components": [
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 12297.6
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Mumbai",
+        "destination": "Indore",
+        "distance_km": 610.0,
+        "weight_kg": 260.0,
+        "service_level": "standard"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07B.txt",
+        "locator": "consignment block 6 (ref=FF-8024)"
+      },
+      "raw": {
+        "lines": [
+          "6. Consignment FF-8024",
+          "Mumbai to Indore, 610 km, 260 kg, standard",
+          "Freight incl. fuel surcharge: Rs 12,297.60",
+          "LINE TOTAL: Rs 12,297.60"
+        ]
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07B",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8025",
+      "billed_amount": 5088.4,
+      "billed_components": [
+        {
+          "label": "Residential delivery",
+          "amount": 250.0
+        },
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 4838.4
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Pune",
+        "destination": "Nashik",
+        "distance_km": 240.0,
+        "weight_kg": 350.0,
+        "service_level": "standard"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07B.txt",
+        "locator": "consignment block 7 (ref=FF-8025)"
+      },
+      "raw": {
+        "lines": [
+          "7. Consignment FF-8025",
+          "Pune to Nashik, 240 km, 350 kg, standard",
+          "Residential delivery: Rs 250.00",
+          "Freight incl. fuel surcharge: Rs 4,838.40",
+          "LINE TOTAL: Rs 5,088.40"
+        ]
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07B",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8003",
+      "billed_amount": 7392.0,
+      "billed_components": [
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 7392.0
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Pune",
+        "destination": "Kolhapur",
+        "distance_km": 275.0,
+        "weight_kg": 900.0,
+        "service_level": "standard"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07B.txt",
+        "locator": "consignment block 8 (ref=FF-8003)"
+      },
+      "raw": {
+        "lines": [
+          "8. Consignment FF-8003",
+          "Pune to Kolhapur, 275 km, 900 kg, standard",
+          "Freight incl. fuel surcharge: Rs 7,392.00",
+          "LINE TOTAL: Rs 7,392.00"
+        ]
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07B",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8026",
+      "billed_amount": 21504.0,
+      "billed_components": [
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 21504.0
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Mumbai",
+        "destination": "Bengaluru",
+        "distance_km": 800.0,
+        "weight_kg": 1500.0,
+        "service_level": "standard"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07B.txt",
+        "locator": "consignment block 9 (ref=FF-8026)"
+      },
+      "raw": {
+        "lines": [
+          "9. Consignment FF-8026",
+          "Mumbai to Bengaluru, 800 km, 1500 kg, standard",
+          "Freight incl. fuel surcharge: Rs 21,504.00",
+          "LINE TOTAL: Rs 21,504.00"
+        ]
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07B",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8027",
+      "billed_amount": 14142.24,
+      "billed_components": [
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 14142.24
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Mumbai",
+        "destination": "Indore",
+        "distance_km": 610.0,
+        "weight_kg": 260.0,
+        "service_level": "express"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07B.txt",
+        "locator": "consignment block 10 (ref=FF-8027)"
+      },
+      "raw": {
+        "lines": [
+          "10. Consignment FF-8027",
+          "Mumbai to Indore, 610 km, 260 kg, express",
+          "Freight incl. fuel surcharge: Rs 14,142.24",
+          "LINE TOTAL: Rs 14,142.24"
+        ]
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07B",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8028",
+      "billed_amount": 14246.4,
+      "billed_components": [
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 14246.4
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Mumbai",
+        "destination": "Ahmedabad",
+        "distance_km": 530.0,
+        "weight_kg": 900.0,
+        "service_level": "standard"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07B.txt",
+        "locator": "consignment block 11 (ref=FF-8028)"
+      },
+      "raw": {
+        "lines": [
+          "11. Consignment FF-8028",
+          "Mumbai to Ahmedabad, 530 km, 900 kg, standard",
+          "Freight incl. fuel surcharge: Rs 14,246.40",
+          "LINE TOTAL: Rs 14,246.40"
+        ]
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07B",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8029",
+      "billed_amount": 7392.0,
+      "billed_components": [
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 7392.0
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Pune",
+        "destination": "Kolhapur",
+        "distance_km": 275.0,
+        "weight_kg": 1500.0,
+        "service_level": "standard"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07B.txt",
+        "locator": "consignment block 12 (ref=FF-8029)"
+      },
+      "raw": {
+        "lines": [
+          "12. Consignment FF-8029",
+          "Pune to Kolhapur, 275 km, 1500 kg, standard",
+          "Freight incl. fuel surcharge: Rs 7,392.00",
+          "LINE TOTAL: Rs 7,392.00"
+        ]
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07B",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8030",
+      "billed_amount": 3628.8,
+      "billed_components": [
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 3628.8
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Pune",
+        "destination": "Mumbai",
+        "distance_km": 180.0,
+        "weight_kg": 260.0,
+        "service_level": "standard"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07B.txt",
+        "locator": "consignment block 13 (ref=FF-8030)"
+      },
+      "raw": {
+        "lines": [
+          "13. Consignment FF-8030",
+          "Pune to Mumbai, 180 km, 260 kg, standard",
+          "Freight incl. fuel surcharge: Rs 3,628.80",
+          "LINE TOTAL: Rs 3,628.80"
+        ]
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07B",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8031",
+      "billed_amount": 14496.4,
+      "billed_components": [
+        {
+          "label": "Residential delivery",
+          "amount": 250.0
+        },
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 14246.4
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Mumbai",
+        "destination": "Ahmedabad",
+        "distance_km": 530.0,
+        "weight_kg": 1500.0,
+        "service_level": "standard"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07B.txt",
+        "locator": "consignment block 14 (ref=FF-8031)"
+      },
+      "raw": {
+        "lines": [
+          "14. Consignment FF-8031",
+          "Mumbai to Ahmedabad, 530 km, 1500 kg, standard",
+          "Residential delivery: Rs 250.00",
+          "Freight incl. fuel surcharge: Rs 14,246.40",
+          "LINE TOTAL: Rs 14,496.40"
+        ]
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07B",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8032",
+      "billed_amount": 12287.52,
+      "billed_components": [
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 12287.52
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Mumbai",
+        "destination": "Ahmedabad",
+        "distance_km": 530.0,
+        "weight_kg": 120.0,
+        "service_level": "express"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07B.txt",
+        "locator": "consignment block 15 (ref=FF-8032)"
+      },
+      "raw": {
+        "lines": [
+          "15. Consignment FF-8032",
+          "Mumbai to Ahmedabad, 530 km, 120 kg, express",
+          "Freight incl. fuel surcharge: Rs 12,287.52",
+          "LINE TOTAL: Rs 12,287.52"
+        ]
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07B",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8033",
+      "billed_amount": 13977.6,
+      "billed_components": [
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 13977.6
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Mumbai",
+        "destination": "Vadodara",
+        "distance_km": 520.0,
+        "weight_kg": 1500.0,
+        "service_level": "standard"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07B.txt",
+        "locator": "consignment block 16 (ref=FF-8033)"
+      },
+      "raw": {
+        "lines": [
+          "16. Consignment FF-8033",
+          "Mumbai to Vadodara, 520 km, 1500 kg, standard",
+          "Freight incl. fuel surcharge: Rs 13,977.60",
+          "LINE TOTAL: Rs 13,977.60"
+        ]
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07B",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8034",
+      "billed_amount": 11289.6,
+      "billed_components": [
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 11289.6
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Mumbai",
+        "destination": "Surat",
+        "distance_km": 420.0,
+        "weight_kg": 900.0,
+        "service_level": "standard"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07B.txt",
+        "locator": "consignment block 17 (ref=FF-8034)"
+      },
+      "raw": {
+        "lines": [
+          "17. Consignment FF-8034",
+          "Mumbai to Surat, 420 km, 900 kg, standard",
+          "Freight incl. fuel surcharge: Rs 11,289.60",
+          "LINE TOTAL: Rs 11,289.60"
+        ]
+      }
+    },
+    {
+      "invoice": "FALCON-2026-07B",
+      "carrier": "falcon",
+      "consignment_ref": "FF-8035",
+      "billed_amount": 17472.0,
+      "billed_components": [
+        {
+          "label": "Freight incl. fuel surcharge",
+          "amount": 17472.0
+        }
+      ],
+      "stated_attributes": {
+        "origin": "Mumbai",
+        "destination": "Hyderabad",
+        "distance_km": 650.0,
+        "weight_kg": 900.0,
+        "service_level": "standard"
+      },
+      "provenance": {
+        "file": "data/invoices/FALCON-2026-07B.txt",
+        "locator": "consignment block 18 (ref=FF-8035)"
+      },
+      "raw": {
+        "lines": [
+          "18. Consignment FF-8035",
+          "Mumbai to Hyderabad, 650 km, 900 kg, standard",
+          "Freight incl. fuel surcharge: Rs 17,472.00",
+          "LINE TOTAL: Rs 17,472.00"
+        ]
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-1",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7001",
+      "billed_amount": 1680.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 1680.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 260.0,
+        "distance_km": 60.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-1.csv",
+        "locator": "csv row 2 (cnote_no=SG-7001)"
+      },
+      "raw": {
+        "cnote_no": "SG-7001",
+        "booking_dt": "2026-07-02",
+        "wt_kg": "260",
+        "dist_km": "60",
+        "freight_rs": "1680.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "1680.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-1",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7002",
+      "billed_amount": 1970.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 1970.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 300.0,
+        "distance_km": 85.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-1.csv",
+        "locator": "csv row 3 (cnote_no=SG-7002)"
+      },
+      "raw": {
+        "cnote_no": "SG-7002",
+        "booking_dt": "2026-07-03",
+        "wt_kg": "300",
+        "dist_km": "85",
+        "freight_rs": "1970.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "1970.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-1",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7003",
+      "billed_amount": 570.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 530.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 60.0,
+        "distance_km": 85.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-1.csv",
+        "locator": "csv row 4 (cnote_no=SG-7003)"
+      },
+      "raw": {
+        "cnote_no": "SG-7003",
+        "booking_dt": "2026-07-04",
+        "wt_kg": "60",
+        "dist_km": "85",
+        "freight_rs": "530.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "570.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-1",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7004",
+      "billed_amount": 710.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 710.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 75.0,
+        "distance_km": 130.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-1.csv",
+        "locator": "csv row 5 (cnote_no=SG-7004)"
+      },
+      "raw": {
+        "cnote_no": "SG-7004",
+        "booking_dt": "2026-07-05",
+        "wt_kg": "75",
+        "dist_km": "130",
+        "freight_rs": "710.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "710.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-1",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7005",
+      "billed_amount": 680.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 680.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 60.0,
+        "distance_km": 160.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-1.csv",
+        "locator": "csv row 6 (cnote_no=SG-7005)"
+      },
+      "raw": {
+        "cnote_no": "SG-7005",
+        "booking_dt": "2026-07-06",
+        "wt_kg": "60",
+        "dist_km": "160",
+        "freight_rs": "680.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "680.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-1",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7006",
+      "billed_amount": 1730.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 1730.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 260.0,
+        "distance_km": 85.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-1.csv",
+        "locator": "csv row 7 (cnote_no=SG-7006)"
+      },
+      "raw": {
+        "cnote_no": "SG-7006",
+        "booking_dt": "2026-07-07",
+        "wt_kg": "260",
+        "dist_km": "85",
+        "freight_rs": "1730.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "1730.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-1",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7007",
+      "billed_amount": 1820.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 1820.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 260.0,
+        "distance_km": 130.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-1.csv",
+        "locator": "csv row 8 (cnote_no=SG-7007)"
+      },
+      "raw": {
+        "cnote_no": "SG-7007",
+        "booking_dt": "2026-07-08",
+        "wt_kg": "260",
+        "dist_km": "130",
+        "freight_rs": "1820.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "1820.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-1",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7008",
+      "billed_amount": 1704.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 1420.0
+        },
+        {
+          "label": "chill_prem_rs",
+          "amount": 284.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 200.0,
+        "distance_km": 110.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-1.csv",
+        "locator": "csv row 9 (cnote_no=SG-7008)"
+      },
+      "raw": {
+        "cnote_no": "SG-7008",
+        "booking_dt": "2026-07-09",
+        "wt_kg": "200",
+        "dist_km": "110",
+        "freight_rs": "1420.00",
+        "chill_prem_rs": "284.00",
+        "total_rs": "1704.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-1",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7009",
+      "billed_amount": 1680.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 1680.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 200.0,
+        "distance_km": 140.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-1.csv",
+        "locator": "csv row 10 (cnote_no=SG-7009)"
+      },
+      "raw": {
+        "cnote_no": "SG-7009",
+        "booking_dt": "2026-07-10",
+        "wt_kg": "200",
+        "dist_km": "140",
+        "freight_rs": "1680.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "1680.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-1",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7010",
+      "billed_amount": 1840.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 1840.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 260.0,
+        "distance_km": 140.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-1.csv",
+        "locator": "csv row 11 (cnote_no=SG-7010)"
+      },
+      "raw": {
+        "cnote_no": "SG-7010",
+        "booking_dt": "2026-07-11",
+        "wt_kg": "260",
+        "dist_km": "140",
+        "freight_rs": "1840.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "1840.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-1",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7011",
+      "billed_amount": 1420.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 1420.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 200.0,
+        "distance_km": 110.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-1.csv",
+        "locator": "csv row 12 (cnote_no=SG-7011)"
+      },
+      "raw": {
+        "cnote_no": "SG-7011",
+        "booking_dt": "2026-07-12",
+        "wt_kg": "200",
+        "dist_km": "110",
+        "freight_rs": "1420.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "1420.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-1",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7012",
+      "billed_amount": 850.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 850.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 110.0,
+        "distance_km": 95.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-1.csv",
+        "locator": "csv row 13 (cnote_no=SG-7012)"
+      },
+      "raw": {
+        "cnote_no": "SG-7012",
+        "booking_dt": "2026-07-13",
+        "wt_kg": "110",
+        "dist_km": "95",
+        "freight_rs": "850.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "850.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-1",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7013",
+      "billed_amount": 830.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 830.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 90.0,
+        "distance_km": 145.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-1.csv",
+        "locator": "csv row 14 (cnote_no=SG-7013)"
+      },
+      "raw": {
+        "cnote_no": "SG-7013",
+        "booking_dt": "2026-07-01",
+        "wt_kg": "90",
+        "dist_km": "145",
+        "freight_rs": "830.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "830.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-1",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7014",
+      "billed_amount": 1520.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 1520.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 200.0,
+        "distance_km": 160.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-1.csv",
+        "locator": "csv row 15 (cnote_no=SG-7014)"
+      },
+      "raw": {
+        "cnote_no": "SG-7014",
+        "booking_dt": "2026-07-02",
+        "wt_kg": "200",
+        "dist_km": "160",
+        "freight_rs": "1520.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "1520.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-1",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7015",
+      "billed_amount": 1460.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 1460.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 200.0,
+        "distance_km": 130.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-1.csv",
+        "locator": "csv row 16 (cnote_no=SG-7015)"
+      },
+      "raw": {
+        "cnote_no": "SG-7015",
+        "booking_dt": "2026-07-03",
+        "wt_kg": "200",
+        "dist_km": "130",
+        "freight_rs": "1460.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "1460.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-1",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7016",
+      "billed_amount": 535.2,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 446.0
+        },
+        {
+          "label": "chill_prem_rs",
+          "amount": 89.2
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 45.0,
+        "distance_km": 88.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-1.csv",
+        "locator": "csv row 17 (cnote_no=SG-7016)"
+      },
+      "raw": {
+        "cnote_no": "SG-7016",
+        "booking_dt": "2026-07-04",
+        "wt_kg": "45",
+        "dist_km": "88",
+        "freight_rs": "446.00",
+        "chill_prem_rs": "89.20",
+        "total_rs": "535.20"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-1",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7017",
+      "billed_amount": 536.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 536.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 60.0,
+        "distance_km": 88.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-1.csv",
+        "locator": "csv row 18 (cnote_no=SG-7017)"
+      },
+      "raw": {
+        "cnote_no": "SG-7017",
+        "booking_dt": "2026-07-05",
+        "wt_kg": "60",
+        "dist_km": "88",
+        "freight_rs": "536.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "536.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-1",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7018",
+      "billed_amount": 1000.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 1000.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 130.0,
+        "distance_km": 110.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-1.csv",
+        "locator": "csv row 19 (cnote_no=SG-7018)"
+      },
+      "raw": {
+        "cnote_no": "SG-7018",
+        "booking_dt": "2026-07-06",
+        "wt_kg": "130",
+        "dist_km": "110",
+        "freight_rs": "1000.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "1000.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-1",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7019",
+      "billed_amount": 1976.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 1976.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 300.0,
+        "distance_km": 88.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-1.csv",
+        "locator": "csv row 20 (cnote_no=SG-7019)"
+      },
+      "raw": {
+        "cnote_no": "SG-7019",
+        "booking_dt": "2026-07-07",
+        "wt_kg": "300",
+        "dist_km": "88",
+        "freight_rs": "1976.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "1976.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-1",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7020",
+      "billed_amount": 410.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 410.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 45.0,
+        "distance_km": 70.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-1.csv",
+        "locator": "csv row 21 (cnote_no=SG-7020)"
+      },
+      "raw": {
+        "cnote_no": "SG-7020",
+        "booking_dt": "2026-07-08",
+        "wt_kg": "45",
+        "dist_km": "70",
+        "freight_rs": "410.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "410.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-1",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7021",
+      "billed_amount": 1420.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 1420.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 200.0,
+        "distance_km": 110.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-1.csv",
+        "locator": "csv row 22 (cnote_no=SG-7021)"
+      },
+      "raw": {
+        "cnote_no": "SG-7021",
+        "booking_dt": "2026-07-09",
+        "wt_kg": "200",
+        "dist_km": "110",
+        "freight_rs": "1420.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "1420.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-1",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7022",
+      "billed_amount": 800.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 800.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 90.0,
+        "distance_km": 130.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-1.csv",
+        "locator": "csv row 23 (cnote_no=SG-7022)"
+      },
+      "raw": {
+        "cnote_no": "SG-7022",
+        "booking_dt": "2026-07-10",
+        "wt_kg": "90",
+        "dist_km": "130",
+        "freight_rs": "800.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "800.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-1",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7023",
+      "billed_amount": 950.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 950.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 110.0,
+        "distance_km": 145.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-1.csv",
+        "locator": "csv row 24 (cnote_no=SG-7023)"
+      },
+      "raw": {
+        "cnote_no": "SG-7023",
+        "booking_dt": "2026-07-11",
+        "wt_kg": "110",
+        "dist_km": "145",
+        "freight_rs": "950.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "950.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-1",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7024",
+      "billed_amount": 1608.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 1340.0
+        },
+        {
+          "label": "chill_prem_rs",
+          "amount": 268.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 200.0,
+        "distance_km": 70.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-1.csv",
+        "locator": "csv row 25 (cnote_no=SG-7024)"
+      },
+      "raw": {
+        "cnote_no": "SG-7024",
+        "booking_dt": "2026-07-12",
+        "wt_kg": "200",
+        "dist_km": "70",
+        "freight_rs": "1340.00",
+        "chill_prem_rs": "268.00",
+        "total_rs": "1608.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-1",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7025",
+      "billed_amount": 560.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 560.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 60.0,
+        "distance_km": 100.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-1.csv",
+        "locator": "csv row 26 (cnote_no=SG-7025)"
+      },
+      "raw": {
+        "cnote_no": "SG-7025",
+        "booking_dt": "2026-07-13",
+        "wt_kg": "60",
+        "dist_km": "100",
+        "freight_rs": "560.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "560.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-2",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7026",
+      "billed_amount": 940.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 940.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 110.0,
+        "distance_km": 140.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-2.csv",
+        "locator": "csv row 2 (cnote_no=SG-7026)"
+      },
+      "raw": {
+        "cnote_no": "SG-7026",
+        "booking_dt": "2026-07-17",
+        "wt_kg": "110",
+        "dist_km": "140",
+        "freight_rs": "940.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "940.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-2",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7027",
+      "billed_amount": 490.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 490.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 45.0,
+        "distance_km": 110.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-2.csv",
+        "locator": "csv row 3 (cnote_no=SG-7027)"
+      },
+      "raw": {
+        "cnote_no": "SG-7027",
+        "booking_dt": "2026-07-18",
+        "wt_kg": "45",
+        "dist_km": "110",
+        "freight_rs": "490.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "490.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-2",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7028",
+      "billed_amount": 560.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 560.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 60.0,
+        "distance_km": 100.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-2.csv",
+        "locator": "csv row 4 (cnote_no=SG-7028)"
+      },
+      "raw": {
+        "cnote_no": "SG-7028",
+        "booking_dt": "2026-07-19",
+        "wt_kg": "60",
+        "dist_km": "100",
+        "freight_rs": "560.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "560.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-2",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7029",
+      "billed_amount": 980.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 980.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 110.0,
+        "distance_km": 160.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-2.csv",
+        "locator": "csv row 5 (cnote_no=SG-7029)"
+      },
+      "raw": {
+        "cnote_no": "SG-7029",
+        "booking_dt": "2026-07-20",
+        "wt_kg": "110",
+        "dist_km": "160",
+        "freight_rs": "980.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "980.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-2",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7030",
+      "billed_amount": 820.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 820.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 90.0,
+        "distance_km": 140.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-2.csv",
+        "locator": "csv row 6 (cnote_no=SG-7030)"
+      },
+      "raw": {
+        "cnote_no": "SG-7030",
+        "booking_dt": "2026-07-21",
+        "wt_kg": "90",
+        "dist_km": "140",
+        "freight_rs": "820.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "820.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-2",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7031",
+      "billed_amount": 740.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 740.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 75.0,
+        "distance_km": 145.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-2.csv",
+        "locator": "csv row 7 (cnote_no=SG-7031)"
+      },
+      "raw": {
+        "cnote_no": "SG-7031",
+        "booking_dt": "2026-07-22",
+        "wt_kg": "75",
+        "dist_km": "145",
+        "freight_rs": "740.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "740.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-2",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7032",
+      "billed_amount": 900.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 900.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 130.0,
+        "distance_km": 60.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-2.csv",
+        "locator": "csv row 8 (cnote_no=SG-7032)"
+      },
+      "raw": {
+        "cnote_no": "SG-7032",
+        "booking_dt": "2026-07-23",
+        "wt_kg": "130",
+        "dist_km": "60",
+        "freight_rs": "900.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "900.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-2",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7033",
+      "billed_amount": 780.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 650.0
+        },
+        {
+          "label": "chill_prem_rs",
+          "amount": 130.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 60.0,
+        "distance_km": 145.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-2.csv",
+        "locator": "csv row 9 (cnote_no=SG-7033)"
+      },
+      "raw": {
+        "cnote_no": "SG-7033",
+        "booking_dt": "2026-07-24",
+        "wt_kg": "60",
+        "dist_km": "145",
+        "freight_rs": "650.00",
+        "chill_prem_rs": "130.00",
+        "total_rs": "780.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-2",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7034",
+      "billed_amount": 680.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 680.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 90.0,
+        "distance_km": 70.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-2.csv",
+        "locator": "csv row 10 (cnote_no=SG-7034)"
+      },
+      "raw": {
+        "cnote_no": "SG-7034",
+        "booking_dt": "2026-07-25",
+        "wt_kg": "90",
+        "dist_km": "70",
+        "freight_rs": "680.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "680.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-2",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7035",
+      "billed_amount": 1070.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 1070.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 150.0,
+        "distance_km": 85.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-2.csv",
+        "locator": "csv row 11 (cnote_no=SG-7035)"
+      },
+      "raw": {
+        "cnote_no": "SG-7035",
+        "booking_dt": "2026-07-26",
+        "wt_kg": "150",
+        "dist_km": "85",
+        "freight_rs": "1070.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "1070.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-2",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7036",
+      "billed_amount": 410.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 410.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 45.0,
+        "distance_km": 70.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-2.csv",
+        "locator": "csv row 12 (cnote_no=SG-7036)"
+      },
+      "raw": {
+        "cnote_no": "SG-7036",
+        "booking_dt": "2026-07-27",
+        "wt_kg": "45",
+        "dist_km": "70",
+        "freight_rs": "410.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "410.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-2",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7037",
+      "billed_amount": 1120.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 1120.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 150.0,
+        "distance_km": 110.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-2.csv",
+        "locator": "csv row 13 (cnote_no=SG-7037)"
+      },
+      "raw": {
+        "cnote_no": "SG-7037",
+        "booking_dt": "2026-07-28",
+        "wt_kg": "150",
+        "dist_km": "110",
+        "freight_rs": "1120.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "1120.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-2",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7038",
+      "billed_amount": 990.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 990.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 150.0,
+        "distance_km": 45.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-2.csv",
+        "locator": "csv row 14 (cnote_no=SG-7038)"
+      },
+      "raw": {
+        "cnote_no": "SG-7038",
+        "booking_dt": "2026-07-16",
+        "wt_kg": "150",
+        "dist_km": "45",
+        "freight_rs": "990.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "990.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-2",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7039",
+      "billed_amount": 1060.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 1060.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 130.0,
+        "distance_km": 140.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-2.csv",
+        "locator": "csv row 15 (cnote_no=SG-7039)"
+      },
+      "raw": {
+        "cnote_no": "SG-7039",
+        "booking_dt": "2026-07-17",
+        "wt_kg": "130",
+        "dist_km": "140",
+        "freight_rs": "1060.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "1060.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-2",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7040",
+      "billed_amount": 360.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 360.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 45.0,
+        "distance_km": 45.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-2.csv",
+        "locator": "csv row 16 (cnote_no=SG-7040)"
+      },
+      "raw": {
+        "cnote_no": "SG-7040",
+        "booking_dt": "2026-07-18",
+        "wt_kg": "45",
+        "dist_km": "45",
+        "freight_rs": "360.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "360.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-2",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7041",
+      "billed_amount": 1416.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 1180.0
+        },
+        {
+          "label": "chill_prem_rs",
+          "amount": 236.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 150.0,
+        "distance_km": 140.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-2.csv",
+        "locator": "csv row 17 (cnote_no=SG-7041)"
+      },
+      "raw": {
+        "cnote_no": "SG-7041",
+        "booking_dt": "2026-07-19",
+        "wt_kg": "150",
+        "dist_km": "140",
+        "freight_rs": "1180.00",
+        "chill_prem_rs": "236.00",
+        "total_rs": "1416.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-2",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7042",
+      "billed_amount": 560.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 560.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 45.0,
+        "distance_km": 145.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-2.csv",
+        "locator": "csv row 18 (cnote_no=SG-7042)"
+      },
+      "raw": {
+        "cnote_no": "SG-7042",
+        "booking_dt": "2026-07-20",
+        "wt_kg": "45",
+        "dist_km": "145",
+        "freight_rs": "560.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "560.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-2",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7043",
+      "billed_amount": 750.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 750.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 110.0,
+        "distance_km": 45.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-2.csv",
+        "locator": "csv row 19 (cnote_no=SG-7043)"
+      },
+      "raw": {
+        "cnote_no": "SG-7043",
+        "booking_dt": "2026-07-21",
+        "wt_kg": "110",
+        "dist_km": "45",
+        "freight_rs": "750.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "750.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-2",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7044",
+      "billed_amount": 1220.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 1220.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 150.0,
+        "distance_km": 160.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-2.csv",
+        "locator": "csv row 20 (cnote_no=SG-7044)"
+      },
+      "raw": {
+        "cnote_no": "SG-7044",
+        "booking_dt": "2026-07-22",
+        "wt_kg": "150",
+        "dist_km": "160",
+        "freight_rs": "1220.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "1220.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-2",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7045",
+      "billed_amount": 1100.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 1100.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 130.0,
+        "distance_km": 160.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-2.csv",
+        "locator": "csv row 21 (cnote_no=SG-7045)"
+      },
+      "raw": {
+        "cnote_no": "SG-7045",
+        "booking_dt": "2026-07-23",
+        "wt_kg": "130",
+        "dist_km": "160",
+        "freight_rs": "1100.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "1100.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-2",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7046",
+      "billed_amount": 490.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 490.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 45.0,
+        "distance_km": 110.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-2.csv",
+        "locator": "csv row 22 (cnote_no=SG-7046)"
+      },
+      "raw": {
+        "cnote_no": "SG-7046",
+        "booking_dt": "2026-07-24",
+        "wt_kg": "45",
+        "dist_km": "110",
+        "freight_rs": "490.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "490.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-2",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7047",
+      "billed_amount": 530.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 530.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 45.0,
+        "distance_km": 130.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-2.csv",
+        "locator": "csv row 23 (cnote_no=SG-7047)"
+      },
+      "raw": {
+        "cnote_no": "SG-7047",
+        "booking_dt": "2026-07-25",
+        "wt_kg": "45",
+        "dist_km": "130",
+        "freight_rs": "530.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "530.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-2",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7048",
+      "billed_amount": 640.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 640.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 75.0,
+        "distance_km": 95.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-2.csv",
+        "locator": "csv row 24 (cnote_no=SG-7048)"
+      },
+      "raw": {
+        "cnote_no": "SG-7048",
+        "booking_dt": "2026-07-26",
+        "wt_kg": "75",
+        "dist_km": "95",
+        "freight_rs": "640.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "640.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-2",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7049",
+      "billed_amount": 1320.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 1100.0
+        },
+        {
+          "label": "chill_prem_rs",
+          "amount": 220.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 150.0,
+        "distance_km": 100.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-2.csv",
+        "locator": "csv row 25 (cnote_no=SG-7049)"
+      },
+      "raw": {
+        "cnote_no": "SG-7049",
+        "booking_dt": "2026-07-27",
+        "wt_kg": "150",
+        "dist_km": "100",
+        "freight_rs": "1100.00",
+        "chill_prem_rs": "220.00",
+        "total_rs": "1320.00"
+      }
+    },
+    {
+      "invoice": "SAGAR-JUL-2",
+      "carrier": "sagar",
+      "consignment_ref": "SG-7050",
+      "billed_amount": 630.0,
+      "billed_components": [
+        {
+          "label": "freight_rs",
+          "amount": 630.0
+        }
+      ],
+      "stated_attributes": {
+        "weight_kg": 90.0,
+        "distance_km": 45.0
+      },
+      "provenance": {
+        "file": "data/invoices/SAGAR-JUL-2.csv",
+        "locator": "csv row 26 (cnote_no=SG-7050)"
+      },
+      "raw": {
+        "cnote_no": "SG-7050",
+        "booking_dt": "2026-07-28",
+        "wt_kg": "90",
+        "dist_km": "45",
+        "freight_rs": "630.00",
+        "chill_prem_rs": "0.00",
+        "total_rs": "630.00"
+      }
+    }
+  ]
+}

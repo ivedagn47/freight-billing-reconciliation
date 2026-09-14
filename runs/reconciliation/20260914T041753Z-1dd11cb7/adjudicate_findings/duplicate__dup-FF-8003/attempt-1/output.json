@@ -1,0 +1,14 @@
+{
+  "finding_id": "duplicate:dup-FF-8003",
+  "disposition": "dispute",
+  "justification": "Consignment FF-8003, tied to a single shipment (SH-4003), appears as a full freight line on two separate Falcon invoices (FALCON-2026-07A and FALCON-2026-07B), each individually priced correctly against the contract's per-km, weight-banded base freight (\u00a71) plus applicable fuel surcharge (\u00a73) for this 900 kg, 275 km, standard-service shipment with no special handling. The contract's freight schedule charges a consignment once for its carriage; nothing in the shipment record, invoice evidence, or contract (e.g. no re-delivery, correction, or split-shipment indicator) explains a legitimate second charge for the same consignment note. Absent such an explanation, the second occurrence is an unsupported duplicate charge that should not be paid twice.",
+  "governing_clauses": [
+    "falcon-freight.md \u00a71",
+    "falcon-freight.md \u00a75"
+  ],
+  "memo_narrative": {
+    "what_happened": "Falcon billed consignment FF-8003 (shipment SH-4003) as a full freight line on two separate invoices, 07A and 07B, with identical amounts and no indication of a re-delivery, correction, or split shipment.",
+    "why": "The contract's freight charges (\u00a71) are for carriage of a given consignment, and \u00a75 confirms no charges beyond the agreed schedule are payable without prior written agreement; a second, unexplained full charge for the same consignment is not supported by the contract or the shipment record.",
+    "recommended_action": "Raise this as a duplicate-billing dispute with Falcon within the 45-day window (\u00a77), asking them to confirm which invoice (07A or 07B) is the valid billing for FF-8003 and to withdraw or credit-note (\u00a78) the duplicate."
+  }
+}

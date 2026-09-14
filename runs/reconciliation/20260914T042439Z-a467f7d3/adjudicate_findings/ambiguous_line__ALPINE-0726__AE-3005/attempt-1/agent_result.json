@@ -1,0 +1,125 @@
+{
+  "duration_api_ms": 14095,
+  "stop_reason": "tool_use",
+  "session_id": "9b05e4ad-2cc6-4af9-a504-d5f5aed95804",
+  "total_cost_usd": 0.060085,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 10825,
+    "cache_read_input_tokens": 9435,
+    "output_tokens": 909,
+    "output_tokens_details": {
+      "thinking_tokens": 67
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 10825,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 909,
+        "cache_read_input_tokens": 9435,
+        "cache_creation_input_tokens": 10825,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 10825
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 5729,
+      "outputTokens": 15,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.005804,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-sonnet-5": {
+      "inputTokens": 2,
+      "outputTokens": 909,
+      "cacheReadInputTokens": 9435,
+      "cacheCreationInputTokens": 10825,
+      "webSearchRequests": 0,
+      "costUSD": 0.054280999999999996,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 67,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "extra_usage_disabled",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 2,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"finding_id\":\"ambiguous_line:ALPINE-0726:AE-3005\",\"disposition\":\"escalate\",\"justification\":\"The shipment's actual weight is exactly 50.0 kg, which already meets and exceeds the 25 kg chargeable-weight floor (\u00a71), so chargeable weight is 50.0 kg. Clause \u00a72 sets a per-kg rate for consignments \\\"under 50 kg\\\" (strict less-than) and a separate rate for consignments \\\"over 50 kg\\\" (strict greater-than). A consignment at exactly 50 kg satisfies neither condition as literally written, so the contract does not state a per-kg rate applicable to this consignment. This is not a case where the shipment facts are unclear -- the facts are certain -- but the rate-band boundaries in \u00a72 leave a genuine textual gap at exactly 50 kg, which the rate card's own recorded ambiguities list confirms (it flags this exact scenario). Because two readings are plausible (rounding down to the \\\"under 50kg\\\" band, or up to the \\\"over 50kg\\\" band) and neither is compelled by the text, I cannot determine which rate governs, so no expected amount can be soundly derived. This matches the policy default for ambiguous_line findings: escalate rather than pick a band that isn't actually written in the contract.\",\"governing_clauses\":[\"alpine-express.md \u00a71\",\"alpine-express.md \u00a72\"],\"memo_narrative\":{\"what_happened\":\"The consignment's chargeable weight came out to exactly 50 kg, and the contract's per-kg rate bands are written as strictly 'under 50 kg' and strictly 'over 50 kg,' so neither band literally covers this weight.\",\"why\":\"Alpine Express's own contract (\u00a72) leaves a textual gap at exactly the 50 kg boundary, and there's no other clause resolving which rate should apply -- this is a genuine ambiguity, not something we can resolve by picking one side.\",\"recommended_action\":\"Escalate to Alpine Express's account manager for a written ruling on which per-kg rate applies to consignments at exactly 50 kg, and ask that \u00a72 be clarified (e.g., to '50 kg or less' / 'over 50 kg') in future contract revisions.\"}}",
+  "structured_output": {
+    "finding_id": "ambiguous_line:ALPINE-0726:AE-3005",
+    "disposition": "escalate",
+    "justification": "The shipment's actual weight is exactly 50.0 kg, which already meets and exceeds the 25 kg chargeable-weight floor (\u00a71), so chargeable weight is 50.0 kg. Clause \u00a72 sets a per-kg rate for consignments \"under 50 kg\" (strict less-than) and a separate rate for consignments \"over 50 kg\" (strict greater-than). A consignment at exactly 50 kg satisfies neither condition as literally written, so the contract does not state a per-kg rate applicable to this consignment. This is not a case where the shipment facts are unclear -- the facts are certain -- but the rate-band boundaries in \u00a72 leave a genuine textual gap at exactly 50 kg, which the rate card's own recorded ambiguities list confirms (it flags this exact scenario). Because two readings are plausible (rounding down to the \"under 50kg\" band, or up to the \"over 50kg\" band) and neither is compelled by the text, I cannot determine which rate governs, so no expected amount can be soundly derived. This matches the policy default for ambiguous_line findings: escalate rather than pick a band that isn't actually written in the contract.",
+    "governing_clauses": [
+      "alpine-express.md \u00a71",
+      "alpine-express.md \u00a72"
+    ],
+    "memo_narrative": {
+      "what_happened": "The consignment's chargeable weight came out to exactly 50 kg, and the contract's per-kg rate bands are written as strictly 'under 50 kg' and strictly 'over 50 kg,' so neither band literally covers this weight.",
+      "why": "Alpine Express's own contract (\u00a72) leaves a textual gap at exactly the 50 kg boundary, and there's no other clause resolving which rate should apply -- this is a genuine ambiguity, not something we can resolve by picking one side.",
+      "recommended_action": "Escalate to Alpine Express's account manager for a written ruling on which per-kg rate applies to consignments at exactly 50 kg, and ask that \u00a72 be clarified (e.g., to '50 kg or less' / 'over 50 kg') in future contract revisions."
+    }
+  },
+  "ttft_ms": 3976,
+  "type": "result",
+  "duration_ms": 11756,
+  "uuid": "f133a4c2-714d-41d1-a3b1-f9abd5980341",
+  "ttft_stream_ms": 2775,
+  "time_to_request_ms": 32,
+  "first_content_frame_ms": 3284,
+  "queued_turn_count": 0,
+  "result_index": 0
+}
